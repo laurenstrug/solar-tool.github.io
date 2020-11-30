@@ -45,17 +45,6 @@
           <li><a href="#color">Applying color</a></li>
           <li><a href="#widgettype">Widget types</a></li>
         </ul>
-        <li><a href="#choose">How do I choose a site based on...?</a></li>
-        <ul>
-          <li><a href="#city">Within my city</a></li>
-          <li><a href="#cpa">Within CPA Territory</a></li>
-          <li><a href="#capacity">Sufficient circuit capacity</a></li>
-          <li><a href="#highest">Highest potential generation capacity</a>
-          </li>
-          <li><a href="#dac">Within DAC Census Tracts</a></li>
-          <li><a href="#pop">Where more people live</a></li>
-          <li><a href="#rent">Where more people are renters</a></li>
-        </ul>
         <li><a href="#trouble">Troubleshooting</a></li>
       </ul>
     </nav>
@@ -236,145 +225,6 @@
         across the eligible sites. For example: 15% Penetration Capacity,
         CalEnviroScreen 3.0 Scores, and Combined Capacity Potential.</p>
       <img src="images/histogram.gif">
-      <h3 id="choose">How do I choose a site based on?</h3>
-
-      <p id="city"><b>Find sites within my city</b></p>
-      <ol>
-        <li>To focus the map on your city of interest, type your city in the
-          search bar, located in the bottom left corner of the map or zoom
-          into your city on the map.</li>
-        <li>Open the City widget. Click "Search in 87 Categories." Type your
-          city in the search bar.</li>
-        <li> Once it appears in the list, click the check box to the left.
-          Click Apply in the upper-left corner of the widget.</li>
-      </ol>
-      <p>Now, only eligible sites within your city are shown on the map.
-        Other widgets will reflect this filter. You can now see the
-        distribution of other available datasets for sites located only in
-        your city. Because filters are added cumulatively, making a
-        selection in an additional widget will further refine the selected
-        sites.</p>
-      <p>To undo your selection, click “Unlock” in the widget.</p>
-      <img class="tutorialImg" src="images/sites_by_city.gif"
-        onclick="openModal();currentSlide(6)">
-
-      <p id="cpa"><b>Find sites within service territory of the Clean Power
-          Alliance (CPA)</b></p>
-      <ol>
-        <li>Scroll to and open the "CPA Territory" widget.</li>
-        <li>Eligible sites are divided into two categories: true where the
-          site is located within CPA territory, and false where it is
-          outside CPA territory.</li>
-        <li>Click "true." Now, only eligible sites within CPA territory are
-          shown on the map. Filtering with additional widgets will further
-          refine your selected sites.</li>
-      </ol>
-      <p>To undo this step, click "All" within the CPA Territory widget.</p>
-      <img class="tutorialImg" src="images/cpa.gif"
-        onclick="openModal();currentSlide(7)">
-
-      <p id="capacity"><b>Find sites with sufficient circuit capacity</b>
-      </p>
-      <ol>
-        <li>Scroll to and open the "Sufficient Circuit Capacity" widget.
-        </li>
-        <li>Eligible sites are divided into two cateogires: true where the
-          site has sufficient circuit capacity, and false where it does not.
-        </li>
-        <li>Click "true." Now, only eligible sites with sufficient circuit
-          capacity are shown on the map. Filtering with additional widgets
-          will further refine your selected sites.</li>
-      </ol>
-      <p>To undo this step, click "All" within the Sufficient Circuit
-        Capacity widget.</p>
-      <img class="tutorialImg" src="images/capacity.gif"
-        onclick="openModal();currentSlide(8)">
-
-      <p id="highest"><b>Find sites with the highest combined potential
-          generation capacity (MW)</b></p>
-      <ol>
-        <li>Scroll to and open the Combined Capacity Potential (MW) widget.
-        </li>
-        <li>A histogram shows the distribution of combined capacity
-          potential (MW) in each eligible site shown on the map.</li>
-        <li>Click on the histogram and two range bars appear. Drag the bars
-          to capture the highest range of values or the values you are most
-          interested in.</li>
-        <li>Now, only eligible sites with a combined capacity potential
-          within the range you have set in the histogram are available.
-          Filtering with additional widgets will further refine your
-          selected sites.</li>
-      </ol>
-      <p>To undo this step, click "Clear" within the Combined Capacity
-        Potential widget. To see a histogram of just your selected values,
-        click "Zoom."</p>
-      <img class="tutorialImg" src="images/highest.gif"
-        onclick="openModal();currentSlide(9)">
-
-      <p id="dac"><b>Find sites within DAC Census Tracts</b></p>
-      <ol>
-        <li>Go to the legend on the left side of the map. Click the check
-          box next to "DAC Census Tracts." This layer is provided as an
-          overview of the DAC Census Tracts in Los Angeles County.</li>
-        <li>Scroll to and open the "CalEnviroscreen 3.0 Scores" widget. This
-          widget filters eligible sites based on the CalEnviroscreen score
-          of the census tract it is located within.</li>
-        <li>Click the histogram and two range bars appear. Drag the bars to
-          capture the eligible sites with a CalEnviroscreen score between 75
-          and 100. The eligible sites now overlap with the DAC Census Tract
-          layer available in the legend.</li>
-        <li>Turn off the "DAC Census Tracts" layer. Click the rain drop
-          above the histogram to apply the color style. Now only eligible
-          sites located in a census tract with a CalEnviroscreen score
-          between 75 and 100 are available and colored gradiently by score.
-          Filtering with additional widgets will further refine your
-          selected sites.</li>
-      </ol>
-      <p>To undo this step, click "Clear" within the CalEnviroscreen 3.0
-        Scores widget. Click the raindrop to undo the color style.</p>
-      <img class="tutorialImg" src="images/dac.gif"
-        onclick="openModal();currentSlide(10)">
-
-      <p id="pop"><b>Find sites where the most people live</b></p>
-      <ol>
-        <li>Scroll down to the "Local Population Offset" widget and open it.
-        </li>
-        <li>A histogram shows the distribution of total population within
-          each eligible site.</li>
-        <li>Click on the histogram and two range bars appear. Drag the bars
-          to capture the highest range of population or the range you are
-          most interested in.</li>
-        <li>Now, only eligible sites with a population within the range
-          you've set are available. Filtering with additional widgets will
-          further refine your selected sites.</li>
-      </ol>
-      <p>To undo this step, click "Clear" within the Local Population Offset
-        widget. To see a histogram of just the sites you've selected, click
-        "Zoom."</p>
-      <img class="tutorialImg" src="images/pop.gif"
-        onclick="openModal();currentSlide(11)">
-
-      <p id="rent"><b>Find sites where the most people are renters</b></p>
-      <ol>
-        <li>Go to the legend on the left side of the map. Click the check
-          box next to the "Housing Attribute Data" layer. This layer is
-          provided as an overview of the percentage of renters in each
-          census tract.</li>
-        <li>Scroll to and open the "Local Renter Household Offset" widget.
-          This widget filters eligible sites based on the percentage of
-          renters in the census tract it is located within.</li>
-        <li>Click the histogram and two range bars appear. Drag the bars to
-          capture the eligible sites within the highest range of percent
-          renters.</li>
-        <li>Now, only eligible sites with a percentage of renters within the
-          range you have selected are visible on the map. Filtering with
-          additional widgets will further refine your selected sites.</li>
-      </ol>
-      <p>To undo this step, click "Clear" within the Local Renter Househoold
-        Offset widget. Too see a histogram of just the sites you've
-        selected, click "Zoom."</p>
-      <img class="tutorialImg" src="images/rent.gif"
-        onclick="openModal();currentSlide(12)">
 
       <h3 id="trouble">Troubleshooting</h3>
 
@@ -430,51 +280,6 @@
               widget</figcaption>
             <img src="images/apply_color.gif">
           </figure>
-          <figure class="mySlides">
-            <figcaption id="caption"><span class="number">6</span>Find eligible
-              sites by
-              city</figcaption>
-            <img src="images/sites_by_city.gif">
-          </figure>
-          <figure class="mySlides">
-            <figcaption id="caption"><span class="number">7</span>Find eligible
-              within CPA
-              Territory</figcaption>
-            <img src="images/cpa.gif">
-          </figure>
-          <figure class="mySlides">
-            <figcaption id="caption"><span class="number">8</span>Find eligible
-              sites by
-              sufficient circuit capacity</figcaption>
-            <img src="images/capacity.gif">
-          </figure>
-          <figure class="mySlides">
-            <figcaption id="caption"><span class="number">9</span>Find eligible
-              sites with
-              the highest combined generation capacity</figcaption>
-            <img src="images/highest.gif">
-          </figure>
-          <figure class="mySlides">
-            <figcaption id="caption"><span class="number">10</span>Find eligible
-              sites
-              within DAC Census Tracts</figcaption>
-            <img src="images/dac.gif">
-          </figure>
-          <figure class="mySlides">
-            <figcaption id="caption"><span class="number">11</span>Find eligible
-              sites
-              located in census tracts with the highest population</figcaption>
-            <img src="images/pop.gif">
-          </figure>
-          <figure class="mySlides">
-            <figcaption>
-              <figcaption id="caption"><span class="number">12</span>Find
-                eligible sites
-                located in census tract with the highest percentage of renters
-              </figcaption>
-              <img src="images/rent.gif">
-          </figure>
-
 
 
           <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
@@ -496,27 +301,6 @@
 
             <img class="demo cursor" src="images/apply_color.gif"
               onclick="currentSlide(5)">
-
-            <img class="demo cursor" src="images/sites_by_city.gif"
-              onclick="currentSlide(6)">
-
-            <img class="demo cursor" src="images/cpa.gif"
-              onclick="currentSlide(7)">
-
-            <img class="demo cursor" src="images/capacity.gif"
-              onclick="currentSlide(8)">
-
-            <img class="demo cursor" src="images/highest.gif"
-              onclick="currentSlide(9)">
-
-            <img class="demo cursor" src="images/dac.gif"
-              onclick="currentSlide(10)">
-
-            <img class="demo cursor" src="images/pop.gif"
-              onclick="currentSlide(11)">
-
-            <img class="demo cursor" src="images/rent.gif"
-              onclick="currentSlide(12)">
           </div><!-- end modal images-->
 
         </div> <!-- end modal content-->
