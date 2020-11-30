@@ -1,0 +1,355 @@
+figure.image-effect {
+	font-family: Overpass, sans-serif;
+	position: relative;
+	/* float: right; */
+	overflow: hidden;
+	margin: 10px 0 10px 10px;
+	width: 62%;
+	height: 30vh;
+	color: #ffffff;
+	text-align: center;
+	font-size: 1.2em;
+	background-color: #000000;
+	animation: slideRight .78s linear;
+	backface-visibility: hidden;
+}
+
+@media screen and (max-width: 1300px) and (min-width:500px) {
+	figure.image-effect {
+		font-size: .8em;
+	}
+}
+
+@media screen and (max-width: 500px) {
+	figure.image-effect {
+		font-size: 0;
+	}
+}
+
+figure.image-effect *,
+figure.image-effect *:before,
+figure.image-effect *:after {
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	-webkit-transition: all 0.55s ease;
+	transition: all 0.55s ease;
+}
+
+
+
+
+figure.image-effect img {
+	max-width: 100%;
+	backface-visibility: hidden;
+	vertical-align: top;
+	opacity: 0.9;
+}
+
+figure.image-effect .title {
+	position: absolute;
+	top: 58%;
+	left: 25px;
+	padding: 5px 10px 10px;
+	text-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+}
+
+figure.image-effect .title:before,
+figure.image-effect .title:after {
+	height: 2px;
+	width: 2000px;
+	position: absolute;
+	content: '';
+	background-color: #ffffff;
+}
+
+figure.image-effect .title:before {
+	top: 0;
+	left: 10px;
+	-webkit-transform: translateX(100%);
+	transform: translateX(100%);
+}
+
+figure.image-effect .title:after {
+	bottom: 0;
+	right: 10px;
+	-webkit-transform: translateX(-100%);
+	transform: translateX(-100%);
+}
+
+figure.image-effect .title div:before,
+figure.image-effect .title div:after {
+	width: 2px;
+	height: 30vh;
+	position: absolute;
+	content: '';
+	background-color: #ffffff;
+}
+
+figure.image-effect .title div:before {
+	top: 10px;
+	right: 0;
+	-webkit-transform: translateY(100%);
+	transform: translateY(100%);
+}
+
+figure.image-effect .title div:after {
+	bottom: 10px;
+	left: 0;
+	-webkit-transform: translateY(-100%);
+	transform: translateY(-100%);
+}
+
+figure.image-effect h2,
+figure.image-effect h4 {
+	margin: 0;
+	text-transform: uppercase;
+}
+
+figure.image-effect h2 {
+	font-weight: 400;
+}
+
+figure.image-effect h4 {
+	display: block;
+	font-weight: 700;
+	background-color: #ffffff;
+	padding: 5px 10px;
+	color: #000000;
+}
+
+figure.image-effect figcaption {
+	position: absolute;
+	bottom: 42%;
+	left: 25px;
+	text-align: left;
+	opacity: 0;
+	padding: 5px 60px 5px 10px;
+	font-size: 0.8em;
+	font-weight: 500;
+	letter-spacing: 1.5px;
+}
+
+figure.image-effect figcaption p {
+	margin: 0;
+}
+
+figure.image-effect a {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+}
+
+figure.image-effect:hover img,
+figure.image-effect.hover img {
+	zoom: 1;
+	filter: alpha(opacity=45);
+	-webkit-opacity: 0.45;
+	opacity: 0.45;
+}
+
+figure.image-effect:hover .title:before,
+figure.image-effect.hover .title:before,
+figure.image-effect:hover .title:after,
+figure.image-effect.hover .title:after,
+figure.image-effect:hover .title div:before,
+figure.image-effect.hover .title div:before,
+figure.image-effect:hover .title div:after,
+figure.image-effect.hover .title div:after {
+	-webkit-transform: translate(0, 0);
+	transform: translate(0, 0);
+}
+
+figure.image-effect:hover .title:before,
+figure.image-effect.hover .title:before,
+figure.image-effect:hover .title:after,
+figure.image-effect.hover .title:after {
+	-webkit-transition-delay: 0.15s;
+	transition-delay: 0.15s;
+}
+
+figure.image-effect:hover figcaption,
+figure.image-effect.hover figcaption {
+	opacity: 1;
+	-webkit-transition-delay: 0.2s;
+	transition-delay: 0.2s;
+}
+
+figure.image-effect-2 {
+	font-family: Overpass, sans-serif;
+	position: relative;
+	/* float: left; */
+	overflow: hidden;
+	margin: 10px 10px 10px 0;
+	width: 62%;
+	height: 30vh;
+	color: #ffffff;
+	text-align: center;
+	font-size: 1.2em;
+	background-color: #000000;
+	animation: slideLeft .8s linear;
+	backface-visibility: hidden;
+
+}
+
+@media screen and (max-width: 1300px) and (min-width:500px) {
+	figure.image-effect-2 {
+		font-size: .8em;
+	}
+}
+
+@media screen and (max-width: 500px) {
+	figure.image-effect-2 {
+		font-size: 0;
+	}
+}
+
+figure.image-effect-2 *,
+figure.image-effect-2 *:before,
+figure.image-effect-2 *:after {
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	-webkit-transition: all 0.55s ease;
+	transition: all 0.55s ease;
+}
+
+
+
+figure.image-effect-2 img {
+	max-width: 100%;
+	backface-visibility: hidden;
+	vertical-align: top;
+	opacity: 0.9;
+}
+
+figure.image-effect-2 .title {
+	position: absolute;
+	top: 58%;
+	right: 25px;
+	padding: 5px 10px 10px;
+	text-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+}
+
+figure.image-effect-2 .title:before,
+figure.image-effect-2 .title:after {
+	height: 2px;
+	width: 2000px;
+	position: absolute;
+	content: '';
+	background-color: #ffffff;
+}
+
+figure.image-effect-2 .title:before {
+	top: 0;
+	left: 10px;
+	-webkit-transform: translateX(100%);
+	transform: translateX(100%);
+}
+
+figure.image-effect-2 .title:after {
+	bottom: 0;
+	right: 10px;
+	-webkit-transform: translateX(-100%);
+	transform: translateX(-100%);
+}
+
+figure.image-effect-2 .title div:before,
+figure.image-effect-2 .title div:after {
+	width: 2px;
+	height: 30vh;
+	position: absolute;
+	content: '';
+	background-color: #ffffff;
+}
+
+figure.image-effect-2 .title div:before {
+	top: 10px;
+	right: 0;
+	-webkit-transform: translateY(100%);
+	transform: translateY(100%);
+}
+
+figure.image-effect-2 .title div:after {
+	bottom: 10px;
+	left: 0;
+	-webkit-transform: translateY(-100%);
+	transform: translateY(-100%);
+}
+
+figure.image-effect-2 h2,
+figure.image-effect-2 h4 {
+	margin: 0;
+	text-transform: uppercase;
+}
+
+figure.image-effect-2 h2 {
+	font-weight: 400;
+}
+
+figure.image-effect-2 h4 {
+	display: block;
+	font-weight: 700;
+	background-color: #ffffff;
+	padding: 5px 10px;
+	color: #000000;
+}
+
+figure.image-effect-2 figcaption {
+	position: absolute;
+	bottom: 14%;
+	right: 155px;
+	text-align: right;
+	opacity: 0;
+	padding: 5px 60px 5px 60px;
+	font-size: 0.8em;
+	font-weight: 500;
+	letter-spacing: 1.5px;
+}
+
+figure.image-effect-2 figcaption p {
+	margin: 0px -3px -7px 0;
+}
+
+figure.image-effect-2 a {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+}
+
+figure.image-effect-2:hover img,
+figure.image-effect-2.hover img {
+	zoom: 1;
+	filter: alpha(opacity=45);
+	-webkit-opacity: 0.45;
+	opacity: 0.45;
+}
+
+figure.image-effect-2:hover .title:before,
+figure.image-effect-2.hover .title:before,
+figure.image-effect-2:hover .title:after,
+figure.image-effect-2.hover .title:after,
+figure.image-effect-2:hover .title div:before,
+figure.image-effect-2.hover .title div:before,
+figure.image-effect-2:hover .title div:after,
+figure.image-effect-2.hover .title div:after {
+	-webkit-transform: translate(0, 0);
+	transform: translate(0, 0);
+}
+
+figure.image-effect-2:hover .title:before,
+figure.image-effect-2.hover .title:before,
+figure.image-effect-2:hover .title:after,
+figure.image-effect-2.hover .title:after {
+	-webkit-transition-delay: 0.15s;
+	transition-delay: 0.15s;
+}
+
+figure.image-effect-2:hover figcaption,
+figure.image-effect-2.hover figcaption {
+	opacity: 1;
+	-webkit-transition-delay: 0.2s;
+	transition-delay: 0.2s;
+}

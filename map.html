@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <title>Map | LA Solar Prioritization Tool</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta name="description"
+      content="LA Solar Prioritization Tool is a first-of-its-kind interactive platform for mapping net solar potential in LA County. Produced by the California Center for Sustainable Communities at UCLA.">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Assistant:wght@800&family=Overpass:ital,wght@0,400;0,700;0,900;1,400;1,700&display=swap"
+      rel="stylesheet">
+    <link href="css/styles.css" rel="stylesheet">
+
+  <body>
+    <nav id="main-nav" role="navigation">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="methods.html">Methods</a></li>
+        <li><a href="tutorial.html">Tutorial</a></li>
+        <li><a href="map.html">Solar Map</a></li>
+        <li><a href="https://energyatlas.ucla.edu">Energy Atlas</a></li>
+        <li><a href="mailto:ccsc@ioes.ucla.edu">Contact</a></li>
+      </ul>
+    </nav>
+
+    <header role="banner">
+      <h1>Solar Map</h1>
+      <div class="tutorial-links">
+      <h2>Tutorial Quick Link</h2>
+      <p><b>Note</b>: Links go to the <a href="tutorial.html">tutorial page</a>.
+      </p>
+      <ul>
+        <li><a href="tutorial.html#city" role="button">Find sites within my
+            city</a></li>
+        <li><a href="tutorial.html#cpa" role="button">Find sites within Clean
+            Power Alliance Territory</a></li>
+        <li><a href="tutorial.html#capacity" role="button">Find sites with
+            sufficient circuit capacity</a></li>
+        <li><a href="tutorial.html#highest" role="button">Find sites with the
+            highest combined potential generation capacity</a></li>
+        <li><a href="tutorial.html#dac" role="button">Find sites within DAC
+            Census Tracts</a></li>
+        <li><a href="tutorial.html#pop" role="button">Find sites with the most
+            people</a></li>
+        <li><a href="tutorial.html#rent" role="button">Find sites with the most
+            renters</a></li>
+      </ul>
+    </div>
+    </header>
+
+    <main role="main">
+
+      <p class="lede">Where are opportunities to install community
+        solar?</p>
+      <p>Find eligible sites for community
+        solar in your city with this map tool.</p>
+      <p>Panels on the right side of the map help
+        filter and narrow locations based on criteria important to your solar
+        installation site.</p>
+
+      <p><a href="#map" role="button">Go to Map</a></p>
+
+      <p>Tutorials are provided below to help you get started:</p>
+
+      <button class="accordion">Find sites within my city</button>
+      <div class="panel">
+      
+        <ol>
+          <li>To focus the map on your city of interest, type your city in the
+            search bar, located in the bottom left corner of the map or zoom
+            into your city on the map.</li>
+          <li>Open the City widget. Click "Search in 87 Categories." Type your
+            city in the search bar.</li>
+          <li> Once it appears in the list, click the check box to the left.
+            Click Apply in the upper-left corner of the widget.</li>
+        </ol>
+        <p>Now, only eligible sites within your city are shown on the map.
+          Other widgets will reflect this filter. You can now see the
+          distribution of other available datasets for sites located only in
+          your city. Because filters are added cumulatively, making a
+          selection in an additional widget will further refine the selected
+          sites.</p>
+        <p>To undo your selection, click “Unlock” in the widget.</p>
+        <img src="images/sites_by_city.gif">
+       
+      </div>
+
+      <button class="accordion">Find sites within Clean Power Alliance (CPA)
+        Territory</button>
+      <div class="panel">
+       
+        <ol>
+          <li>Scroll to and open the "CPA Territory" widget.</li>
+          <li>Eligible sites are divided into two categories: true where the
+            site is located within CPA territory, and false where it is
+            outside CPA territory.</li>
+          <li>Click "true." Now, only eligible sites within CPA territory are
+            shown on the map. Filtering with additional widgets will further
+            refine your selected sites.</li>
+        </ol>
+        <p>To undo this step, click "All" within the CPA Territory widget.</p>
+        <img src="images/cpa.gif">
+
+      </div>
+
+      <button class="accordion">Find sites sufficient circuit capacity</button>
+      <div class="panel">
+
+        <ol>
+          <li>Scroll to and open the "Sufficient Circuit Capacity" widget.
+          </li>
+          <li>Eligible sites are divided into two cateogires: true where the
+            site has sufficient circuit capacity, and false where it does not.
+          </li>
+          <li>Click "true." Now, only eligible sites with sufficient circuit
+            capacity are shown on the map. Filtering with additional widgets
+            will further refine your selected sites.</li>
+        </ol>
+        <p>To undo this step, click "All" within the Sufficient Circuit
+          Capacity widget.</p>
+        <img src="images/capacity.gif">
+       
+      </div>
+
+      <button class="accordion">Find sites with the highest Combined Capacity
+        Potential (MW)</button>
+      <div class="panel">
+       
+        <ol>
+          <li>Scroll to and open the Combined Capacity Potential (MW) widget.
+          </li>
+          <li>A histogram shows the distribution of combined capacity
+            potential (MW) in each eligible site shown on the map.</li>
+          <li>Click on the histogram and two range bars appear. Drag the bars
+            to capture the highest range of values or the values you are most
+            interested in.</li>
+          <li>Now, only eligible sites with a combined capacity potential
+            within the range you have set in the histogram are available.
+            Filtering with additional widgets will further refine your
+            selected sites.</li>
+        </ol>
+        <p>To undo this step, click "Clear" within the Combined Capacity
+          Potential widget. To see a histogram of just your selected values,
+          click "Zoom."</p>
+        <img src="images/highest.gif">
+       
+      </div>
+
+      <button class="accordion">Find sites within DAC census tracts</button>
+      <div class="panel">
+      
+        <ol>
+          <li>Go to the legend on the left side of the map. Click the check
+            box next to "DAC Census Tracts." This layer is provided as an
+            overview of the DAC Census Tracts in Los Angeles County.</li>
+          <li>Scroll to and open the "CalEnviroscreen 3.0 Scores" widget. This
+            widget filters eligible sites based on the CalEnviroscreen score
+            of the census tract it is located within.</li>
+          <li>Click the histogram and two range bars appear. Drag the bars to
+            capture the eligible sites with a CalEnviroscreen score between 75
+            and 100. The eligible sites now overlap with the DAC Census Tract
+            layer available in the legend.</li>
+          <li>Turn off the "DAC Census Tracts" layer. Click the rain drop
+            above the histogram to apply the color style. Now only eligible
+            sites located in a census tract with a CalEnviroscreen score
+            between 75 and 100 are available and colored gradiently by score.
+            Filtering with additional widgets will further refine your
+            selected sites.</li>
+        </ol>
+        <p>To undo this step, click "Clear" within the CalEnviroscreen 3.0
+          Scores widget. Click the raindrop to undo the color style.</p>
+        <img src="images/dac.gif">
+       
+      </div>
+
+      <button class="accordion">Find sites with the most people</button>
+      <div class="panel">
+       
+        <ol>
+          <li>Scroll down to the "Local Population Offset" widget and open it.
+          </li>
+          <li>A histogram shows the distribution of total population within
+            each eligible site.</li>
+          <li>Click on the histogram and two range bars appear. Drag the bars
+            to capture the highest range of population or the range you are
+            most interested in.</li>
+          <li>Now, only eligible sites with a population within the range
+            you've set are available. Filtering with additional widgets will
+            further refine your selected sites.</li>
+        </ol>
+        <p>To undo this step, click "Clear" within the Local Population Offset
+          widget. To see a histogram of just the sites you've selected, click
+          "Zoom."</p>
+        <img src="images/pop.gif">
+       
+      </div>
+
+      <button class="accordion">Find sites with the most renters</button>
+      <div class="panel">
+       
+        <ol>
+          <li>Go to the legend on the left side of the map. Click the check
+            box next to the "Housing Attribute Data" layer. This layer is
+            provided as an overview of the percentage of renters in each
+            census tract.</li>
+          <li>Scroll to and open the "Local Renter Household Offset" widget.
+            This widget filters eligible sites based on the percentage of
+            renters in the census tract it is located within.</li>
+          <li>Click the histogram and two range bars appear. Drag the bars to
+            capture the eligible sites within the highest range of percent
+            renters.</li>
+          <li>Now, only eligible sites with a percentage of renters within the
+            range you have selected are visible on the map. Filtering with
+            additional widgets will further refine your selected sites.</li>
+        </ol>
+        <p>To undo this step, click "Clear" within the Local Renter Househoold
+          Offset widget. Too see a histogram of just the sites you've
+          selected, click "Zoom."</p>
+        <img src="images/rent.gif">
+      
+      </div>
+
+
+
+    </main>
+
+
+
+    <iframe class="map-wrapper" id="map"
+      src="https://ccsc-ucla.carto.com/builder/d02c9204-891a-440a-b021-7df2ebcdb976/embed"
+      allowfullscreen webkitallowfullscreen mozallowfullscreen oallowfullscreen
+      msallowfullscreen title="Solar Tool Carto Map"></iframe>
+
+    <script src="js/jquery-3.5.1.min.js"></script>
+    <script src="js/scripts.js"></script>
+
+  </body>
+
+</html>

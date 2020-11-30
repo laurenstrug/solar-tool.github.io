@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <title>Tutorial | LA Solar Prioritization Tool</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta name="description"
+      content="LA Solar Prioritization Tool is a first-of-its-kind interactive platform for mapping net solar potential in LA County.">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Assistant:wght@800&family=Overpass:ital,wght@0,400;0,700;0,900;1,400;1,700&display=swap"
+      rel="stylesheet">
+    <link href="css/styles.css" rel="stylesheet">
+
+  <body>
+    <nav id="main-nav" role="navigation">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="methods.html">Methods</a></li>
+        <li><a href="tutorial.html">Tutorial</a></li>
+        <li><a href="map.html">Solar Map</a></li>
+        <li><a href="https://energyatlas.ucla.edu">Energy Atlas</a></li>
+        <li><a href="mailto:ccsc@ioes.ucla.edu">Contact</a></li>
+      </ul>
+    </nav>
+
+    <header role="banner">
+      <h1>Tutorial</h1>
+     
+    </header>
+
+    <nav class="toc">
+      <h3>Table of Contents</h3>
+      <ul>
+        <li><a href="#overview">Overview</a></li>
+        <li><a href="#layers">Available Map Layers</a></li>
+        <li><a href="#map">Using the Map</a></li>
+        <ul>
+          <li><a href="#zoom">Zooming in</a></li>
+          <li><a href="#widget">Using a widget</a></li>
+          <li><a href="#color">Applying color</a></li>
+          <li><a href="#widgettype">Widget types</a></li>
+        </ul>
+        <li><a href="#choose">How do I choose a site based on...?</a></li>
+        <ul>
+          <li><a href="#city">Within my city</a></li>
+          <li><a href="#cpa">Within CPA Territory</a></li>
+          <li><a href="#capacity">Sufficient circuit capacity</a></li>
+          <li><a href="#highest">Highest potential generation capacity</a>
+          </li>
+          <li><a href="#dac">Within DAC Census Tracts</a></li>
+          <li><a href="#pop">Where more people live</a></li>
+          <li><a href="#rent">Where more people are renters</a></li>
+        </ul>
+        <li><a href="#trouble">Troubleshooting</a></li>
+      </ul>
+    </nav>
+   
+
+    <main role="main">
+
+
+      <h2 id="overview">Overview</h2>
+
+      <p>
+        When v2.0 of the solar prioritization tool loads, two elements
+        appear on the screen: a map panel and a single primary widget panel
+        (right side).
+        A custom basemap has been developed using Mapbox which highlights
+        the administrative boundary of Los Angeles County, grays out the
+
+        service territory of
+        LADWP <sup>1</sup> and
+        restricts reference annotation text elements to only those
+        geographic points of interest most
+        relevant to this project.</p>
+
+
+
+
+      <figure>
+        <img class="tutorialImg" src="images/overview.png"
+          onclick="openModal();currentSlide(1)">
+        <figcaption>Hover your cursor over an image, click to enlarge.
+        </figcaption>
+      </figure>
+      <small>1. LADWP is grayed out because key data inputs about grid
+        distribution circuit
+        capacities were unavailable.</small>
+      <hr>
+      <p class="lede">After the solar prioritization tool loads, the map is
+        divided into two panels.</p>
+      <ol>
+        <li>A Map Panel</li>
+        <li>A Widget Panel</li>
+      </ol>
+      <h3>Map Panel</h3>
+      <p>
+        Within the map panel there are a series of interactive elements
+        which can be used to explore different sources of geographic
+        information as well as adjust the zoom level or search for
+        geographic locations of interest. These elements are highlighted in
+        the following image.
+      </p>
+
+      <img class="tutorialImg" src="images/map_panel.png"
+        onclick="openModal();currentSlide(2)">
+
+      <h3>Widget Panel</h3>
+      <p>
+        Within the widget panel are interactive selection tools, referred to
+        as widgets, that allow users to iteratively compose filters which
+        are applied to the layer of eligible sites. These selection tools
+        (widgets) range from histograms, to categorical identity filters, to
+        binary conditions. The features and suggested patterns of use of
+        these tools shall be discussed in subsequent sections.
+      </p>
+      <p>
+        Think of the widgets as building blocks. The widget filters that can
+        be combined to meet the requirements of your site selection. Each
+        tutorial detailed below gives an example of suggested use for each
+        widget. Combine tutorials to narrow down your eligible sites.
+      </p>
+      <img class="tutorialImg" src="images/widget_panel.png"
+        onclick="openModal();currentSlide(3)">
+
+      <h3>Metadata Links</h3>
+      <p>
+        In addition to these map controls and the widget panels the app also
+        has links to important metadata - such as the location of this page,
+        as well as the CCSC CARTO profile. These links are highlighted in
+        the screenshot below.
+      </p>
+      <img class="tutorialImg" src="images/metadata_links.png"
+        onclick="openModal();currentSlide(4)">
+
+      <h3 id="layers">Available Map Layers</h3>
+
+      <p><b>Eligible Sites</b></p>
+      <p>
+        Using the layer selection controls, the user can easily toggle on or
+        off different geographic data layers. The primary layer, whose
+        attributes are linked to all of the interactive selection widgets,
+        is titled "Eligible Sites" within the layer control panel. This
+        layer corresponds to institutional sites considered eligible for
+        potential selection for the location of a community scale solar PV
+        generation system that could potentially be used as the anchor
+        location for a virtual net metering program. A detailed discussion
+        of how these sites were selected and their corresponding attributes
+        were calculated is provided in the following methodology section. By
+        default these sites are color coded according to the estimated
+        combined solar nameplate capacity potential from the available
+        on-site rooftop and parking lot carport areas (MW-AC).
+      </p>
+      <p><b>City Boundaries</b></p>
+      <p>
+        Two boundary layers are included to provide geographic context for
+        the focused search for eligible sites within a particular region of
+        interest. The first of these is titled "City Boundaries" and
+        contains the borders of Los Angeles County's 88 cities as well as in
+        unincorporated areas.
+      </p>
+      <p><b>Zip Code Boundaries</b></p>
+      <p>
+        The second contextual boundary layer corresponds to all of the zip
+        codes contained within Los Angeles County. Zip Codes can be a
+        convenient alternative to cities as detailed geographic identifiers,
+        particularly within the county's sizable unincorporated areas.
+      </p>
+      <p><b>Circuit Group Data</b></p>
+      <p>
+        In addition to the two previous boundary layers, two additional
+        sources of contextual information are provided in the map panel. The
+        first of these corresponds to collections of Census Block Groups
+        which are described by the title "Circuit Groups." According to the
+        methodology used to develop this analysis, a circuit group is a
+        collection of census block groups which are associated with the same
+        distribution circuit - with associations determined on the basis of
+        geographic proximity. These circuit groups reflect the most granular
+        spatial unit at which residential energy consumption data, sourced
+        from the UCLA Energy Atlas, have been aggregated to generate
+        estimates of annual electricity use per capita and per household
+        throughout the region. Illustrated in this layer, are estimates of
+        the total annual electricity consumption per renter household within
+        each circuit group (kWh/year).
+      </p>
+      <p><b>Block Group Data</b></p>
+      <p>
+        The block group layer plots the percentage of the population that
+        are renters within each Block Group in Los Angeles County. This
+        information provides useful context to the energy consumption per
+        household data described previously for the circuit groups and can
+        be useful for identifying, at the macro scale, cities or zip codes
+        that should be focus areas for the exploration of eligible sites.
+      </p>
+      <h3 id="map">Using the Map</h3>
+
+      <p id="zoom"><b>How to zoom in</b></p>
+      <p>
+        Zoom into the map using the + and - controls in the bottom left
+        corner of the tool. As you zoom into the map the count of eligible
+        sites decreases. Zooming in on the map filters the data, which is
+        reflected in the eligible site count, cumulative solar capacity, and
+        histogram widgets.
+      </p>
+      <p id="widget"><b>Using a widget</b></p>
+      <p>
+        To open a widget, hover your cursor over the three vertical dots and
+        click the green "Toggle Widget" switch.
+      </p>
+      <img src="images/open_widget.gif">
+
+      <p>Think of the different widgets on the sidebar as building blocks.
+        They can be combined and explored based on your custom requirements
+        for selecting a site. </p>
+      <p id="color"><b>Applying color style to eligible sites</b></p>
+      <p>Each widget has the option to apply a color style. Color styles are
+        helpful to identify how sites compare to each other with respect to
+        the numeric values available in the histogram widgets. Click the
+        water droplet on the left side of any widget and an auto style will
+        be applied to the Eligible Site layer.</p>
+      <img class="tutorialImg" src="images/apply_color.gif"
+        onclick="openModal();currentSlide(5)">
+
+      <p id="widgettype"><b>Category widget versus histogram widgets</b></p>
+      <p>Category widgets allow you to filter eligible sites based on a
+        data-defined categories. For example: city, zip code, and circuit
+        name. To filter with a category widget: open the widget and click on
+        a category OR search for a category, click the check box, and click
+        apply.</p>
+      <p>Histogram widgets show the distribution of a numerical data source
+        across the eligible sites. For example: 15% Penetration Capacity,
+        CalEnviroScreen 3.0 Scores, and Combined Capacity Potential.</p>
+      <img src="images/histogram.gif">
+      <h3 id="choose">How do I choose a site based on?</h3>
+
+      <p id="city"><b>Find sites within my city</b></p>
+      <ol>
+        <li>To focus the map on your city of interest, type your city in the
+          search bar, located in the bottom left corner of the map or zoom
+          into your city on the map.</li>
+        <li>Open the City widget. Click "Search in 87 Categories." Type your
+          city in the search bar.</li>
+        <li> Once it appears in the list, click the check box to the left.
+          Click Apply in the upper-left corner of the widget.</li>
+      </ol>
+      <p>Now, only eligible sites within your city are shown on the map.
+        Other widgets will reflect this filter. You can now see the
+        distribution of other available datasets for sites located only in
+        your city. Because filters are added cumulatively, making a
+        selection in an additional widget will further refine the selected
+        sites.</p>
+      <p>To undo your selection, click “Unlock” in the widget.</p>
+      <img class="tutorialImg" src="images/sites_by_city.gif"
+        onclick="openModal();currentSlide(6)">
+
+      <p id="cpa"><b>Find sites within service territory of the Clean Power
+          Alliance (CPA)</b></p>
+      <ol>
+        <li>Scroll to and open the "CPA Territory" widget.</li>
+        <li>Eligible sites are divided into two categories: true where the
+          site is located within CPA territory, and false where it is
+          outside CPA territory.</li>
+        <li>Click "true." Now, only eligible sites within CPA territory are
+          shown on the map. Filtering with additional widgets will further
+          refine your selected sites.</li>
+      </ol>
+      <p>To undo this step, click "All" within the CPA Territory widget.</p>
+      <img class="tutorialImg" src="images/cpa.gif"
+        onclick="openModal();currentSlide(7)">
+
+      <p id="capacity"><b>Find sites with sufficient circuit capacity</b>
+      </p>
+      <ol>
+        <li>Scroll to and open the "Sufficient Circuit Capacity" widget.
+        </li>
+        <li>Eligible sites are divided into two cateogires: true where the
+          site has sufficient circuit capacity, and false where it does not.
+        </li>
+        <li>Click "true." Now, only eligible sites with sufficient circuit
+          capacity are shown on the map. Filtering with additional widgets
+          will further refine your selected sites.</li>
+      </ol>
+      <p>To undo this step, click "All" within the Sufficient Circuit
+        Capacity widget.</p>
+      <img class="tutorialImg" src="images/capacity.gif"
+        onclick="openModal();currentSlide(8)">
+
+      <p id="highest"><b>Find sites with the highest combined potential
+          generation capacity (MW)</b></p>
+      <ol>
+        <li>Scroll to and open the Combined Capacity Potential (MW) widget.
+        </li>
+        <li>A histogram shows the distribution of combined capacity
+          potential (MW) in each eligible site shown on the map.</li>
+        <li>Click on the histogram and two range bars appear. Drag the bars
+          to capture the highest range of values or the values you are most
+          interested in.</li>
+        <li>Now, only eligible sites with a combined capacity potential
+          within the range you have set in the histogram are available.
+          Filtering with additional widgets will further refine your
+          selected sites.</li>
+      </ol>
+      <p>To undo this step, click "Clear" within the Combined Capacity
+        Potential widget. To see a histogram of just your selected values,
+        click "Zoom."</p>
+      <img class="tutorialImg" src="images/highest.gif"
+        onclick="openModal();currentSlide(9)">
+
+      <p id="dac"><b>Find sites within DAC Census Tracts</b></p>
+      <ol>
+        <li>Go to the legend on the left side of the map. Click the check
+          box next to "DAC Census Tracts." This layer is provided as an
+          overview of the DAC Census Tracts in Los Angeles County.</li>
+        <li>Scroll to and open the "CalEnviroscreen 3.0 Scores" widget. This
+          widget filters eligible sites based on the CalEnviroscreen score
+          of the census tract it is located within.</li>
+        <li>Click the histogram and two range bars appear. Drag the bars to
+          capture the eligible sites with a CalEnviroscreen score between 75
+          and 100. The eligible sites now overlap with the DAC Census Tract
+          layer available in the legend.</li>
+        <li>Turn off the "DAC Census Tracts" layer. Click the rain drop
+          above the histogram to apply the color style. Now only eligible
+          sites located in a census tract with a CalEnviroscreen score
+          between 75 and 100 are available and colored gradiently by score.
+          Filtering with additional widgets will further refine your
+          selected sites.</li>
+      </ol>
+      <p>To undo this step, click "Clear" within the CalEnviroscreen 3.0
+        Scores widget. Click the raindrop to undo the color style.</p>
+      <img class="tutorialImg" src="images/dac.gif"
+        onclick="openModal();currentSlide(10)">
+
+      <p id="pop"><b>Find sites where the most people live</b></p>
+      <ol>
+        <li>Scroll down to the "Local Population Offset" widget and open it.
+        </li>
+        <li>A histogram shows the distribution of total population within
+          each eligible site.</li>
+        <li>Click on the histogram and two range bars appear. Drag the bars
+          to capture the highest range of population or the range you are
+          most interested in.</li>
+        <li>Now, only eligible sites with a population within the range
+          you've set are available. Filtering with additional widgets will
+          further refine your selected sites.</li>
+      </ol>
+      <p>To undo this step, click "Clear" within the Local Population Offset
+        widget. To see a histogram of just the sites you've selected, click
+        "Zoom."</p>
+      <img class="tutorialImg" src="images/pop.gif"
+        onclick="openModal();currentSlide(11)">
+
+      <p id="rent"><b>Find sites where the most people are renters</b></p>
+      <ol>
+        <li>Go to the legend on the left side of the map. Click the check
+          box next to the "Housing Attribute Data" layer. This layer is
+          provided as an overview of the percentage of renters in each
+          census tract.</li>
+        <li>Scroll to and open the "Local Renter Household Offset" widget.
+          This widget filters eligible sites based on the percentage of
+          renters in the census tract it is located within.</li>
+        <li>Click the histogram and two range bars appear. Drag the bars to
+          capture the eligible sites within the highest range of percent
+          renters.</li>
+        <li>Now, only eligible sites with a percentage of renters within the
+          range you have selected are visible on the map. Filtering with
+          additional widgets will further refine your selected sites.</li>
+      </ol>
+      <p>To undo this step, click "Clear" within the Local Renter Househoold
+        Offset widget. Too see a histogram of just the sites you've
+        selected, click "Zoom."</p>
+      <img class="tutorialImg" src="images/rent.gif"
+        onclick="openModal();currentSlide(12)">
+
+      <h3 id="trouble">Troubleshooting</h3>
+
+      <p><b>Widget timed out</b></p>
+      <p>Occasionally, if the tool has been open in your browser for an
+        extended period of time, a widget will time out. A refresh button
+        becomes available in the top left corner of the widget. Click
+        refresh to resolve. </p>
+      <p><b>No Data Available</b></p>
+      <p>When you use a histogram type widget and click on the graph to make
+        a range selection, on the first click before you drag the range
+        selector bars, you might accidentally make a selection that doesn’t
+        include any sites. This will look like all other widgets graying out
+        and displaying a message that no data is available.</p>
+      <p>To solve this, scroll back to the histogram widget you had just
+        clicked. Drag the selector bars on the histogram apart until they
+        are selecting sites.</p>
+      <p><b>Refreshing or Clearing widgets to start over</b></p>
+
+
+
+      <div id="myModal" class="modal">
+        <span class="close cursor" onclick="closeModal()">&times;</span>
+
+        <div class="modal-content">
+          <figure class="mySlides">
+            <figcaption id="caption"><span class="number">1</span>Overview image
+              of tool
+            </figcaption>
+            <img src="images/overview.png">
+          </figure>
+          <figure class="mySlides">
+            <figcaption id="caption"><span class="number">2</span>Location of
+              the Map
+              Panel on the tool</figcaption>
+            <img src="images/map_panel.png">
+          </figure>
+          <figure class="mySlides">
+            <figcaption id="caption"><span class="number">3</span>Location of
+              Widget Panel
+              on the tool</figcaption>
+            <img src="images/widget_panel.png">
+          </figure>
+          <figure class="mySlides">
+            <figcaption id="caption"><span class="number">4</span>Location of
+              Metadata
+              Links on the tool</figcaption>
+            <img src="images/metadata_links.png">
+          </figure>
+          <figure class="mySlides">
+            <figcaption id="caption"><span class="number">5</span>How to apply
+              color on a
+              widget</figcaption>
+            <img src="images/apply_color.gif">
+          </figure>
+          <figure class="mySlides">
+            <figcaption id="caption"><span class="number">6</span>Find eligible
+              sites by
+              city</figcaption>
+            <img src="images/sites_by_city.gif">
+          </figure>
+          <figure class="mySlides">
+            <figcaption id="caption"><span class="number">7</span>Find eligible
+              within CPA
+              Territory</figcaption>
+            <img src="images/cpa.gif">
+          </figure>
+          <figure class="mySlides">
+            <figcaption id="caption"><span class="number">8</span>Find eligible
+              sites by
+              sufficient circuit capacity</figcaption>
+            <img src="images/capacity.gif">
+          </figure>
+          <figure class="mySlides">
+            <figcaption id="caption"><span class="number">9</span>Find eligible
+              sites with
+              the highest combined generation capacity</figcaption>
+            <img src="images/highest.gif">
+          </figure>
+          <figure class="mySlides">
+            <figcaption id="caption"><span class="number">10</span>Find eligible
+              sites
+              within DAC Census Tracts</figcaption>
+            <img src="images/dac.gif">
+          </figure>
+          <figure class="mySlides">
+            <figcaption id="caption"><span class="number">11</span>Find eligible
+              sites
+              located in census tracts with the highest population</figcaption>
+            <img src="images/pop.gif">
+          </figure>
+          <figure class="mySlides">
+            <figcaption>
+              <figcaption id="caption"><span class="number">12</span>Find
+                eligible sites
+                located in census tract with the highest percentage of renters
+              </figcaption>
+              <img src="images/rent.gif">
+          </figure>
+
+
+
+          <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+          <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+
+          <div class="modal-nav">
+            <img class="demo cursor" src="images/overview.png"
+              onclick="currentSlide(1)">
+
+            <img class="demo cursor" src="images/map_panel.png"
+              onclick="currentSlide(2)">
+
+            <img class="demo cursor" src="images/widget_panel.png"
+              onclick="currentSlide(3)">
+
+            <img class="demo cursor" src="images/metadata_links.png"
+              onclick="currentSlide(4)">
+
+            <img class="demo cursor" src="images/apply_color.gif"
+              onclick="currentSlide(5)">
+
+            <img class="demo cursor" src="images/sites_by_city.gif"
+              onclick="currentSlide(6)">
+
+            <img class="demo cursor" src="images/cpa.gif"
+              onclick="currentSlide(7)">
+
+            <img class="demo cursor" src="images/capacity.gif"
+              onclick="currentSlide(8)">
+
+            <img class="demo cursor" src="images/highest.gif"
+              onclick="currentSlide(9)">
+
+            <img class="demo cursor" src="images/dac.gif"
+              onclick="currentSlide(10)">
+
+            <img class="demo cursor" src="images/pop.gif"
+              onclick="currentSlide(11)">
+
+            <img class="demo cursor" src="images/rent.gif"
+              onclick="currentSlide(12)">
+          </div><!-- end modal images-->
+
+        </div> <!-- end modal content-->
+
+    </main>
+    <footer role="contentinfo">
+      <p>Please <a href="mailto:ccsc@ioes.ucla.edu">contact us</a> with
+        any questions or comments.</p>
+      <address>
+        <a href="https://ioes.ucla.edu/ccsc"><b>CALIFORNIA CENTER FOR
+            SUSTAINABLE COMMUNITIES at
+            UCLA</b></a>
+        <br>
+        <a href="https://goo.gl/maps/UexjVhPDxM12">La
+          Kretz Hall, Suite 300, 619 Charles E. Young Drive East<br>Los Angeles,
+          CA 90095-1496</a>
+        <br>
+        <a
+          href="https://www.ioes.ucla.edu/ccsc/">www.ioes.ucla.edu/ccsc</a><br><a
+          href="mailto:ccsc@ioes.ucla.edu">ccsc@ioes.ucla.edu</a><br><a
+          href="tel:3108253778">(310) 825-3778</a>
+      </address>
+
+      <p><a href="https://www.ioes.ucla.edu/">
+          <svg class="ucla-ioes-logo" xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 399.06 44">
+            <path
+              d="M99.95 5.87h1.21v9.65h-1.21V5.87zm3.94 3.59a2.61 2.61 0 012.21-1.08 2 2 0 01.34 0 2.1 2.1 0 012.09 2.09 1.28 1.28 0 010 .19v4.9h-1.09v-4.85c0-.9-.6-1.41-1.58-1.41h-.11a1.86 1.86 0 00-1.85 1.85v4.38h-1v-7h1v.94zm5.59 3.79h1.12c.15 1.22 1 1.55 2 1.55s1.62-.5 1.62-1.14c0-.79-.54-1-1.83-1.26s-2.6-.57-2.6-2.09c0-1.16.89-1.92 2.51-1.92a2.44 2.44 0 012.7 2.19h-1.15c-.11-.92-.61-1.33-1.65-1.33s-1.4.45-1.4 1c0 .76.67.91 1.87 1.15 1.41.29 2.58.6 2.58 2.2 0 1.41-1.14 2.12-2.75 2.12-1.89 0-3-.9-3.06-2.47zm6.21-4.71h1v-2.2h1.09v2.2h1.35v.89h-1.34V14c0 .48.26.65.7.65a2.35 2.35 0 00.59-.1v1a6.4 6.4 0 01-.88.09c-.89 0-1.54-.36-1.54-1.35V9.43h-1v-.89zm4.4-2.67h1.09v1.35h-1.09V5.87zm0 2.67h1.09v7h-1.09v-7zm1.91 0h1v-2.2h1.09v2.2h1.35v.89h-1.35V14c0 .48.26.65.71.65a2.27 2.27 0 00.58-.1v1a6.4 6.4 0 01-.88.09c-.89 0-1.54-.36-1.54-1.35V9.43h-1v-.89zm8.89 6.98v-1a2.45 2.45 0 01-2.11 1.12h-.19a2.17 2.17 0 01-2.16-2.16v-5h1.1v4.88a1.38 1.38 0 001.37 1.37h.19A1.83 1.83 0 00130.9 13a.61.61 0 000-.14V8.54h1.1v7h-1.09zm1.91-6.98h1v-2.2h1.09v2.2h1.35v.89h-1.35V14c0 .48.25.65.7.65a2.27 2.27 0 00.58-.1v1a6.4 6.4 0 01-.88.09c-.89 0-1.54-.36-1.54-1.35V9.43h-1l.05-.89zm3.82 3.46a2.62 2.62 0 010-.28 3.42 3.42 0 013.28-3.4c2.09 0 3.22 1.62 3.22 3.93h-5.42c.08 1.42.85 2.5 2.26 2.5a1.82 1.82 0 001.93-1.43H143a2.86 2.86 0 01-3 2.35 3.4 3.4 0 01-3.35-3.38 2.71 2.71 0 010-.29zm1.15-.57H142c-.07-1.39-.78-2.24-2-2.24a2.27 2.27 0 00-2.2 2.24zM146 12a2.35 2.35 0 010-.26 3.38 3.38 0 116.76 0 2.35 2.35 0 010 .26 2.17 2.17 0 010 .26 3.38 3.38 0 11-6.76 0 2.17 2.17 0 010-.26zm5.62 0c0-1.54-.75-2.77-2.24-2.77s-2.25 1.23-2.25 2.77.77 2.75 2.25 2.75 2.24-1.16 2.24-2.75zm1.46-3.46h1V7.42c0-1.2.68-1.64 1.85-1.64h.55v.93h-.35c-.7 0-1 .18-1 .74v1.07h1.3v.89h-1.3v6.09H154V9.43h-1v-.89zm6.11 0h1v-2.2h1.1v2.2h1.35v.89h-1.35V14c0 .48.26.65.7.65a2.27 2.27 0 00.58-.1v1a4.31 4.31 0 01-.88.09c-.89 0-1.54-.36-1.54-1.35V9.43h-1v-.89zm5.48.92a2.6 2.6 0 012.22-1.08 1.42 1.42 0 01.29 0 2.1 2.1 0 012.09 2.09 1.09 1.09 0 010 .18v4.9h-1.09v-4.84c0-.9-.6-1.41-1.58-1.41h-.07a1.85 1.85 0 00-1.85 1.85v4.37h-1.09V5.87h1.09v3.59zm5.62 2.54a2.44 2.44 0 010-.27 3.42 3.42 0 013.32-3.41c2.09 0 3.21 1.62 3.21 3.93h-5.4c.08 1.42.85 2.5 2.26 2.5a1.82 1.82 0 001.93-1.43h1.06a2.85 2.85 0 01-3 2.35 3.38 3.38 0 01-3.37-3.37V12zm1.15-.57h4.2c-.07-1.39-.78-2.24-2-2.24a2.3 2.3 0 00-2.2 2.24zm-71.09 9.49h12.75v3h-9.21v3.88h8.09v2.83h-8.09v4.7h9.31v2.93h-12.85V20.92zm17.83 6.6h.07a4.06 4.06 0 013.69-2c2.57 0 4.29 1.94 4.29 4.66v8.12h-3.34v-7.67a1.55 1.55 0 000-.21 2.07 2.07 0 00-2.07-2.07h-.1A2.6 2.6 0 00118.2 31a2.35 2.35 0 000 .26v7.06h-3.3v-12.5h3.23v1.7zm8.49-1.7H130l2 6.45c.36 1.19.56 2 .56 2h.05s.17-.8.53-2l2-6.45h3.29l-4.33 12.44H131l-4.28-12.44zm12.75-4.9h3.3v3h-3.3v-3zm0 4.9h3.3v12.44h-3.3V25.82zm8.58 1.99c.75-1.41 1.6-2.13 3-2.13a2.06 2.06 0 01.78.09v2.86h-.08c-2.15-.22-3.71.92-3.71 3.54v6.06h-3.24V25.82H148v2zm4.35 4.24a6.5 6.5 0 116.5 6.5 6.53 6.53 0 01-6.5-6.5zm9.65 0c0-2.42-1.14-4.07-3.16-4.07s-3.15 1.65-3.15 4.07 1.12 4 3.15 4 3.16-1.57 3.16-4zm8.05-4.53h.08a4 4 0 013.68-2c2.57 0 4.29 1.94 4.29 4.66v8.12h-3.29v-7.67a1.55 1.55 0 000-.21 2.07 2.07 0 00-2.07-2.07h-.1a2.6 2.6 0 00-2.53 2.6 2.35 2.35 0 000 .26v7.06h-3.3V25.82h3.22v1.7zm10.08-1.7h3.18v1.68h.07a4 4 0 013.62-2 3.69 3.69 0 013.44 2.13 4.31 4.31 0 013.73-2.19c2.62 0 4.1 1.7 4.1 4.42v8.36H195v-7.77c0-1.4-.7-2.13-1.91-2.13-1.39 0-2.24 1.07-2.24 2.71v7.23h-3.29v-7.81c0-1.4-.71-2.13-1.92-2.13a2.43 2.43 0 00-2.26 2.68v7.23h-3.3V25.79zM199.74 32c0-3.69 2.5-6.55 6.14-6.55 4 0 6.13 3.06 6.13 7.49h-9c.25 1.92 1.31 3.11 3.18 3.11a2.34 2.34 0 002.4-1.53h3.25c-.46 2.21-2.43 4.07-5.63 4.07-4.14 0-6.47-2.88-6.47-6.59zm3.26-1.3h5.53v-.05A2.63 2.63 0 00206 28h-.06c-1.71 0-2.56 1-2.85 2.67zm13.72-3.18h.08a4 4 0 013.68-2c2.57 0 4.29 1.94 4.29 4.66v8.12h-3.29v-7.67a1.55 1.55 0 000-.21 2.07 2.07 0 00-2.07-2.07h-.1a2.6 2.6 0 00-2.53 2.6 2.35 2.35 0 000 .26v7.06h-3.3V25.82h3.22v1.7zm8.96-1.7h1.72v-3.88h3.22v3.88h2.14V28h-2.14v6.74a1.1 1.1 0 001.1 1.1h1.18v2.43h-2.06c-1.6 0-3.37-.63-3.37-3V28h-1.72l-.06-2.19zm12.21 7.98c0-2.47 1.58-4 3.84-5.17a5.21 5.21 0 01-1.46-3.58c0-2.26 1.79-4 4.49-4s4.53 1.6 4.53 4c0 2.14-1.24 3.2-3.1 4.17l2.3 3a11 11 0 00.68-2.81h2.93a12 12 0 01-1.65 5.36l2.74 3.54h-4l-.9-1.14a7.67 7.67 0 01-4.6 1.5c-3.8 0-5.8-2.16-5.8-4.87zm8.66 1.09l-3.18-4.15a3.37 3.37 0 00-2 3A2.24 2.24 0 00243.6 36h.17a4.29 4.29 0 002.81-1.06zm-1.84-7.56a2.46 2.46 0 001.45-2.26v-.12a1.36 1.36 0 10-2.72 0v.12a3.43 3.43 0 001.29 2.26zM258 32.9h3.45c.24 2.09 1.43 2.91 3.9 2.91 1.79 0 3.37-.63 3.37-2.23s-1.65-2-4.29-2.64c-3.11-.7-5.94-1.53-5.94-5.14 0-3.42 2.79-5.19 6.64-5.19s6.43 1.91 6.69 5.41h-3.37c-.19-1.75-1.55-2.62-3.34-2.62s-3.13.8-3.13 2c0 1.41 1.21 1.82 3.78 2.38 3.57.78 6.48 1.62 6.48 5.36 0 3.51-2.84 5.48-6.75 5.48-4.7 0-7.37-2.06-7.49-5.72zm23.89 5.36v-1.45h-.07a4 4 0 01-3.57 1.82c-2.77 0-4.32-1.77-4.32-4.49v-8.32h3.27v7.74c0 1.45.66 2.25 2.06 2.25a2.52 2.52 0 002.51-2.51v-7.48h3.3v12.44zm4.53-4.02h3.05c.22 1.43 1.24 2.06 2.72 2.06s2.28-.56 2.28-1.43c0-1.19-1.58-1.31-3.27-1.65-2.24-.44-4.42-1-4.42-3.76s2.23-4 5.07-4c3.27 0 5.09 1.63 5.33 4.12h-3c-.14-1.33-1-1.81-2.4-1.81s-2.13.48-2.13 1.38c0 1.07 1.65 1.16 3.42 1.53 2.08.43 4.38 1 4.38 3.92 0 2.5-2.13 4-5.23 4-3.59 0-5.61-1.72-5.8-4.36zM298 25.82h1.72v-3.88h3.21v3.88H305V28h-2.13v6.62a.81.81 0 000 .16 1.09 1.09 0 001.13 1.1h1.15v2.42h-2.06c-1.6 0-3.37-.63-3.37-3V28H298v-2.18zm16 11.06c-.63.94-1.53 1.67-3.66 1.67-2.55 0-4.34-1.33-4.34-3.8 0-2.74 2.23-3.62 5-4 2.06-.29 3-.46 3-1.4s-.71-1.48-2.09-1.48c-1.55 0-2.3.56-2.4 1.74h-2.93c.09-2.18 1.72-4.09 5.36-4.09s5.23 1.67 5.23 4.58v6.33c0 .94.15 1.5.44 1.72v.12h-3.18a3.42 3.42 0 01-.43-1.39zm0-3V32a9.61 9.61 0 01-2.3.72c-1.73.39-2.57.78-2.57 1.94s.77 1.58 1.94 1.58c1.91 0 2.95-1.16 2.95-2.38zm5.21-12.96h3.29v3h-3.29v-3zm0 4.9h3.29v12.44h-3.29V25.82zm8.59 1.7h.09a4.06 4.06 0 013.69-2c2.57 0 4.29 1.94 4.29 4.66v8.12h-3.3v-7.67a1.55 1.55 0 000-.21 2.07 2.07 0 00-2.07-2.07h-.1a2.6 2.6 0 00-2.53 2.6 2.18 2.18 0 000 .25v7.06h-3.27V25.82h3.22v1.7zm17.5 9.36h-.05c-.63.94-1.53 1.67-3.66 1.67-2.55 0-4.34-1.33-4.34-3.8 0-2.74 2.23-3.62 5-4 2.06-.29 3-.46 3-1.4s-.71-1.48-2.09-1.48c-1.55 0-2.3.56-2.4 1.74h-2.93c.09-2.18 1.72-4.09 5.36-4.09s5.23 1.67 5.23 4.58v6.33c0 .94.15 1.5.44 1.72v.12h-3.18a3.56 3.56 0 01-.38-1.39zm0-3V32a9.75 9.75 0 01-2.3.72c-1.73.39-2.57.78-2.57 1.94s.77 1.58 1.94 1.58c1.91 0 2.95-1.16 2.95-2.38zm8.4 2.83h-.05v1.55h-3.18V20.92h3.3v6.41h.12a3.89 3.89 0 013.47-1.85c3.13 0 5.36 2.69 5.36 6.57s-2.18 6.58-5.31 6.58a4.16 4.16 0 01-3.71-1.92zm5.62-4.66c0-2.3-.92-3.9-2.76-3.9-2.09 0-2.86 1.67-2.86 4s1.14 3.73 3 3.73 2.62-1.43 2.62-3.83zm4.9-11.13h3.29v3h-3.29v-3zm0 4.9h3.29v12.44h-3.29V25.82zm5.38-4.9h3.29v17.34h-3.3l.01-17.34zm5.4 0h3.3v3H375v-3zm0 4.9h3.3v12.44H375V25.82zm4.4 0h1.72v-3.88h3.22v3.88h2.14V28h-2.14v6.62a.76.76 0 000 .15 1.11 1.11 0 001.1 1.1h1.15v2.43h-2.06c-1.6 0-3.37-.63-3.37-3V28h-1.72v-2.19zm9.08 13.92h1.16c1.31 0 1.85-.68 1.85-1.7a11 11 0 00-1-3.37l-3.35-8.85h3.47l1.84 5.6c.39 1.14.81 2.72.81 2.72s.34-1.58.73-2.72l1.75-5.6h3.32l-4.25 12.81c-.95 2.76-1.87 3.75-4.39 3.75h-1.94v-2.64z" />
+            <path fill="#2774ae" fill-rule="evenodd" d="M92 0H0v44h92V0z" />
+            <path
+              d="M14.71 26.23a20.55 20.55 0 010-2.22l1-12h3.85l-1 12.1c-.23 2.62.78 4.48 3.34 4.48s4-1.9 4.24-4.22l1-12.37H31l-1 12.22c-.42 4.71-3.48 8.23-8.43 8.23-3.85 0-6.34-2.55-6.81-6.22m17.14-4.06c.51-5.76 4.32-10.53 10.89-10.53a8.85 8.85 0 015.06 1.49l-.44 4.76a5.64 5.64 0 00-5-2.37c-4.1 0-6.34 2.9-6.66 6.57s1.49 6.48 5.46 6.48a7.26 7.26 0 005.49-2.47l-.4 4.9a11 11 0 01-5.37 1.5c-6.51 0-9.49-4.93-9-10.32m19-10.18h3.84l-1.41 16.3h7.51c0 .2-.35 3.77-.35 3.77H49.18L50.93 12zm20 7.49a4.9 4.9 0 00.29-.84h.06a4.09 4.09 0 00.15.85c.21.91 1.7 6 1.7 6h-4.85s2.6-5.85 2.65-6m1-8.39h-.27L61.14 32h4.08l1.48-3.18h7.4L75 32h4.1l-7.17-20.89z"
+              fill="#fff" /></svg></a></p>
+
+    </footer>
+    <script src="js/jquery-3.5.1.min.js"></script>
+    <script src="js/scripts.js"></script>
+
+  </body>
+
+</html>
