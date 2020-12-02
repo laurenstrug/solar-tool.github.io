@@ -72,7 +72,7 @@
 
 
       <figure>
-        <img class="tutorialImg" src="images/overview.png"
+        <img class="tutorialImg" src="images/overview.PNG"
           onclick="openModal();currentSlide(1)">
         <figcaption>Hover your cursor over an image, click to enlarge.
         </figcaption>
@@ -242,7 +242,13 @@
       <p>To solve this, scroll back to the histogram widget you had just
         clicked. Drag the selector bars on the histogram apart until they
         are selecting sites.</p>
+      <img class="tutorialImg" src="images/nodata.gif"
+      onclick="openModal();currentSlide(6)">
       <p><b>Refreshing or Clearing widgets to start over</b></p>
+      <p>To remove all filtering from the map, each widget needs to be cleared separately.
+        For a histogram widget, click "Clear." For a category widget, click 'All' or 'Unlock' depending 
+        on if you have clicked a category or searched for a category. 
+      </p>
 
 
 
@@ -280,6 +286,11 @@
               widget</figcaption>
             <img src="images/apply_color.gif">
           </figure>
+          <figure class="mySlides">
+            <figcaption id="caption"><span class="number">6</span>Troubleshooting: 
+              No Data Available</figcaption>
+            <img src="images/nodata.gif">
+          </figure>
 
 
           <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
@@ -301,6 +312,9 @@
 
             <img class="demo cursor" src="images/apply_color.gif"
               onclick="currentSlide(5)">
+            
+            <img class="demo cursor" src="images/nodata.gif"
+            onclick="currentSlide(6)">
           </div><!-- end modal images-->
 
         </div> <!-- end modal content-->
