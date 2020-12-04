@@ -303,6 +303,26 @@ button.accordion {
 	content: "\2796"; /* Unicode character for "minus" sign (-) */
 }
 
+/*Map.html go to top button */
+#topBtn {
+	display: none;
+	position: fixed;
+	bottom: 0.75em;
+	left: 19em;
+	z-index: 99;
+	font-size: 1rem;
+	color: #0085ff;
+	transition: 0.15s ease-in-out;
+	border: 2px solid#0085ff;
+		padding: 0.25em 0.5em;
+	outline: none;
+	cursor: pointer;
+  }
+  
+  #topBtn:hover {
+	background-color: #0085ff;
+	color: white;
+  }
 
 .direction {
 	color: #ebd2b9;

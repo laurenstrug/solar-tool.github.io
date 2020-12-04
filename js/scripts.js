@@ -1,3 +1,23 @@
+//Get the top button on maps page
+var topbutton = document.getElementById("topBtn");
+
+// When the user scrolls down from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 1000 || document.documentElement.scrollTop > 1000) {
+    topbutton.style.display = "block";
+  } else {
+    topbutton.style.display = "none";
+  }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
+
 var acc = document.getElementsByClassName("accordion");
 var p;
 
@@ -76,4 +96,6 @@ function myFunction() {
     x.className = "nav-menu"
   }
 }
+
+
 
