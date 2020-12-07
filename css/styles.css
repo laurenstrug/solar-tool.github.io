@@ -6,7 +6,7 @@
 
 body {
 	display: grid;
-	grid-template-areas: 
+	grid-template-areas:
 		"nav nav"
 		"header main"
 		". main"
@@ -23,10 +23,10 @@ body {
   text-rendering: optimizeSpeed;
   line-height: 1.5;
 }
-/* 
+/*
 @media (min-width: 90em) {
   body {
-		grid-template-areas: 
+		grid-template-areas:
 		"nav nav"
 		"header map"
 		"main map"
@@ -298,7 +298,7 @@ button.accordion {
 	color: #1785FB;
 	margin-left: auto;
 }
-  
+
 .active:after {
 	content: "\2796"; /* Unicode character for "minus" sign (-) */
 }
@@ -318,7 +318,7 @@ button.accordion {
 	outline: none;
 	cursor: pointer;
   }
-  
+
   #topBtn:hover {
 	background-color: #0085ff;
 	color: white;
@@ -486,4 +486,3 @@ button.accordion {
 }
 
 /* The Modal ends here (background) */
-
