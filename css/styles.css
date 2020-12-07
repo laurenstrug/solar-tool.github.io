@@ -123,7 +123,7 @@ main > ol {
 
 main > ul,
 main > ol {
-	margin: 0;
+	margin-left: 2em;
 	padding: 0;
 }
 
@@ -486,3 +486,9 @@ button.accordion {
 }
 
 /* The Modal ends here (background) */
+
+.cci_logo {
+  height: 120px;
+  width: auto;
+  margin:0 auto;
+}
