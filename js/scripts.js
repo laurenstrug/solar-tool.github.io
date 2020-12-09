@@ -5,7 +5,7 @@ var topbutton = document.getElementById("topBtn");
 window.onscroll = function() {scrollFunction()};
 
 function scrollFunction() {
-  if (document.body.scrollTop > 1000 || document.documentElement.scrollTop > 1000) {
+  if (document.body.scrollTop > 1035 || document.documentElement.scrollTop > 1035) {
     topbutton.style.display = "block";
   } else {
     topbutton.style.display = "none";
