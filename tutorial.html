@@ -50,9 +50,11 @@
         <li><a href="#map">Using the Map</a></li>
         <ul>
           <li><a href="#zoom">Zooming in</a></li>
-          <li><a href="#widget">Using a Filter</a></li>
+          <li><a href="#filter">Using a Filter</a></li>
           <li><a href="#color">Applying color</a></li>
-          <li><a href="#widgettype">Filter types</a></li>
+          <li><a href="#filtertype">Filter types</a></li>         
+          <li><a href="#popupinfo">Get more information from pop-ups</a></li>
+          <li><a href="#filterlist">Map Filter Options</a></li>
         </ul>
         <li><a href="#trouble">Troubleshooting</a></li>
       </ul>
@@ -149,44 +151,52 @@
         generation system that could potentially be used as the anchor
         location for a virtual net metering program. A detailed discussion
         of how these sites were selected and their corresponding attributes
-        were calculated is provided in the following methodology section. By
-        default these sites are color coded according to the estimated
-        combined solar nameplate capacity potential from the available
-        on-site rooftop and parking lot carport areas (MW-AC).
+        were calculated is provided in the <a href="methods.html">Methods</a> page. 
       </p>
       <p><b>City Boundaries</b></p>
       <p>
-        Two boundary layers are included to provide geographic context for
-        the focused search for eligible sites within a particular region of
-        interest. The first of these is titled "City Boundaries" and
-        contains the borders of Los Angeles County's 88 cities as well as in
-        unincorporated areas.
+        A boundary layer containing the borders of Los Angeles County's 88 cities as well as
+        unincorporated areas. This layer is included to provide geographic context for
+        the focused search of eligible sites within a particular city or region of
+        interest. 
       </p>
-      <p><b>Circuit Group Data</b></p>
+      <p><b>DAC Census Tracts</b></p>
       <p>
-        In addition to the two previous boundary layers, two additional
-        sources of contextual information are provided in the map panel. The
-        first of these corresponds to collections of Census Block Groups
-        which are described by the title "Circuit Groups." According to the
-        methodology used to develop this analysis, a circuit group is a
-        collection of census block groups which are associated with the same
-        distribution circuit - with associations determined on the basis of
-        geographic proximity. These circuit groups reflect the most granular
+        The DAC Census Tracts is an additional boundary layer displaying the 25% highest 
+        scoring census tracts in <a href="https://oehha.ca.gov/calenviroscreen/report/calenviroscreen-30" target="_blank">CalEnviroScreen 3.0</a>. These areas are designated as 
+        Disadvantaged Communities (DAC) by the California Office of Environmental Health
+        Hazard Assessment. This is provided as a layer for geographic context in the search
+        for eligible sites.
+      </p>
+      <p><b>Electricity Consumption Data</b></p>
+      <p>
+        Illustrated in this layer, are estimates of
+        the total annual electricity consumption percapita within
+        each circuit group (kWh/year). These circuit groups reflect the most granular
         spatial unit at which residential energy consumption data, sourced
         from the UCLA Energy Atlas, have been aggregated to generate
         estimates of annual electricity use per capita and per household
-        throughout the region. Illustrated in this layer, are estimates of
-        the total annual electricity consumption per renter household within
-        each circuit group (kWh/year).
+        throughout the region. A circuit group is a
+        collection of census block groups which are associated with the same
+        distribution circuit. Click on a feature to find the total residential usage (kWh/year) 
+        for both renter and owner-occupied households.
       </p>
-      <p><b>Block Group Data</b></p>
+      <p><b>Housing Attribute Data</b></p>
       <p>
-        The block group layer plots the percentage of the population that
+        This layer plots the percentage of the population that
         are renters within each Block Group in Los Angeles County. This
         information provides useful context to the energy consumption per
-        household data described previously for the circuit groups and can
-        be useful for identifying, at the macro scale, cities or zip codes
-        that should be focus areas for the exploration of eligible sites.
+        household data described for the circuit groups and can
+        be useful for identifying, at the macro scale, cities or regions
+        that should be focus areas for the exploration of eligible sites. 
+        Click on a feature in this layer to find more information on Census Block Groups 
+        including total population and more detailed housing statistics. 
+      </p>
+      <p><b>Distribution Circuit Data</b></p>
+      <p>
+        Important note: zoom into the map and this layer will appear. The layer shows the location of 
+        distributions circuits displaying their relative 15% penetration capacity (MW). Click on a circuit to 
+        see additional information about the districution circuit including existing, queued, and total generation.
       </p>
       <p><b>Brownfield Sites</b></p>
       <p>
@@ -210,7 +220,7 @@
         reflected in the eligible site count, cumulative solar capacity, and
         histogram filters.
       </p>
-      <p id="widget"><b>Using a filter</b></p>
+      <p id="filter"><b>Using a filter</b></p>
       <p>
         To open a filter, hover your cursor over the three vertical dots and
         click the green "Toggle Widget" switch. CARTO calls these filters "Widgets."
@@ -220,7 +230,8 @@
 
       <p>Think of the different filters on the sidebar as building blocks.
         They can be combined and explored based on your custom requirements
-        for selecting a site. </p>
+        for selecting a site. 
+      </p>
       <p id="color"><b>Applying color style to eligible sites</b></p>
       <p>Each filter has the option to apply a color style. Color styles are
         helpful to identify how sites compare to each other with respect to
@@ -230,9 +241,9 @@
       <img class="tutorialImg" src="images/apply_color.gif"
         onclick="openModal();currentSlide(5)">
 
-      <p id="widgettype"><b>Category filter versus histogram filters</b></p>
+      <p id="filtertype"><b>Category filter versus histogram filters</b></p>
       <p>Category filters allow you to filter eligible sites based on
-        data-defined categories. For example: city, zip code, and circuit
+        data-defined categories. For example: city, CPA territory, and circuit
         name. To use a category filter: open the filter and click on
         a category OR search for a category, click the check box, and click
         apply.</p>
@@ -240,6 +251,25 @@
         across the eligible sites. For example: 15% Penetration Capacity,
         CalEnviroScreen 3.0 Scores, and Combined Capacity Potential.</p>
       <img src="images/histogram.gif">
+
+      <p id="popupinfo"><b>How to get more information from layer pop-ups</b></p>
+      <p>Pop-up information can be displayed by turning on a map layer and clicking on
+        any feature of interest. 
+      </p>
+      <img src="images/popupinfo.gif">
+      <p>This feature is available for the following layers: Eligible Sites, Electricity Consumption Data, Housing Attribute Data, Distribution Circuit Data, and EV Charging Stations</p>
+
+      <p id="filterlist"><b>Description of Filters Available on the Map</b></p>
+      <p><i><b>City:</b></i> Filter eligible sites by the City they reside in.</p>
+      <p><i><b>CalEnviroScreen 3.0 Scores:</b></i> Filter and see the distribution of eligible sites based on the CalEnviroScreen 3.0 percentile of the census tract the site resides in.</p>
+      <p><i><b>CPA Territory:</b></i> Display eligible sites based on "true" if the site is located within service territory boundaries for the Clean Power Alliance (CPA), and "false" if it is not.</p>
+      <p><i><b>Circuit Name:</b></i> Display eligible sites based on the distribution circuit name defined by Southern California Edison (SCE) which the site is served by.</p>
+      <p><i><b>Sufficient Circuit Capacity:</b></i> Display eligible sites based on "true" if the site has sufficient grid circuit capacity to accommodate PV, and "false" if it does not.</p>
+      <p><i><b>15% Penetration Capacity (MW):</b></i> Filter and see the distribution of eligible sites based on the 15% Penetration Capacity (MW) of the distribution circuit the site is served by.</p>
+      <p><i><b>Combined Capacity Potential (MW):</b></i> Filter and see the distribution of eligible sites based on the combined total of the low estimate of parking lot generation potential and rooftop solar generation capacity potential (MW).</p>
+      <p><i><b>Local Population Offset:</b></i> Filter and see the distribution of eligible sites based on the estimate of households within census block group where total electricity usage could be offset by the low estimate combined solar potential.</p>
+      <p><i><b>Local Renter Households Offset:</b></i> Filter and see the distribution of eligible sites based on the estimate of renter-occupied households within census block group where total electricity usage could be offset by the low estimate combined solar potential.</p>
+
 
       <h3 id="trouble">Troubleshooting</h3>
 
