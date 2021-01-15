@@ -1,0 +1,15 @@
+How the Excel data connection for institutional_sites.xlsx is made:
+
+1. Get Data > From Web , then set the source as:
+https://ccsc-ucla.carto.com:443/api/v2/sql?q=select site_id, address, combined_solar_potential_low_mw, percent_15_cap, combined_solar_annual_output_low_mwh_ac, low_combined_res_usage_offset_capita, low_combined_res_usage_offset_owner_households, low_combined_res_usage_offset_renter_households, ciscorep, cpa_territory, circuit_name, sub_name, sys_name, rooftop_solar_potential_mw, parking_lot_solar_potential_low_mw, parking_lot_solar_annual_output_low_mwh_ac, rooftop_solar_annual_output_mwh_ac, total_res_usage_per_cap, total_res_usage_per_owner_household, total_res_usage_per_renter_household, average_household_size_owner_occupied_housing_units, average_household_size_renter_occupied_housing_units, vacancy_percentage, renter_percentage from public.institutional_sites
+
+2. Right-click rows > drill down
+
+3. Click Convert-to-table
+4. Click little arrows button next to 'Column1' and uncheck 'Use original column name as prefix'
+5. Close and load
+
+How to UPDATE the data connection every couple months (tbd):
+1. Open Queries & Connections and Refresh Preview
+2. Close&Load
+3. Save and deploy

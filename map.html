@@ -247,23 +247,27 @@
 
       <button class="accordion">Download Data</button>
       <div class="panel">
-        <p>The Eligible Sites data layer is available for download through CARTO as a csv, shapefile,
-          KML, GeoJSON, SVG, and GeoPackage. Metadata includes column names and descriptions.
+        <p><b>Simplified Data</b></p>
+        <p>Choose Excel for curated data columns matching what is available when you click 
+          on an Eligible Site on the Map. Our suggestion, if you would like data for a 
+          few sites, is to write down the Site ID value (found by clicking on
+          a site on the map). Use the Excel file to match the Site ID(s) of interest. 
+          This document includes metadata.
         </p>
-        <p>Our suggestion is, if you would like the data for a few sites you have identified, to write down the 
-          Site ID value. Site ID is the first piece of information when you click on a site. Then, filter in 
-          the downloaded data based on the Site ID values you have identified. 
+        <p><b>Full Data Columns</b></p>
+        <p>Choose CSV or Shapefile for the full columns of the Eligible Sites data layer available for download through CARTO.
         </p>
+        <p>Metadata includes column names and descriptions.</p>
         <div class="dropdown">
           <button onclick="dropFunction()" class="dropbtn">Download Eligible Sites Data as:</button>
           <div id="myDropdown" class="dropdown-content">
-            <a href="download/institutional_sites.xlsx" download="institutional_sites">Excel</a>
-            <a href="https://ccsc-ucla.carto.com/tables/institutional_sites/public/map" target="_blank">CSV</a>
-            <a href="https://ccsc-ucla.carto.com/tables/institutional_sites/public/map" target="_blank">Shapefile</a>
+            <a href="download/institutional_sites.xlsx" download="institutional_sites">Excel (simplified with metadata)</a>
+            <a href="https://ccsc-ucla.carto.com/tables/institutional_sites/public/map" target="_blank">CSV (full data)</a>
+            <a href="https://ccsc-ucla.carto.com/tables/institutional_sites/public/map" target="_blank">Shapefile (full data)</a>
           </div>
         </div>
         <a href="images/institutional_sites_metadata.xlsx" role="button">
-          Download Metadata</a>
+          Download Full Metadata</a>
 
        
 
