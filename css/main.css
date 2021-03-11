@@ -215,12 +215,13 @@ a:hover {
 	background-image: url("../images/solarpanels.gif");
 	background-size: cover;
 	background-repeat: no-repeat;
-	background-color: #ebd2ba;
+	background-color: #0085ff4f;
 	background-position: bottom;
 }
 
 .ucla-ioes-logo {
 	width: 300px;
+	padding-bottom: 38px
 }
 
 .lede {
