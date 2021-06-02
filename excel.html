@@ -63,7 +63,7 @@
             var buf = new ArrayBuffer(wbout.length);
             var view = new Uint8Array(buf);
             for (var i=0; i<wbout.length; i++) view[i] = wbout.charCodeAt(i) & 0xFF;
-            saveAs(new Blob([buf],{type:"application/octet-stream"}), 'test.xlsx')
+            saveAs(new Blob([buf],{type:"application/octet-stream"}), 'com_solar_op_map_sites.xlsx')
           }
           getSitesData();
     
