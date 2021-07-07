@@ -5,3 +5,9 @@ This web tool is an interactive, web-based platform for visualizing the best loc
 ## Tools
 
 - [Carto Builder](https://carto.com/builder/)
+
+## Contributors
+
+- Lauren Strug
+- Hannah Gustafson
+- Scott Gruber
