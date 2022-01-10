@@ -11,3 +11,4 @@ This web tool is an interactive, web-based platform for visualizing the best loc
 - Lauren Strug
 - Hannah Gustafson
 - Scott Gruber
+- Eric Daniel Fournier
