@@ -1,0 +1,13 @@
+1. Search "Snipping Tool" and open
+2. Set "Mode" to "Window Snip" and Delay to "5 seconds"
+3. Take a snip by clicking "New" and clicking the screen.  
+4. File>Save ... I put then in a folder and label them sequentially as I go.
+
+I plan out what my click/hover images will be
+and repeat steps 3-4 until I have each frame of the gif I'm making.
+
+5. Use https://ezgif.com/ naviagte to GIF Maker.
+6. Choose your files, upload.
+7. Set Delay time: 120 under GIF Options. Sometimes I will set the last frame to 200 or 220.
+8. Make a GIF!
+9. Crop and Save to images folder in repo, rename. 
