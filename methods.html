@@ -56,165 +56,55 @@
       <h2 id="overview">Overview</h2>
 
       <p class="lede">
-        This page provides documentation of the data sources and analytical
-        methods that have been developed to create the Community Solar
-        Opportunity Map.</p>
+        This page provides documentation of the data sources and analytical methods that have been developed to create the Community Solar Opportunity Map.</p>
 
       <h2 id="keydata">Key Datasets and Assumptions</h2>
 
       <h3>Eligible Site Selection</h3>
       <p>
-        The design plan for this tool includes the following criteria which
-        are used for initial identification of “eligible sites” for the
-        development of community scale solar generation or resiliency center
-        assets. The criteria of eligibility are listed below:
-      </p>
+          The design plan for this tool includes the following criteria which are used for initial identification of “eligible sites” for the development of community scale solar generation or resiliency center assets. The criteria of eligibility are listed below:</p>
       <ul>
-        <li> Eligible sites should be restricted to publicly owned or community
-          oriented properties with existing buildings and parking
-          lots. This requirement is meant to ensure that the development of
-          solar PV assets on these sites will be categorically exempt from
-          California Environmental Quality Act (CEQA) review requirements.
-          Sites that could only support ground mounted arrays on previously
-          undeveloped lands were not included.</li>
-        <li> Eligible sites should possess existing metered electricity
-          accounts. The requirement is meant to ensure that  one or more
-          existing accounts are available that could be used to support the
-          solar PV installation. The presence of buildings larger than 400 ft^s
-          in footprint area was used as a proxy for the existence of a metered
-          electricity account.</li>
-        <li> External accounts considered eligible for participating in a VNM
-          program in conjunction with the development of a community scale
-          solar PV asset on any particular site will be restricted to those
-          which are connected to the same local distribution circuit as the
-          eligible site in question. This is meant to minimize the potential
-          risks of experiencing reverse power flows along any particular
-          circuit in the event of a temporary imbalance between supply and
-          demand.
+        <li> 
+            Eligible sites should be restricted to institutional, publicly owned, and community oriented properties with existing buildings and parking lots. This requirement is meant to ensure that the development of solar PV assets on these sites will be categorically exempt from California Environmental Quality Act (CEQA) review requirements. Sites that could only support ground mounted arrays on previously undeveloped lands were not included.</li>
+        <li> 
+            Eligible sites should possess existing metered electricity accounts. The requirement is meant to ensure that  one or more existing accounts are available that could be used to support the solar PV installation. The presence of buildings larger than 400 ft^s in footprint area was used as a proxy for the existence of a metered electricity account.</li>
+        <li> 
+            External accounts considered eligible for participating in a VNM program in conjunction with the development of a community scale solar PV asset on any particular site will be restricted to those which are connected to the same local distribution circuit as the eligible site in question. This is meant to minimize the potential risks of experiencing reverse power flows along any particular circuit in the event of a temporary imbalance between supply and demand.
         </li>
       </ul>
 
       <h3>Grid Infrastructure Capacity</h3>
       <p>
-        Grid infrastructure capacity metrics for each distribution circuit
-        have been developed by the local investor owned utility, Southern
-        California Edison (SCE), as part of an integrated capacity assessment
-        performed in support of their distributed energy resource planning
-        efforts. Within SCE service territory, there are different relevant
-        capacity metrics for distributed energy resource planning depending 
-        upon whether the planned system is intended to be interconnected to the
-        distribution grid from in-front or behind the customer's meter.</p> 
-        
-      <p>For behind the meter systems, interconnections are governed by a regulatory framework called Rule-21, which details utility procedures and
-        requirements for the submission of distributed energy resource grid
-        integration requests. Rule-21 dictates that the total combined nameplate
-        capacity of all generation assets connected to each distribution
-        circuit must not exceed 15% of the historical maximum load experienced
-        on that circuit over the previous ~18 months. This 15% limit is called the 
-        15% penetration capacity and is defined for each named circuit. 
-      </p>
+        Grid infrastructure capacity metrics for each distribution circuit have been developed by the local investor owned utility, Southern California Edison (SCE), as part of an integrated capacity assessment performed in support of their distributed energy resource planning efforts. Within SCE service territory, there are different relevant capacity metrics for distributed energy resource planning depending upon whether the planned system is intended to be interconnected to the distribution grid from in-front or behind the customer's meter.</p> 
+    
       <p>
-        For systems that are intended to be interconnected to the distribution grid
-        in-front of a customer's meter, and participate in the wholesale market for 
-        power generation, a different circuit capacity meteric is more relevant. For 
-        these types of in-front of the meter systems, we expose the maximum allowable 
-        pv generation limit for the closest circuit segment to each eligible site as
-        published through SCE's integrated capacity assessment results. 
-      </p>
+          For behind the meter systems, interconnections are governed by a regulatory framework called Rule-21, which details utility procedures and requirements for the submission of distributed energy resource grid integration requests. Rule-21 dictates that the total combined nameplate capacity of all generation assets connected to each distribution circuit must not exceed 15% of the historical maximum load experienced on that circuit over the previous ~18 months. This 15% limit is called the 15% penetration capacity and is defined for each named circuit. </p>
       <p>
-        As part of this analysis, each eligible site must  be
-        associated with its proximal distribution circuit in order to assess the
-        extent to which the full development of that site's available solar PV
-        generation potential will or will not exceed relevant capacity limits.
-        Additionally, for in-front of the meter system designs, local residential accounts 
-        must also be associated with their proximal circuits in order to determine 
-        which accounts can potentially be served by a VNM scheme implemented at any individual
-        candidate site. These circuit-to-site and circuit-to-account
-        relationships have all been assigned on the basis of minimum geographic
-        distance. This is the same allocation procedure used by (Porse et al.
-        2020).
-      </p>
+          For systems that are intended to be interconnected to the distribution grid in-front of a customer's meter, and participate in the wholesale market for power generation, a different circuit capacity meteric is more relevant. For these types of in-front of the meter systems, we expose the maximum allowable pv generation limit for the closest circuit segment to each eligible site as published through SCE's integrated capacity assessment results. </p>
+      <p>
+          As part of this analysis, each eligible site must be associated with its proximal distribution circuit in order to assess the extent to which the full development of that site's available solar PV generation potential will or will not exceed relevant capacity limits. Additionally, for in-front of the meter system designs, local residential accounts must also be associated with their proximal circuits in order to determine which accounts can potentially be served by a VNM scheme implemented at any individual candidate site. These circuit-to-site and circuit-to-account relationships have all been assigned on the basis of minimum geographic distance. This is the same allocation procedure used by (Porse et al. 2020).</p>
 
       <h3>Site Nameplate Generation Potential</h3>
       <p>
-        Two types of solar PV systems are considered by the tool: rooftop and
-        parking canopy mounted systems. As rooftops are existing structures that
-        can be remotely sensed using aerial/satellite imagery & LiDAR, there are
-        established methods for calculating the potential nameplate size of rooftop
-        mounted PV. These methods account for roof size, orientation, obstacles,
-        and local shading factors. The rooftop solar potentials of all
-        of the buildings within Los Angeles County have already been estimated
-        using these methods as part of the development of the <a href="https://planning.lacounty.gov/solar/" target="_blank">Los Angeles County
-        Solar Map</a>. This data has been leveraged as part of this analysis to
-        provide a comprehensive estimate of the total combined rooftop system
-        potential associated with all of the buildings located on each eligible
-        site.
-      </p>
+          Two types of solar PV systems are considered by the tool: rooftop and parking canopy mounted systems. As rooftops are existing structures that can be remotely sensed using aerial/satellite imagery & LiDAR, there are established methods for calculating the potential nameplate size of rooftop mounted PV. These methods account for roof size, orientation, obstacles, and local shading factors. The rooftop solar potentials of all of the buildings within Los Angeles County have already been estimated using these methods as part of the development of the <a href="https://planning.lacounty.gov/solar/" target="_blank">Los Angeles County Solar Map</a>. This data has been leveraged as part of this analysis to provide a comprehensive estimate of the total combined rooftop system potential associated with all of the buildings located on each eligible site.</p>
       <p>
-        In addition to rooftop PV system capacities, the availability of
-        detailed information about the geographic extents of parking lots within
-        the region creates the opportunity to assess the solar
-        potential (MW) of canopy mounted systems as well. However, as canopy
-        structures must be fabricated, and thus, do not yet exist, procedures
-        for estimating their potential are not as well-established, nor
-        are similar estimates for LA County buildings readily available.
-      </p>
+          In addition to rooftop PV system capacities, the availability of detailed information about the geographic extents of parking lots within the region creates the opportunity to assess the solar potential (MW) of canopy mounted systems as well. However, as canopy structures must be fabricated, and thus, do not yet exist, procedures for estimating their potential are not as well-established, nor are similar estimates for LA County buildings readily available.</p>
       <p>
-        Our approach to estimating the solar potential of parking lot canopy
-        structure mounted systems on eligible candidate sites involves a set of
-        assumptions about the upper and lower bound on the fraction of a site’s
-        parking lot area that could potentially be covered by canopy structures.
-        The values for these “site density factors” that were used to develop
-        the tool were (15% - 30%). To be conservative about our solar
-        potential estimates, only the lower bound estimates have been reported
-        in the front end user interface.
-      </p>
+          Our approach to estimating the solar potential of parking lot canopy structure mounted systems on eligible candidate sites involves a set of assumptions about the fraction of a site’s parking lot area that could potentially be covered by canopy structures. To be conservative about our solar potential estimates, the specific value for this “site density factor” that was used to develop the tool was 15%. This means that only 15% of the total available parking lot surface area is expected to be able to covered with PV panels.</p>
+      <p> 
+          This choice of this 15% value is based on an analysis of the ratio of available parking lot areas to installed canopy structure areas for existing generator facilities which have throughout the region as well as a review of the academic literature on the design and performance characteristics of such "carport" solar PV systems.</p>
       <p>
-        This range of values is based on an analysis of the ratio of available
-        parking lot areas to installed canopy structure areas for existing
-        generator facilities which have throughout the region as well as a
-        review of the academic literature on the design and performance
-        characteristics of such "carport" solar PV systems.
-      </p>
-      <p>
-        Once this range of canopy structure footprint area estimates has been
-        established, these values can then be multiplied by a corresponding set
-        of "panel density factors" which reflect the total panel area that can
-        be installed on the footprint area of a given canopy structure. Finally,
-        once this range of estimates for the total panel area have been
-        established, the output of these panels can be modeled using solar
-        insolation and system performance characteristics for the site's
-        location using the National Renewable Energy Laboratory's PVWatts Model
-        API.
-      </p>
-      <p>
-        While these approximation techniques are admittedly coarse, they should
-        be useful in providing an order of magnitude level estimate of the
-        potential for parking lot canopy structures to contribute to a site's
-        total solar PV generation potential. This is increasingly
-        becoming an essential consideration as parking lot canopy structure
-        mounted systems have grown in popularity throughout the region in recent
-        years.
-      </p>
+          Once the canopy structure footprint area estimates have been established, these values can then be multiplied by a corresponding "panel density factor" which represents the total panel area that can be installed on the footprint area of a given canopy structure. Finally, once the total panel area estimates have been established, the output of these panels can be modeled using solar insolation and system performance characteristics for the site's location using the National Renewable Energy Laboratory's PVWatts Model API.</p>
+      <p> 
+          While these approximation techniques are admittedly coarse, they should be useful in providing an order of magnitude level estimate of the potential for parking lot canopy structures to contribute to a site's total solar PV generation potential. This is increasingly becoming an essential consideration as parking lot canopy structure mounted systems have grown in popularity throughout the region in recent years.</p>
 
       <p><b>Residential Per-Capita Energy Intensity</b></p>
       <p>
-        Account level residential energy consumption data from the UCLA Energy
-        Atlas are aggregated to the Census Block Group level. Once the total
-        annual residential consumption for each block group was computed, this
-        value was divided by the block group's population to estimate average
-        per-capita residential electricity demand.
-      </p>
+          Account level residential energy consumption data from the UCLA Energy Atlas are aggregated to the Census Block Group level. Once the total annual residential consumption for each block group was computed, this value was divided by the block group's population to estimate average per-capita residential electricity demand.</p>
 
       <p><b>Solar Output Offsets</b></p>
       <p>
-        Based on shared distribution circuit associations, average residential
-        per-capita consumption values were linked to nearby eligible sites  in
-        order to estimate (on a per-capita and per-household basis) how much
-        residential energy use could be offset by solar PV generation at that
-        site. Estimates for households are broken down by renter and owner
-        households, based on census data.
-      </p>
+          Based on shared distribution circuit associations, average residential per-capita consumption values were linked to nearby eligible sites in order to estimate (on a per-capita and per-household basis) how much residential energy use could be offset by solar PV generation at that site. Estimates for households are broken down by renter and owner households, based on census data.</p>
       <h2 id="sources">Data Sources</h2>
 
       <h3>Electricity Consumption Data</h3>
@@ -226,24 +116,9 @@
         <li><i>Dates:</i> Data year: 2016, Data accessed: June 2020</li>
       </ul>
       <p>
-        Energy consumption data used for the development of the solar
-        opportunity tool has been sourced from the UCLA Energy Atlas
-        back-end database. This is the raw source data that is used to develop
-        the aggregated data which is publicly displayed within the UCLA Energy
-        Atlas front-end website. These data have been obtained from the
-        California Public Utilities Commission (CPUC) under a binding
-        non-disclosure agreement.
-      </p>
+          Energy consumption data used for the development of the solar opportunity tool has been sourced from the UCLA Energy Atlas back-end database. This is the raw source data that is used to develop the aggregated data which is publicly displayed within the UCLA Energy Atlas front-end website. These data have been obtained from the California Public Utilities Commission (CPUC) under a binding non-disclosure agreement.</p>
       <p>
-        This back-end Energy Atlas database contains account level monthly
-        electricity consumption for all metered accounts within Southern
-        California Edison service territory over a period spanning 2006-2016.
-        These account level data records are stored in a secure computing
-        facility on the UCLA campus and are subject to strict cyber-security
-        protocols. Additionally, all research applications of this data comply
-        with CPUC mandated rules for the privacy preserving aggregation of
-        account level consumption records.
-      </p>
+          This back-end Energy Atlas database contains account level monthly electricity consumption for all metered accounts within Southern California Edison service territory over a period spanning 2006-2016. These account level data records are stored in a secure computing facility on the UCLA campus and are subject to strict cyber-security protocols. Additionally, all research applications of this data comply with CPUC mandated rules for the privacy preserving aggregation of account level consumption records.</p>
       <h3>Census Block Group Level Statistics</h3>
       <ul>
         <li><i>Source:</i> U.S. Census Bureau American Community Survey</li>
@@ -253,10 +128,8 @@
         </li>
         <li><i>Dates:</i> Data year: 2018, Data accessed: March 2019</li>
       </ul>
-      <p>Census block group level statistics from the 2018 vintage of the
-        American Community Survey were downloaded for use in this analysis.
-        Information for total population, renter/owner, and average household size per block
-        group were incorporated into the analysis.
+      <p>
+          Census block group level statistics from the 2018 vintage of the American Community Survey were downloaded for use in this analysis. Information for total population, renter/owner, and average household size per block group were incorporated into the analysis.
       </p>
       <h3>CalEnviroScreen (DAC) Census Tracts</h3>
       <ul>
@@ -267,41 +140,31 @@
         </li>
         <li><i>Dates:</i> Data year: 2018, Data accessed: March 2019</li>
       </ul>
-      <p>Disadvantaged community census tracts (DAC) were downloaded from the
-        OEHHA website. DAC census tracts have scores higher than 75%.
+      <p>
+          Disadvantaged community census tracts (DAC) were downloaded from the OEHHA website. DAC census tracts have scores higher than 75%.
       </p>
       <h3>Parcel Zoning Data</h3>
       <ul>
-        <li><i>Source:</i> Southern California Association of Regional
-          Governments</li>
+        <li><i>Source:</i> Southern California Association of Regional Governments</li>
         <li><i>Access:</i> Private</li>
         <li><i>Info:</i> <a
             href=" https://scag.ca.gov/DataAndTools/Pages/Home.aspx"  target="_blank">SCAG.gov</a>
         </li>
-        <li><i>Dates:</i> Data year: 2016, Data accessed: March 2019</li>
+        <li><i>Dates:</i> Data year: 2020, Data accessed: March 2019</li>
       </ul>
       <p>
-        Standardized parcel zoning data for the Los Angeles County region were
-        obtained from a Southern California Association of Governments parcel
-        database. Records in this database were originally derived from source
-        data publicly released by the Los Angeles County Office of Regional
-        Planning through the Los Angeles County Open Data initiative.
+          Standardized parcel zoning data for the Los Angeles County region were obtained from the Los Angeles County Parcel Assessor for the year 2020. The assessor's parcel database was downloaded from Los Angeles County's Socrata Open Data portal.
       </p>
       <h3>Grid Distribution Infrastructure Data</h3>
       <ul>
-        <li><i>Source:</i> Southern California Edison Distributed Resource
-          Planning External Portal (DRPEP)</li>
+        <li><i>Source:</i> Southern California Edison Distributed Resource Planning External Portal (DRPEP)</li>
         <li><i>Access:</i> Public</li>
         <li><i>Info:</i> <a href="https://ltmdrpep.sce.com/drpep/"  target="_blank">SCE</a>
         </li>
         <li><i>Dates:</i> Data year: 2020, Data accessed: February 2020</li>
       </ul>
       <p>
-        Distribution circuit capacity layers were programmatically accessed
-        from the SCE DRPEP web- map application's REST API. The SCE DRPEP
-        distribution circuit attributes are documented at the following
-        location: <a href="https://services5.arcgis.com/z6hI6KRjKHvhNO0r/ArcGIS/rest/services/ICA_Layer/FeatureServer/3DRPEP"
-        target="_blank">DRPEP Layer Metadata</a>.
+          In-front of the meter and behind the meter grid distribution circuit capacity layers were programmatically accessed from the SCE DRPEP web- map application's REST API. The SCE DRPEP distribution circuit attributes are documented at the following location: <a href="https://services5.arcgis.com/z6hI6KRjKHvhNO0r/ArcGIS/rest/services/ICA_Layer/FeatureServer/3DRPEP" target="_blank">DRPEP Layer Metadata</a>.
       </p>
       <h3>Building Rooftop Solar Generation Potential Data</h3>
       <ul>
@@ -313,16 +176,7 @@
         <li><i>Dates:</i> Data year: 2017, Data accessed: June 2020</li>
       </ul>
       <p>
-        Building Rooftop solar estimates were generated by the consulting firm
-        Critigen - a sub- contractor to the Environmental Services Firm
-        CH2M-Hill - for the Los Angeles County Internal Services Department as
-        part of the development of the County's Solar Map. These solar
-        estimates were modeled using detailed information about incident solar
-        radiation intensities, micro and mesoscale shading, and building
-        rooftop surface areas and orientations derived from high resolution
-        LiDAR scans performed as part of the LARIAC-5 program. These estimates
-        were then aggregated to the parcel level and reported in terms of
-        total suitable area for the installation of solar panels.
+          Building Rooftop solar estimates were generated by the consulting firm Critigen - a sub- contractor to the Environmental Services Firm CH2M-Hill - for the Los Angeles County Internal Services Department as part of the development of the County's Solar Map. These solar estimates were modeled using detailed information about incident solar radiation intensities, micro and mesoscale shading, and building rooftop surface areas and orientations derived from high resolution LiDAR scans performed as part of the LARIAC-5 program. These estimates were then aggregated to the parcel level and reported in terms of total suitable area for the installation of solar panels.
       </p>
       <h3>Building Footprint Data</h3>
       <ul>
@@ -334,8 +188,7 @@
         <li><i>Dates:</i>Data year: 2017, Data accessed: March 2019</li>
       </ul>
       <p>
-        Building footprints were generated as a derived dataset from high
-        resolution LiDAR scans performed as part of the LARIAC-5 program.
+          Building footprints were generated as a derived dataset from high resolution LiDAR scans performed as part of the LARIAC-5 program.
       </p>
       <h3>Parking Lot Footprint Data</h3>
       <ul>
@@ -347,8 +200,7 @@
         <li><i>Dates:</i>Data year: 2017, Data accessed: March 2019</li>
       </ul>
       <p>
-        Parking lot footprints were generated as a derived dataset from high
-        resolution LiDAR scans performed as part of the LARIAC-5 program.
+          Parking lot footprints were generated as a derived dataset from high resolution LiDAR scans performed as part of the LARIAC-5 program.
       </p>
       <h3>Solar Generation System Performance</h3>
       <ul>
@@ -361,14 +213,7 @@
         <li><i>Dates:</i> Data year: June 2020, Data accessed: June 2020</li>
       </ul>
       <p>
-        The National Renewable Energy Laboratory has developed a toolset for
-        estimating solar generation facility performance called PV-WATTS. This
-        toolset incorporates geographically specific data about solar
-        insolation intensities as well as up-to-date technical parameters
-        about system component efficiencies. The fifth version of the PV-WATTS
-        toolset is accessible via programmatic API call and can be used to
-        automate the process of estimating the performance characteristics of
-        systems installed on a large number of potential sites.
+          The National Renewable Energy Laboratory has developed a toolset for estimating solar generation facility performance called PV-WATTS. This toolset incorporates geographically specific data about solar insolation intensities as well as up-to-date technical parameters about system component efficiencies. The fifth version of the PV-WATTS toolset is accessible via programmatic API call and can be used to automate the process of estimating the performance characteristics of systems installed on a large number of potential sites.
       </p>
       <h3>In Front of the Meter Currently Installed Solar Generator Data
       </h3>
@@ -382,16 +227,7 @@
         <li><i>Dates:</i> Data year: 2020, Data accessed: June 2020</li>
       </ul>
       <p>
-        The California Energy Commission (CEC) maintains a database of
-        permitted in-front of the meter generator facilities. These facilities
-        are generally large utility scale assets which sell power to the grid
-        at wholesale rates. Each facility is coded by fuel type and has listed
-        as an attribute its nameplate generation capacity. The locations of
-        these existing large scale, in-front of the meter solar PV generators
-        within LA County will be cross-referenced with the locations of
-        eligible community scale generation sites to help determine the extent
-        to which certain site's solar energy potentials have already been
-        developed.
+          The California Energy Commission (CEC) maintains a database of permitted in-front of the meter generator facilities. These facilities are generally large utility scale assets which sell power to the grid at wholesale rates. Each facility is coded by fuel type and has listed as an attribute its nameplate generation capacity. The locations of these existing large scale, in-front of the meter (IFOM) solar PV generators within LA County will be cross-referenced with the locations of eligible community scale generation sites to help determine the extent to which certain site's solar energy potentials have already been developed.
       </p>
       <h3>Electricity Utility Service Territory Boundaries</h3>
       <ul>
@@ -403,9 +239,7 @@
         <li><i>Dates:</i> Data year: 2020, Data accessed: June 2020</li>
       </ul>
       <p>
-        Service territory boundaries for Southern California Edison (SCE), the
-        local electricity utility, have been obtained from the California
-        Energy Commission for context.
+          Service territory boundaries for Southern California Edison (SCE), the local electricity utility, have been obtained from the California Energy Commission for context.
       </p>
       <h3>Community Choice Aggregation Service Territory Boundaries</h3>
       <ul>
@@ -416,10 +250,7 @@
         <li><i>Dates:</i> Data year: 2020, Data accessed: June 2020</li>
       </ul>
       <p>
-        Service territory boundaries for the Clean Power Alliance (CPA), the
-        local Community Choice Aggregation (CCA), have been assembled from
-        published material about the organizations member cities and
-        municipalities.
+          Service territory boundaries for the Clean Power Alliance (CPA), the local Community Choice Aggregation (CCA), have been assembled from published material about the organizations member cities and municipalities.
       </p>
       <h3>Brownfield & Superfund Sites</h3>
       <ul>
@@ -430,8 +261,7 @@
         <li><i>Dates:</i> Data year: 2020, Data accessed: November 2020</li>
       </ul>
       <p>
-        Property locations of US EPA Brownfield and Superfund sites have been downloaded
-        from the US EPA Spatial Data Download Service.
+          Property locations of US EPA Brownfield and Superfund sites have been downloaded from the US EPA Spatial Data Download Service.
       </p>
       <h3>EV Charging Infrastructure</h3>
       <ul>
@@ -442,8 +272,7 @@
         <li><i>Dates:</i> Data year: 2020, Data accessed: November 2020</li>
       </ul>
       <p>
-        EV Charging infrastructure data has been downloaded from the US DOE
-        AFVD using their public developer API.
+          EV Charging infrastructure data has been downloaded from the US DOE AFVD using their public developer API.
       </p>
 
       <h2 id="team">Project Team</h2>
