@@ -52,6 +52,16 @@
             <li><a href="#metadata_links">Metadata Links</a></li>
           </ul>
         <li><a href="#layers">Available Map Layers</a></li>
+          <ul>
+            <li><a href="#eligible_sites">Eligible Sites</a></li>
+            <li><a href="#cities">City Boundaries</a></li>
+            <li><a href="#dacs">DAC Census Tracts</a></li>
+            <li><a href="#elec_usage">Electricity Consumption Data</a></li>
+            <li><a href="#housing">Housing Attribute Data</a></li>
+            <li><a href="#circuits">Distribution Circuit Data</a></li>
+            <li><a href="#brownfields">Brownfield & Superfund Sites</a></li>
+            <li><a href="#ev_charging">EV Charging Stations</a></li>
+          </ul>
         <li><a href="#map">Using the Map</a></li>
         <ul>
           <li><a href="#zoom">Zooming In</a></li>
@@ -116,7 +126,7 @@
 
       <h3 id="layers">Available Map Layers</h3>
 
-      <p><b>Eligible Sites</b></p>
+      <p id="eligible_sites"><b>Eligible Sites</b></p>
       <p>
           Using the layer selection controls, the user can easily toggle on or off different geographic data layers. The primary layer, whose attributes are linked to all of the interactive selection filters, is titled "Eligible Sites" within the layer control panel. This layer corresponds to the following categories of publicly-owned and community-oriented properties considered eligible for potential selection for the location of a community scale solar PV generation system that could potentially be used to support a resilience center or as the anchor location for a community solar virtual net metering program. Examples of these types of sites include: </\p>
             <ul> 
@@ -129,31 +139,31 @@
       <p> 
         A detailed discussion of how these sites were selected and their corresponding attributes were calculated is provided in the <a href="methods.html">Methods</a> page. 
       </p>
-      <p><b>City Boundaries</b></p>
+      <p id="cities"><b>City Boundaries</b></p>
       <p>
           A boundary layer containing the borders of Los Angeles County's 88 cities as well as unincorporated areas. This layer is included to provide geographic context for the focused search of eligible sites within a particular city or region of interest. 
       </p>
-      <p><b>DAC Census Tracts</b></p>
+      <p id="dacs"><b>DAC Census Tracts</b></p>
       <p>
           The DAC Census Tracts is an additional boundary layer displaying the 25% highest scoring census tracts in <a href="https://oehha.ca.gov/calenviroscreen/report/calenviroscreen-30" target="_blank">CalEnviroScreen 4.0</a>. These areas are designated as Disadvantaged Communities (DAC) by the California Office of Environmental Health Hazard Assessment. This is provided as a layer for equity considerations in the search for eligible sites.
       </p>
-      <p><b>Electricity Consumption Data</b></p>
+      <p id="elec_usage"><b>Electricity Consumption Data</b></p>
       <p>
           This layer contains estimates of the total annual electricity consumption per capita within each circuit group (kWh/year). These circuit groups reflect the most granular spatial unit at which residential electricity consumption data, sourced from the UCLA Energy Atlas, have been aggregated to generate estimates of annual electricity use per capita and per household throughout the region. A circuit group is a collection of census block groups which are associated with the same distribution circuit. Click on a feature to find the total residential electricity usage (kWh/year) for both renter and owner-occupied households.
       </p>
-      <p><b>Housing Attribute Data</b></p>
+      <p id="housing"><b>Housing Attribute Data</b></p>
       <p>
           This layer plots the percentage of the population that are renters within each Block Group in Los Angeles County. This information provides useful context to the energy consumption per household data described for the circuit groups and can be useful for identifying, at the macro scale, cities or regions that should be focus areas for the exploration of eligible sites. Click on a feature in this layer to find more information on Census Block Groups including total population and more detailed housing statistics. 
       </p>
-      <p><b>Distribution Circuit Data</b></p>
+      <p id="circuits"><b>Distribution Circuit Data</b></p>
       <p>
           This layer shows the location of distribution circuits and displays their behind the meter 15% penetration capacity (MW) limits. Click on a circuit to see additional information about the distribution circuit, including existing, queued, and total generation.
       </p>
-      <p><b>Brownfield & Superfund Sites</b></p>
+      <p id="brownfields"><b>Brownfield & Superfund Sites</b></p>
       <p>
           Point locations of Brownfield and Superfund Property sites within Los Angeles County are provided as an additional contextual layer within the basemap. Red represents Brownfield and yellow represents Superfund.
       </p>
-      <p><b>EV Charging Stations</b></p>
+      <p id="ev_charging"><b>EV Charging Stations</b></p>
       <p>
           Additionally, point locations of Electric Vehicle Charging Stations are provided as a contextual layer. EV Charging Stations displays stations in three categories: public, private and other. Information like charging time availability, network, and pricing is available when a site is clicked on the map.
       </p>
