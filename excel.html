@@ -16,13 +16,13 @@
                   Title: "Eligible Sites",
                   Subject: "Simplified Eligible Institutional Sites",
                   Author: "CCSC",
-                  CreatedDate: new Date(2021,5,11)
+                  CreatedDate: new Date(2022,1,18)
           };
           
           wb.SheetNames.push("Eligible Institutional Sites");
           wb.SheetNames.push("Metadata");
           
-          const api_url = 'https://ccsc-ucla.carto.com:443/api/v2/sql?q=select site_id, address, combined_solar_potential_low_mw, percent_15_cap, combined_solar_annual_output_low_mwh_ac, low_combined_res_usage_offset_capita, low_combined_res_usage_offset_owner_households, low_combined_res_usage_offset_renter_households, ciscorep, cpa_territory, circuit_name, substation_name, system_name, rooftop_solar_potential_mw, parking_lot_solar_potential_low_mw, parking_lot_solar_annual_output_low_mwh_ac, rooftop_solar_annual_output_mwh_ac, total_res_usage_per_cap, total_res_usage_per_owner_household, total_res_usage_per_renter_household, average_household_size_owner_occupied_housing_units, average_household_size_renter_occupied_housing_units, vacancy_percentage, renter_percentage from public.institutional_sites_v2 order by site_id'
+          const api_url = 'https://ccsc-ucla.carto.com:443/api/v2/sql?q=select site_id, address, use_type, use_descri, combined_solar_potential_low_mw, percent_15_cap, ica_overall_pv, combined_solar_annual_output_low_mwh_ac, low_combined_res_usage_offset_capita, low_combined_res_usage_offset_owner_households, low_combined_res_usage_offset_renter_households, ciscorep, cpa_territory, circuit_name, substation_name, system_name, rooftop_solar_potential_mw, parking_lot_solar_potential_low_mw, parking_lot_solar_annual_output_low_mwh_ac, rooftop_solar_annual_output_mwh_ac, total_res_usage_per_cap, total_res_usage_per_owner_household, total_res_usage_per_renter_household, average_household_size_owner_occupied_housing_units, average_household_size_renter_occupied_housing_units, vacancy_percentage, renter_percentage from public.institutional_sites_v3 order by site_id'
           async function getSitesData() {
             const response = await fetch (api_url);
             const data = await response.json();
@@ -30,29 +30,59 @@
             const ws = XLSX.utils.json_to_sheet(data.rows);
             const ws1 = XLSX.utils.aoa_to_sheet([
                 ['Column Name','Description'],
+                
                 ['site_id','Site ID corresponding to the map pop-up information for Eligible Sites'],
+                
                 ['address','Address of institutional site'],
+                
+                ['use_type', 'General usetype classification of institutional site'],
+                
+                ['use_descri', 'Detailed usetype classfication of institutional site'],
+                
                 ['combined_solar_potential_low_mw ','Combined total of the low estimate of parking lot solar nameplate generation potential and rooftop solar nameplate generation potential (MW)'],
-                ['percent_15_cap','15% Penetration Capacity (MW-AC) of the circuit serving the site. Importance dictated by Rule 21, the total combined nameplate capacity of all generation assets connected to each distribution circuit must not exceed 15% of the historical maximum load experienced on that circuit over the previous 18 months.'],
+                
+                ['percent_15_cap','15% Penetration Capacity (MW) of the circuit serving the site. Importance dictated by Rule 21, the total combined nameplate capacity of all generation assets connected to each distribution circuit must not exceed 15% of the historical maximum load experienced on that circuit over the previous 18 months.'],
+                
+                ['ica_overall_pv', 'The maximum quantity (MVA) of in-front of the meter solar that could potentially be connected to the nearest distribution circuit segement to the institutional site based upon SCEs integrated capacity assessement results.'],
+                
                 ['combined_solar_annual_output_low_mwh_ac','Combine total of the low estimate of parking lot and rooftop solar nameplate generation potential (MWh AC)'],
+                
                 ['low_combined_res_usage_offset_capita','Estimate of households within census block group where total electricity usage could be offset by the low estimate combined solar potential'],
+                
                 ['low_combined_res_usage_offset_owner_households','Estimate of owner-occupied households within census block group where total electricity usage could be offset by the low estimate combined solar potential'],
+                
                 ['low_combined_res_usage_offset_renter_households','Estimate of renter-occupied households within census block group where total electricity usage could be offset by the low estimate combined solar potential'],
-                ['ciscorep','CalEnviroScreen 3.0 Percentile'],
+                
+                ['ciscorep','CalEnviroScreen 4.0 Percentile'],
+                
                 ['cpa_territory','Institutional site located within service territory boundaries for the Clean Power Alliance (CPA)'],
+                
                 ['circuit_name','Nearest distribution circuit, name defined by Southern California Edison (SCE)'],
+                
                 ['sub_name','Substation name defined by Southern California Edison (SCE), linked by nearest distribution circuit'],
+                
                 ['sys_name','System name defined by Southern California Edison (SCE), linked by nearest distribution circuit'],
+                
                 ['rooftop_solar_potential_mw','Rooftop solar nameplate solar generation potential (MW-AC)'],
+                
                 ['parking_lot_solar_potential_low_mw','Low level estimate of available parking lot area solar PV nameplate solar generation potential (MW-AC)'],
+                
                 ['parking_lot_solar_annual_output_low_mwh_ac','Low level estimate of available parking lot area annual solar PV generation potential (MWh AC)'],
+                
                 ['rooftop_solar_annual_output_mwh_ac','Rooftop solar annual solar PV generation (MWh AC) (Los Angeles County Solar Map)'],
+                
                 ['total_res_usage_per_cap','Total residential electricity usage (kWh) per capita within census block group (UCLA Energy Atlas)'],
+                
                 ['total_res_usage_per_owner_household','Total residential electricity usage (kWh) by owner-occupied household within census block group (UCLA Energy Atlas)'],
+                
                 ['total_res_usage_per_renter_household','Total residential electricity usage (kWh) by renter-occupied household within census block group (UCLA Energy Atlas)'],
+                
                 ['average_household_size_owner_occupied_housing_units','Average household size of owner-occupied housing units by census block group (ACS)'],
+                
                 ['average_household_size_renter_occupied_housing_units','Average household size of renter-occupied housing units by census block group (ACS)'],
+                
                 ['vacancy_percentage','Percentage of vacant household by census block group (ACS)'],
+                
                 ['renter_percentage','Percentage of renters by census block group (ACS)']
             ]);
             wb.Sheets["Eligible Institutional Sites"] = ws;
