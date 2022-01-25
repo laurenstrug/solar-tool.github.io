@@ -46,13 +46,28 @@
       <h3>Table of Contents</h3>
       <ul>
         <li><a href="#overview">Overview</a></li>
+          <ul>
+            <li><a href="#map_panel">Map Panel</a></li>
+            <li><a href="#filter_panel">Filter Panel</a></li>
+            <li><a href="#metadata_links">Metadata Links</a></li>
+          </ul>
         <li><a href="#layers">Available Map Layers</a></li>
+          <ul>
+            <li><a href="#eligible_sites">Eligible Sites</a></li>
+            <li><a href="#cities">City Boundaries</a></li>
+            <li><a href="#dacs">DAC Census Tracts</a></li>
+            <li><a href="#elec_usage">Electricity Consumption</a></li>
+            <li><a href="#housing">Housing Attributes</a></li>
+            <li><a href="#circuits">Distribution Circuits</a></li>
+            <li><a href="#brownfields">Brownfield & Superfund Sites</a></li>
+            <li><a href="#ev_charging">EV Charging Stations</a></li>
+          </ul>
         <li><a href="#map">Using the Map</a></li>
         <ul>
           <li><a href="#zoom">Zooming In</a></li>
           <li><a href="#filter">Using Filters</a></li>
+          <li><a href="#filtertype">Filter Types</a></li>
           <li><a href="#color">Applying Colors</a></li>
-          <li><a href="#filtertype">Filter Types</a></li>         
           <li><a href="#popupinfo">Using Pop-Ups</a></li>
           <li><a href="#filterlist">Map Filter Options</a></li>
         </ul>
@@ -67,7 +82,7 @@
       <h2 id="overview">Overview</h2>
 
       <p>
-          When community solar opportunities map loads, two elements appear on the screen: a map panel and a filter panel (right side). A custom basemap has been developed using Mapbox which highlights the administrative boundary of Los Angeles County, grays out the service territory of LADWP <sup>1</sup> and restricts reference annotation text elements to only those geographic points of interest most relevant to this project.
+          When community solar opportunities map loads, two elements appear on the screen: a map panel and a filter panel (right side). A custom basemap has been developed using Mapbox which highlights the administrative boundary of Los Angeles County, grays out the service territory of LADWP <sup>**</sup> and restricts reference annotation text elements to only those geographic points of interest most relevant to this project.
       </p>
 
       <figure>
@@ -76,7 +91,7 @@
         <figcaption>Hover your cursor over an image, click to enlarge.
         </figcaption>
       </figure>
-      <small>1. LADWP is grayed out because key data inputs about grid distribution circuit capacities were unavailable.</small>
+      <i><small>** LADWP is grayed out because key data inputs about grid distribution circuit capacities were unavailable.</small></i>
       <hr>
       <p class="lede">After the solar opportunity map loads, the map is
         divided into two panels.</p>
@@ -84,7 +99,7 @@
         <li>A Map Panel</li>
         <li>A Filter Panel</li>
       </ol>
-      <h3>Map Panel</h3>
+      <h3 id="map_panel">Map Panel</h3>
       <p>
           Within the map panel there are a series of interactive elements which can be used to explore different sources of geographic information as well as adjust the zoom level or search for geographic locations of interest. These elements are highlighted in the following image.
       </p>
@@ -92,7 +107,7 @@
       <img class="tutorialImg" src="images/map_panel.png"
         onclick="openModal();currentSlide(2)">
 
-      <h3>Filter Panel</h3>
+      <h3 id="filter_panel"> Filter Panel</h3>
       <p>
           Within the filter panel are interactive selection tools that allow users to iteratively apply filters to the layer of eligible sites. The CARTO web map service refers to these tools as "widgets." For our purposes, we refer to them as filters. These filters range from histograms, to categorical identity filters, to binary conditions. The features and suggested patterns of use of these tools are discussed in later sections.
       </p>
@@ -102,16 +117,16 @@
       <img class="tutorialImg" src="images/widget_panel.png"
         onclick="openModal();currentSlide(3)">
 
-      <h3>Metadata Links</h3>
+      <h3 id="metadata_links">Metadata Links</h3>
       <p>
-          In addition to these map controls, also located within the filter panel is an arrow icon that links to important metadata for the map as well as a link to the CCSC CARTO profile. The location of these links are highlighted in the screenshot below.
+          On the left hand side of the map located are links to the map's metadata and the CCSC CARTO profile. The locations of these links are highlighted in the screenshot below.
       </p>
       <img class="tutorialImg" src="images/metadata_links.png"
         onclick="openModal();currentSlide(4)">
 
       <h3 id="layers">Available Map Layers</h3>
 
-      <p><b>Eligible Sites</b></p>
+      <p id="eligible_sites"><b>Eligible Sites</b></p>
       <p>
           Using the layer selection controls, the user can easily toggle on or off different geographic data layers. The primary layer, whose attributes are linked to all of the interactive selection filters, is titled "Eligible Sites" within the layer control panel. This layer corresponds to the following categories of publicly-owned and community-oriented properties considered eligible for potential selection for the location of a community scale solar PV generation system that could potentially be used to support a resilience center or as the anchor location for a community solar virtual net metering program. Examples of these types of sites include: </\p>
             <ul> 
@@ -124,31 +139,31 @@
       <p> 
         A detailed discussion of how these sites were selected and their corresponding attributes were calculated is provided in the <a href="methods.html">Methods</a> page. 
       </p>
-      <p><b>City Boundaries</b></p>
+      <p id="cities"><b>City Boundaries</b></p>
       <p>
           A boundary layer containing the borders of Los Angeles County's 88 cities as well as unincorporated areas. This layer is included to provide geographic context for the focused search of eligible sites within a particular city or region of interest. 
       </p>
-      <p><b>DAC Census Tracts</b></p>
+      <p id="dacs"><b>DAC Census Tracts</b></p>
       <p>
           The DAC Census Tracts is an additional boundary layer displaying the 25% highest scoring census tracts in <a href="https://oehha.ca.gov/calenviroscreen/report/calenviroscreen-30" target="_blank">CalEnviroScreen 4.0</a>. These areas are designated as Disadvantaged Communities (DAC) by the California Office of Environmental Health Hazard Assessment. This is provided as a layer for equity considerations in the search for eligible sites.
       </p>
-      <p><b>Electricity Consumption Data</b></p>
+      <p id="elec_usage"><b>Electricity Consumption Data</b></p>
       <p>
           This layer contains estimates of the total annual electricity consumption per capita within each circuit group (kWh/year). These circuit groups reflect the most granular spatial unit at which residential electricity consumption data, sourced from the UCLA Energy Atlas, have been aggregated to generate estimates of annual electricity use per capita and per household throughout the region. A circuit group is a collection of census block groups which are associated with the same distribution circuit. Click on a feature to find the total residential electricity usage (kWh/year) for both renter and owner-occupied households.
       </p>
-      <p><b>Housing Attribute Data</b></p>
+      <p id="housing"><b>Housing Attribute Data</b></p>
       <p>
           This layer plots the percentage of the population that are renters within each Block Group in Los Angeles County. This information provides useful context to the energy consumption per household data described for the circuit groups and can be useful for identifying, at the macro scale, cities or regions that should be focus areas for the exploration of eligible sites. Click on a feature in this layer to find more information on Census Block Groups including total population and more detailed housing statistics. 
       </p>
-      <p><b>Distribution Circuit Data</b></p>
+      <p id="circuits"><b>Distribution Circuit Data</b></p>
       <p>
           This layer shows the location of distribution circuits and displays their behind the meter 15% penetration capacity (MW) limits. Click on a circuit to see additional information about the distribution circuit, including existing, queued, and total generation.
       </p>
-      <p><b>Brownfield & Superfund Sites</b></p>
+      <p id="brownfields"><b>Brownfield & Superfund Sites</b></p>
       <p>
           Point locations of Brownfield and Superfund Property sites within Los Angeles County are provided as an additional contextual layer within the basemap. Red represents Brownfield and yellow represents Superfund.
       </p>
-      <p><b>EV Charging Stations</b></p>
+      <p id="ev_charging"><b>EV Charging Stations</b></p>
       <p>
           Additionally, point locations of Electric Vehicle Charging Stations are provided as a contextual layer. EV Charging Stations displays stations in three categories: public, private and other. Information like charging time availability, network, and pricing is available when a site is clicked on the map.
       </p>
@@ -208,11 +223,11 @@
       <p><i><b>Parking Lot Solar Potential (MW):</b></i> Filter and see the distribution of eligible sites based on the low estimate of parking lot potential (MW) that can be built on the site.</p>
       <p><i><b>Combined Solar Potential (MW):</b></i> Filter and see the distribution of eligible sites based on the combined total of the low estimate of parking lot generation potential and rooftop solar potential (MW).</p>
       <p><i><b>Behind the Meter (BTM) Grid Capacity (MW):</b></i> Display eligible sites based on the grid capacity (MW), as defined by Southern California Edison (SCE), of the circuit serving the site.”. The grid circuit capcity refers to the 15% Penetration capacity which tells you the upper limit (MW) of a behind the meter system size that could be interconnected to a given circuit without the need for a detailed study or infrastructure capacity upgrades. This metric is most useful for evaluating the size of resilience center site opportunities.</p>
-      <p><i><b>In Front of the Meter (IFOM) Grid Capacity (MVA):</b></i> Display eligible sites based on the grid capacity (MVA), as defined by Southern California Edison (SCE), of the circuit serving the site. This Integrated Capacity Analysis (ICA) value is the maximum allowable size for an in front of the meter system without the need for a detailed grid interconnection study or infrastructure capacity upgrades. This metric is most useful for evaluating the size of community solar opportunities.</p>
+      <p><i><b>In Front of the Meter (IFOM) Grid Capacity (MVA):</b></i> Display eligible sites based on the grid capacity (MVA)<sup>**</sup>, as defined by Southern California Edison (SCE), of the circuit serving the site. This Integrated Capacity Analysis (ICA) value is the maximum allowable size for an in front of the meter system without the need for a detailed grid interconnection study or infrastructure capacity upgrades. This metric is most useful for evaluating the size of community solar opportunities.</p>
       <p><i><small>** Note that the units associated with this value are expressed in megavolt-amperes (MVA), instead of megawatts (MW). For purposes of this tool and site planning, it can be assumed that this value is equivalent to MW when comparing it to the size of a prospective solar PV installation. This is equivalent to assuming a power factor of unity and thus, implies that any potential issues related to reactive power would be addressed indepedently of the eligible site's system design.</small></i></p>
       <p><i><b>Local Population Offset:</b></i> Filter and see the distribution of eligible sites based on the estimate of households within census block group where total electricity usage could be offset by the low estimate combined solar potential.</p>
       <p><i><b>Local Renter Households Offset:</b></i> Filter and see the distribution of eligible sites based on the estimate of renter-occupied households within census block group where total electricity usage could be offset by the low estimate combined solar potential.</p>
-      <p><i><b>Site ID:</b></i>Filter eligible sites by the Site ID number. This filter is useful if you have previously identified one or more sites and wish to filter only those, for example, to take screenshots. NOTE: The map will not zoom to the site location upon filtering. The site may be hard to see, therefore it is best to know roughly where to zoom into the map to find your site.</p>
+      <p><i><b>Site ID:</b></i> Filter eligible sites by the Site ID number. This filter is useful if you have previously identified one or more sites and wish to filter only those, for example, to take screenshots. NOTE: The map will not zoom to the site location upon filtering. The site may be hard to see, therefore it is best to know roughly where to zoom into the map to find your site.</p>
       
       <h3 id="trouble">Troubleshooting</h3>
 
