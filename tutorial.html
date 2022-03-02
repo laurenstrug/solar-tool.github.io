@@ -90,44 +90,41 @@
         <figcaption>Hover your cursor over an image, click to enlarge.
         </figcaption>
       </figure>
-      <i><small>** LADWP is grayed out because key data inputs about grid distribution circuit capacities were unavailable.</small></i>
+      <i><small>** Service territories for LADWP and other municipally owned utilities are grayed out because key data inputs about grid distribution circuit capacities were unavailable in these areas.</small></i>
       <hr>
       <p class="lede">After the solar opportunity map loads, the map is
-        divided into two panels.</p>
+        divided into three panels, one of which is minimized by default.</p>
       <ol>
-        <li>A Map Panel</li>
-        <li>A Filter Panel</li>
+        <li>Map Panel</li>
+        <li>Widget Panel</li>
+        <li>Attribute Table Panel (Minimized)</li>
       </ol>
       <p id="map_panel"><b>Map Panel</b></p>
       <p>
-          Within the map panel there are a series of interactive elements which can be used to explore different sources of geographic information as well as adjust the zoom level or search for geographic locations of interest. These elements are highlighted in the following image.
+          Within the map panel there are a series of interactive elements which can be used to explore different sources of geographic information as well as adjust the zoom level or search for geographic locations of interest. On the upper left portion of the map panel is a search bar which can be used to find addresses, points of interest, and other geographic areas. On the bottom left are a series of navigational tools for zooming and panning through the map. The home icon provides a convenient way to return to the default geographic extent and zoom level if ever you find yourself lost. 
       </p>
-
       <img class="tutorialImg" src="images/map_panel.png"
         onclick="openModal();currentSlide(2)">
 
-      <p id="filter_panel"><b>Filter Panel</b></p>
+      <p id="filter_panel"><b>Widget Panel</b></p>
       <p>
-          Within the filter panel are interactive selection tools that allow users to iteratively apply filters to the layer of eligible sites. The CARTO web map service refers to these tools as "widgets." For our purposes, we refer to them as filters. These filters range from histograms, to categorical identity filters, to binary conditions. The features and suggested patterns of use of these tools are discussed in later sections.
-      </p>
-      <p>
-          Think of the filters as building blocks. They can be combined to meet the requirements of your site selection. Each "Get Started" example on the Solar Map page gives an example of suggested use for each filter.
+          Within the widget panel are interactive selection tools that allow users to do things like change the layers that are visble in the map, iteratively apply filters to the layer of eligible sites, explore different infographics and charts, create and navigate bookmarked areas, as well as generate print outs of the map's data. The ArcGIS web map service refers to these tools as "widgets." Among the most important of these widgets are the filters. These filters allow the selection of sites by numeric, categorical, and boolean attributes. The features and suggested patterns of use of these filtering tools are discussed in later sections. Think of the filters as building blocks. They can be combined to meet the requirements of your site selection. Each "Get Started" example on the Solar Map page gives an example of suggested use for each component filter.
       </p>
       <img class="tutorialImg" src="images/widget_panel.png"
         onclick="openModal();currentSlide(3)">
 
-      <p id="metadata_links"><b>Metadata Links</b></p>
-      <p>
-          On the left hand side of the map located are links to the map's metadata and the CCSC CARTO profile. The locations of these links are highlighted in the screenshot below.
-      </p>
-      <img class="tutorialImg" src="images/metadata_links.png"
-        onclick="openModal();currentSlide(4)">
+      <p id="attribute_table_panel"><b>Attribute Table Panel</b></p>
+        <p>
+            At the bottom of the screen is a small grey arrow that, when clicked, will make visible the attribute table panel that is minimized by default. This panel provides a tabular view of the underlying data which is being represented in the map. This attribute table panel allows for the detailed selection, sorting, filtering, and inspection of all of the attributes for any layer that is visible within the current map view. The attribute table panel can also be used to directly export tabular CSV data files for sets of eligible sites that have been selected through the application of various filters.
+          </p>
+        <img class="tutorialImg" src="images/attribute_table_panel.png"
+          onclick="openModal();currentSlide(3)">
 
       <h3 id="layers">Available Map Layers</h3>
 
-      <p id="eligible_sites"><b>Eligible Sites</b></p>
+      <p id="eligible_sites"><b>Eligible Sites by Usetype</b></p>
       <p>
-          Using the layer selection controls, the user can easily toggle on or off different geographic data layers. The primary layer, whose attributes are linked to all of the interactive selection filters, is titled "Eligible Sites" within the layer control panel. This layer corresponds to the following categories of publicly-owned and community-oriented properties considered eligible for potential selection for the location of a community scale solar PV generation system that could potentially be used to support a resilience center or as the anchor location for a community solar virtual net metering program. Examples of these types of sites include: </\p>
+          Using the layer selection controls, the user can easily toggle on or off different geographic data layers. The primary layer, whose attributes are linked to all of the interactive selection filters, is titled "Eligible Sites by Usetype" within the layer control panel. This layer corresponds to the following categories of publicly-owned and community-oriented properties considered eligible for potential selection for the location of a community scale solar PV generation system that could potentially be used to support a resilience center or as the anchor location for a community solar virtual net metering program. Examples of these types of sites include: </p>
             <ul> 
                 <li>Institutional (e.g. Churches, Hospitals)</li>
                 <li>Educational (e.g. Schools)</li>
@@ -142,30 +139,43 @@
       <p>
           A boundary layer containing the borders of Los Angeles County's 88 cities as well as unincorporated areas. This layer is included to provide geographic context for the focused search of eligible sites within a particular city or region of interest. 
       </p>
-      <p id="dacs"><b>DAC Census Tracts</b></p>
+      <p id="zipcodes"><b>Zipcode Boundaries</b></p>
       <p>
-          The DAC Census Tracts is an additional boundary layer displaying the 25% highest scoring census tracts in <a href="https://oehha.ca.gov/calenviroscreen/report/calenviroscreen-30" target="_blank">CalEnviroScreen 4.0</a>. These areas are designated as Disadvantaged Communities (DAC) by the California Office of Environmental Health Hazard Assessment. This is provided as a layer for equity considerations in the search for eligible sites.
+          A boundary layer containing the borders of Los Angeles County's zipcodes. This layer is included to provide geographic context for the focused search of eligible sites within a particular zipcode of interest. 
       </p>
-      <p id="elec_usage"><b>Electricity Consumption Data</b></p>
+      <p id="districts"><b>County Supervisorial District Boundaries</b></p>
       <p>
-          This layer contains estimates of the total annual electricity consumption per capita within each circuit group (kWh/year). These circuit groups reflect the most granular spatial unit at which residential electricity consumption data, sourced from the UCLA Energy Atlas, have been aggregated to generate estimates of annual electricity use per capita and per household throughout the region. A circuit group is a collection of census block groups which are associated with the same distribution circuit. Click on a feature to find the total residential electricity usage (kWh/year) for both renter and owner-occupied households.
+          A boundary layer containing the borders of Los Angeles County five Supervisorial Districts. This layer is included to provide geographic context for the focused search of eligible sites within a particular Supervisorial District of interest. 
       </p>
-      <p id="housing"><b>Housing Attribute Data</b></p>
-      <p>
-          This layer plots the percentage of the population that are renters within each Block Group in Los Angeles County. This information provides useful context to the energy consumption per household data described for the circuit groups and can be useful for identifying, at the macro scale, cities or regions that should be focus areas for the exploration of eligible sites. Click on a feature in this layer to find more information on Census Block Groups including total population and more detailed housing statistics. 
-      </p>
-      <p id="circuits"><b>Distribution Circuit Data</b></p>
-      <p>
-          This layer shows the location of distribution circuits and displays their behind the meter 15% penetration capacity (MW) limits. Click on a circuit to see additional information about the distribution circuit, including existing, queued, and total generation.
-      </p>
-      <p id="brownfields"><b>Brownfield & Superfund Sites</b></p>
-      <p>
-          Point locations of Brownfield and Superfund Property sites within Los Angeles County are provided as an additional contextual layer within the basemap. Red represents Brownfield and yellow represents Superfund.
-      </p>
-      <p id="ev_charging"><b>EV Charging Stations</b></p>
+      <p id="ev_charging"><b>EV Charging Stations by Access Type</b></p>
       <p>
           Additionally, point locations of Electric Vehicle Charging Stations are provided as a contextual layer. EV Charging Stations displays stations in three categories: public, private and other. Information like charging time availability, network, and pricing is available when a site is clicked on the map.
       </p>
+      <p id="brownfields"><b>USEPA Brownfield Sites by Status</b></p>
+      <p>
+          Point locations of USEPA designated Brownfield sites within Los Angeles County are provided as an additional contextual layer. Brownfield sites are color coded according to their activity status.
+      </p>
+      <p id="btm_circuits"><b>Distribution Circuit by Behind the Meter PV Integration Capacity Limits</b></p>
+      <p>
+          This layer shows the location of distribution circuits and displays their behind the meter 15% penetration capacity (MW) limits. Click on a circuit to see additional information about the distribution circuit, including existing, queued, and total generation.
+      </p>
+      <p id="iftm_circuits"><b>Distribution Circuits by In Front of the Meter Integration Capacity Limits</b></p>
+      <p>
+          This layer shows the location of distribution circuits and displays their in front of the meter ICA overall PV integration capacity (MVA) limits. Click on a circuit to see additional information about the distribution circuit, including its associated substation and system.
+      </p>
+      <p id="dacs"><b>Census Tracts by CES-4.0 Disadvantaged Community Status</b></p>
+      <p>
+          The DAC Census Tracts is an additional boundary layer displaying the 25% highest scoring census tracts in <a href="https://oehha.ca.gov/calenviroscreen/report/calenviroscreen-40" target="_blank">CalEnviroScreen 4.0</a>. These areas are designated as Disadvantaged Communities (DAC) by the California Office of Environmental Health Hazard Assessment. This is provided as a layer for equity considerations in the search for eligible sites.
+      </p>
+      <p id="housing"><b>Census Block Groups by Renter Household Percentage</b></p>
+      <p>
+          This layer plots the percentage of the population that are renters within each Block Group in Los Angeles County. This information provides useful context to the energy consumption per household data described for the circuit groups and can be useful for identifying, at the macro scale, cities or regions that should be focus areas for the exploration of eligible sites. Click on a feature in this layer to find more information on Census Block Groups including total population and more detailed housing statistics. 
+      </p>
+      <p id="elec_usage"><b>Census Block Groups by Average Annual Electricity Usage (kWh/year) Per Renter Household</b></p>
+      <p>
+          This layer contains estimates of the total annual electricity consumption per capita within collections of census block groups (kWh/year). These circuit groups reflect the most granular spatial unit at which residential electricity consumption data, sourced from the UCLA Energy Atlas, have been aggregated to generate estimates of annual electricity use per capita and per household throughout the region. A circuit group is a collection of census block groups which are associated with the same distribution circuit. Click on a feature to find the total residential electricity usage (kWh/year) for both renter and owner-occupied households.
+      </p>
+
       <h3 id="map">Using the Map</h3>
 
       <p id="zoom"><b>How to zoom in</b></p>
@@ -174,7 +184,7 @@
       </p>
       <p id="filter"><b>Using a filter</b></p>
       <p>
-          To open a filter, hover your cursor over the three vertical dots and click the green "Toggle Widget" switch. CARTO calls these filters "Widgets." For our purposes, they make more sense to be described as filters.
+          To open a filter, hover your cursor over the three vertical dots and click the green "Toggle Widget" switch. ArcGIS calls these filters "Widgets." For our purposes, they make more sense to be described as filters.
       </p>
       <img src="images/open_widget.gif">
 
@@ -182,26 +192,29 @@
           Think of the different filters on the sidebar as building blocks. They can be combined and explored based on your custom requirements for selecting a site. 
       </p>
       
-      <p id="filtertype"><b>Category filter versus histogram filters</b></p>
+      <p id="filtertype"><b>Categorical filters versus numerical filters</b></p>
       <p>
-          Category filters allow you to filter eligible sites based on data-defined categories. For example: city, CPA territory, and circuit name. To use a category filter: open the filter and click on a category OR search for a category, click the check box, and click apply.</p>
+          Categorical filters allow you to filter eligible sites based on data-defined categories. For example: city name, usetype, CPA territory, etc. To use a category filter: click on the drop-down window and select the category or categories of interest. It is also possible to search for a category and then select from a set of potential matches. </p>
       <p>
-          Histogram filters show the distribution of a numerical data source across the eligible sites. For example: Grid Circuit Capacity, CalEnviroScreen 4.0 Scores, and Combined Solar Potential. Histogram filters are best used in conjunction with the “color style” option (explained below). </p>
-      <img src="images/histogram.gif">
-      
+          Numerical filters allow you to select eligible sites by setting either a threshold or range of desired values. For example: Grid Circuit Capacity, CalEnviroScreen 4.0 Scores, and Combined Solar Potential are all numerical attributes that can be filtered in this way. These filters are largely self descriptive and provide helpful hints as to what types of input values will produce a meaningful selection result.</p>
+      <img src="images/numerical.gif">      
       <p>
-          Use your cursor to select a range of values from the histogram to limit your search. For example, selecting sites that only fall within census tracks with a CalEnviroScreen score of 75% or more.</p>
-      
-      <p id="color"><b>Applying color style to eligible sites</b></p>
-      <p>
-          Each filter gives the option to color code sites on the map based on the range of values within that filter, enabling the comparison of sites to each other with respect to that attribute. This is done using the “auto style" option.</p> 
-      <p>
-          Click the water droplet on the left side of any filter and an auto  style will be applied to the Eligible Site layer. The color displayed on the filter histogram corresponds with the color of eligible sites. For example, if a histogram of Grid Circuit Capacity shows 2 MW as dark green, sites displayed on the map that are dark green have 2 MW grid circuit capacity.</p>
-      <p>
-          Color coding is comparative only and helps to select the best among available sites. It does not mean a site is appropriate as a Community Solar or Resilience Center. The regulatory program max/min values (see the <a href="download/Summary_of_Utility_Programs_672021.pdf" target="_blank">Summary of Utility Programs</a> under the  Resources page) are the best guides for thinking about whether a site has enough capacity.
-      <img class="tutorialImg" src="images/apply_color.gif"
-        onclick="openModal();currentSlide(5)">
+          Navigate to the CES-4.0 Percentile Score filter and input a threshold value of 75. This will create a selection of sites that is restricted to only those which fall within census tracks with a CalEnviroScreen-4.0 score of 75% or more.</p>
 
+      <p id="color"><b>Exploring the aggregate solar potential infographic</b></p>
+        <p>
+          A fully interactive infographic panel has been created which plots the cumulative solar potential across all sites aggregated by general usetype category. Solar potential totals can be explored by installation type and the data which is rendered in the infographic is dynamically linked to the selected parcels which are currently in view. </p>
+        <p> You can hover over different elements of the chart to get more detailed data and click on the different plot series to add or remove them from view. </p>
+      <img class="tutorialImg" src="images/infographic.gif"
+        onclick="openModal();currentSlide(5)">
+    
+      <p id="color"><b>Creating and using spatial bookmarks</b></p>
+      <p>
+          It is possible that a geographic area of interest for a user of the tool may not neatly conform to the city, zipcode, or supervisioral district boundaries that have been provided. In this case it is possible to create and use spatial bookmarks. A bookmark can be created which saves the current map pan and zoom level so it can be easily returned to later in a browsing session.</p> 
+      <p>
+          Several default bookmarks have been provided within the map. These correspond to popular geographic areas within the county that might be of interest to different users.</p>
+      <img class="tutorialImg" src="images/bookmarks.gif"
+        onclick="openModal();currentSlide(5)">
 
       <p id="popupinfo"><b>How to get more information from layer pop-ups</b></p>
       <p>
@@ -212,23 +225,25 @@
           This feature is available for the following layers: Eligible Sites, Electricity Consumption Data, Housing Attribute Data, Distribution Circuit Data, and EV Charging Stations</p>
 
       <p id="filterlist"><b>Description of Filters Available on the Map</b></p>
-      <p><i><b>City:</b></i> Filter eligible sites by the City they reside in.</p>
-      <p><i><b>Zipcode:</b></i> Filter eligible sites by the Zip Code they reside in.</p>
-      <p><i><b>CalEnviroScreen 4.0 Scores:</b></i> Filter and see the distribution of eligible sites based on the CalEnviroScreen 4.0 percentile of the census tract the site resides in.</p>
-      <p><i><b>General Usetype:</b></i> Filter and see the distribution of eligible sites based upon the general use type designation. These high level designations include institutional, educational, recreational, government, and miscellaneous sites.</p>
-      <p><i><b>Detailed Usetype:</b></i> Filter and see the distribution of eligible sites based upon a more detailed use type specification. These more detailed use types included the level of educational facilities and the identity of institutional and recreational sites.</p>
-      <p><i><b>CPA Territory:</b></i> Display eligible sites based on "true" if the site is located within service territory boundaries for the Clean Power Alliance (CPA), and "false" if it is not.</p>
-      <p><i><b>Rooftop Solar Potential (MW):</b></i> Filter and see the distribution of eligible sites based on the low estimate of rooftop solar potential (MW) that can be built on the site.</p>
-      <p><i><b>Parking Lot Solar Potential (MW):</b></i> Filter and see the distribution of eligible sites based on the low estimate of parking lot potential (MW) that can be built on the site.</p>
-      <p><i><b>Combined Solar Potential (MW):</b></i> Filter and see the distribution of eligible sites based on the combined total of the low estimate of parking lot generation potential and rooftop solar potential (MW).</p>
-      <p><i><b>Behind the Meter (BTM) Grid Capacity (MW):</b></i> Display eligible sites based on the grid capacity (MW), as defined by Southern California Edison (SCE), of the circuit serving the site.”. The grid circuit capcity refers to the 15% Penetration capacity which tells you the upper limit (MW) of a behind the meter system size that could be interconnected to a given circuit without the need for a detailed study or infrastructure capacity upgrades. This metric is most useful for evaluating the size of resilience center site opportunities.</p>
-      <p><i><b>In Front of the Meter (IFOM) Grid Capacity (MVA):</b></i> Display eligible sites based on the grid capacity (MVA)<sup>**</sup>, as defined by Southern California Edison (SCE), of the circuit serving the site. This Integrated Capacity Analysis (ICA) value is the maximum allowable size for an in front of the meter system without the need for a detailed grid interconnection study or infrastructure capacity upgrades. This metric is most useful for evaluating the size of community solar opportunities.</p>
+      <p><i><b>City Name is any of:</b></i> Filter eligible sites by the City they reside in.</p>
+      <p><i><b>Zipcode is any of:</b></i> Filter eligible sites by the Zip Code they reside in.</p>
+      <p><i><b>CES-4.0 Percentile Score is greater than:</b></i> Filter and see the distribution of eligible sites based on the CalEnviroScreen 4.0 percentile of the census tract the site resides in.</p>
+      <p><i><b>General Usetype is any of:</b></i> Filter and see the distribution of eligible sites based upon the general use type designation. These high level designations include institutional, educational, recreational, government, and miscellaneous sites.</p>
+      <p><i><b>Detailed Usetype is any of:</b></i> Filter and see the distribution of eligible sites based upon a more detailed use type specification. These more detailed use types included the level of educational facilities and the identity of institutional and recreational sites.</p>
+      <p><i><b>Is in CPA Territory:</b></i> Display eligible sites that are ("1") or are not ("0") located within service territory boundaries for the Clean Power Alliance (CPA).</p>
+      <p><i><b>Site ID is:</b></i> Filter eligible sites by the Site ID number. This filter is useful if you have previously identified one or more sites and wish to filter only those, for example, to take screenshots.</p>
+      <p><i><b>Rooftop Solar Potential (MW) is between:</b></i> Filter and see the distribution of eligible sites based on the low estimate of rooftop solar potential (MW) that can be built on the site.</p>
+      <p><i><b>Parking Lot Solar Potential (MW) is between:</b></i> Filter and see the distribution of eligible sites based on the low estimate of parking lot potential (MW) that can be built on the site.</p>
+      <p><i><b>Combined Solar Potential (MW) is between:</b></i> Filter and see the distribution of eligible sites based on the combined total of the low estimate of parking lot generation potential and rooftop solar potential (MW).</p>
+      <p><i><b>Behind the Meter PV Integration Capacity (MW) is greater than:</b></i> Display eligible sites based on the grid capacity (MW), as defined by Southern California Edison (SCE), of the circuit serving the site.”. The grid circuit capcity refers to the 15% Penetration capacity which tells you the upper limit (MW) of a behind the meter system size that could be interconnected to a given circuit without the need for a detailed study or infrastructure capacity upgrades. This metric is most useful for evaluating the size of resilience center site opportunities.</p>
+      <p><i><b>In-Front of the Meter PV Integration Capacity (MVA) is greater than:</b></i> Display eligible sites based on the grid capacity (MVA)<sup>**</sup>, as defined by Southern California Edison (SCE), of the circuit serving the site. This Integrated Capacity Analysis (ICA) value is the maximum allowable size for an in front of the meter system without the need for a detailed grid interconnection study or infrastructure capacity upgrades. This metric is most useful for evaluating the size of community solar opportunities.</p>
       <p><i><small>** Note that the units associated with this value are expressed in megavolt-amperes (MVA), instead of megawatts (MW). For purposes of this tool and site planning, it can be assumed that this value is equivalent to MW when comparing it to the size of a prospective solar PV installation. This is equivalent to assuming a power factor of unity and thus, implies that any potential issues related to reactive power would be addressed indepedently of the eligible site's system design.</small></i></p>
-      <p><i><b>Local Population Offset:</b></i> Filter and see the distribution of eligible sites based on the estimate of households within census block group where total electricity usage could be offset by the low estimate combined solar potential.</p>
-      <p><i><b>Local Renter Households Offset:</b></i> Filter and see the distribution of eligible sites based on the estimate of renter-occupied households within census block group where total electricity usage could be offset by the low estimate combined solar potential.</p>
-      <p><i><b>Site ID:</b></i> Filter eligible sites by the Site ID number. This filter is useful if you have previously identified one or more sites and wish to filter only those, for example, to take screenshots. NOTE: The map will not zoom to the site location upon filtering. The site may be hard to see, therefore it is best to know roughly where to zoom into the map to find your site.</p>
+      <p><i><b>Combined Residential Usage Offset (Persons) is between:</b></i> Filter and see the distribution of eligible sites based on the estimate of persons within local census block groups whose total electricity usage could be offset by the low estimate combined solar potential.</p>
+      <p><i><b>Combined Residential Usage Offset (Renter Occupied Households) is between:</b></i> Filter and see the distribution of eligible sites based on the estimate of renter-occupied households within local census block groups whose total electricity usage could be offset by the low estimate combined solar potential.</p>
       
       <h3 id="trouble">Troubleshooting</h3>
+      
+      <p> <b> NEEDS UPDATING FOR ARCGIS VERSION </b> </p>
 
       <p><b>Filter timed out</b></p>
       <p>
@@ -238,15 +253,13 @@
           When you use a histogram type filter and click on the graph to make a range selection, on the first click before you drag the range selector bars, you might accidentally make a selection that doesn’t include any sites. This will look like all other filters graying out and displaying a message that no data is available.</p>
       <p>
           To solve this, scroll back to the histogram filter you had just clicked. Drag the selector bars on the histogram apart until they are selecting sites.</p>
-      <img class="tutorialImg" src="images/nodata.gif"
-      onclick="openModal();currentSlide(6)">
       <p><b>Refreshing or Clearing filters to start over</b></p>
       <p>
           To remove all filtering from the map, each filter needs to be cleared separately. For a histogram filter, click "Clear." For a category filter, click 'All' or 'Unlock' depending on if you have clicked a category or searched for a category.
       </p>
       <p><b>Filter Toggle Switch</b></p>
       <p>
-          Many people have noticed that the filter toggle switches are green when off and grey when on – the opposite of what you are probably used to seeing on other sites. This is built into the CARTO platform we are using and cannot be modified by us.
+          Many people have noticed that the filter toggle switches are green when off and grey when on – the opposite of what you are probably used to seeing on other sites. This is built into the Arcgis platform we are using and cannot be modified by us.
       </p>
 
       <div id="myModal" class="modal">
@@ -322,7 +335,7 @@
         <a href="https://ioes.ucla.edu/ccsc" target="_blank"><b>CALIFORNIA CENTER FOR
             SUSTAINABLE COMMUNITIES at
             UCLA</b></a><br>
-          <i><small> Updated: 1/22/2022 </small></i>
+          <i><small> Updated: 3/2/2022 </small></i>
       </address>
       <!-- <p>Please <a href="mailto:ccsc@ioes.ucla.edu">contact us</a> with
         any questions or comments.</p> -->

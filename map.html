@@ -11,10 +11,6 @@
 
       gtag('config', 'G-5267Z24Q15');
     </script>
-    <!--TESTING EXCEL DOWNLOAD-->
-    <script lang="javascript" src="js/xlsx.full.min.js"></script>
-    <script lang="javascript" src="js/FileSaver.min.js"></script>
-    <!--TESTING EXCEL DOWNLOAD-->
 
     <meta charset="utf-8">
     <title>Map | LA Community Solar Opportunity Map</title>
@@ -68,7 +64,7 @@
             Find eligible sites for community solar and resilience center projects in your local area with the map tool below. Eligible sites are publicly owned or community oriented institutional facilities with existing buildings. These sites may also have parking lots.</p>
     
         <p> 
-            Panels on the right side of the map help filter and narrow locations based on criteria important to your solar installation site. LADWP service territory is grayed out because key data inputs about grid distribution circuit capacities were unavailable.</p>
+            The filter panel on the right side of the map allows you to restrict the locations which are currently in view based on criteria important to your solar installation site. The service territories for LADWP and other Los Angeles County municipal electric utilities are currently grayed out because key data inputs about the locations and solar PV integration capacities of their distribution circuits were unavailable.</p>
 
       <p>Please note that 100% screen resolution is most ideal for using the map.</p>
       <a href="http://www.caclimateinvestments.ca.gov/" target="_blank">
@@ -84,15 +80,13 @@
 
         <ol>
           <li>
-              There are two ways to focus the map on your city of interest. Use the search bar, located in the bottom left corner of the map. Type in your city and hit "Enter." This will zoom you into the city of interest and add a red pin.You can also zoom into a city with  using the "+/-" zoom tools next to the search bar.</li>
+              There are two ways to focus the map on your city of interest. The first is to just use the search bar, located in the top left corner of the map, to type in your city and hit "Enter." This will zoom you into the city of interest and add a pin.</li>
           <li>
-              After zooming to your city, open the City filter. Click "Search in 87 Categories." Type your city in the search bar.</li>
-          <li> 
-              Once it appears in the list, it will be greyed out, click the check box to the left to select. Click Apply in the upper-left corner of the filter.</li>
+              If you want to actually create a new selection, which restricts the sites within view to just those which are located in a specific city, the requires using the filter panel on the right of the map. First, select the filter panel, then go to the first dropdown window and select the name of a city (or cities) of interest from the list. This will cause only the sites within that city to be shown, eliminating all others from view in the map. </li>
         </ol>
         <p>
-            Now, only eligible sites within your city are shown on the map. Other filters will reflect this change. You can now see the distribution of other available datasets for sites located only in your city. Because filters are added cumulatively, making a selection in an additional filter will further refine the selected sites.</p>
-        <p>To undo your selection, click “Unlock” in the filter.</p>
+            Once the sites within your city have been selected within the map, all of other filters will be only be applied to the sites in this selection. Because filters are added cumulatively, making a selection in an additional filter will further refine the previous set of selected sites.</p>
+        <p>To clear this selection, click the city selection dropdown menu and either de-select all checked cities or click on the small trashcan icon at the bottom right of the pane.</p>
         <img src="images/sites_by_city.gif">
 
       </div>
@@ -102,43 +96,22 @@
       <div class="panel">
 
         <ol>
-          <li>Scroll to and open the "CPA Territory" filter.</li>
+          <li>Go to the filter panel and navigate to the "CPA Territory" filter.</li>
           <li>
-              Eligible sites are divided into two categories: true where the site is located within CPA territory, and false where it is outside CPA territory.</li>
+              Eligible sites are divided into two categories: true (1) where the site is located within CPA territory, and false (0) where it is outside CPA territory.</li>
           <li>
-              Click "true." Now, only eligible sites within CPA territory are shown on the map. Using additional filters will further refine your selected sites.</li>
+              Select "1" to create a new select which consists of eligible sites that are located within the CPA territory. Using additional filters will further refine the set of eligible sites within view from this selection.</li>
         </ol>
         <p>
-            To undo this step, click "All" within the CPA Territory filter.</p>
+            To clear this selection, unchech the "1" in the CPA filter click on the small trashcan icon at the bottom right of the pane.</p>
         <img src="images/cpa.gif">
-
-      </div>
-
-      <!-- <button class="accordion">Find sites with sufficient circuit capacity</button>
-      <div class="panel">
-
-        <ol>
-          <li>Scroll to and open the "Sufficient Circuit Capacity" filter.
-          </li>
-          <li>Eligible sites are divided into two categories: true where the
-            site has sufficient grid circuit capacity to accomodate solar PV,
-            and false where it does not.
-          </li>
-          <li>Click "true." Now, only eligible sites with sufficient circuit
-            capacity are shown on the map. Using additional filters
-            will further refine your selected sites.</li>
-        </ol>
-        <p>To undo this step, click "All" within the Sufficient Circuit
-          Capacity filter.</p>
-        <img src="images/capacity.gif"> -->
-
       </div>
       
       <button class="accordion">How do I incoporate circuit capacity into an evaluation of sites?</button>
       <div class="panel">
 
         <p>
-            The capacity of the local distribution circuits to accommodate new solar PV systems is an important siting consideration. There are two measures of grid distribution circuit capcity that are provided in the tool. The first, which is based upon the Rule-21 15% Penetration capacity  of the circuit, tells you the upper limit (MW) for a behind the meter system (i.e. for a resilience center) that could be interconnected to a given circuit without the need for a detailed study or infrastructure capacity upgrades. The second, which is based upon SCE's integrated capacity assessement (ICA), tells you the upper limit (MVA)<sup>**</sup> for an in front of the meter (IFOM) system that could be interconnected to support the development of a community solar program for instance.</p>
+            The capacity of local distribution circuits to accommodate new solar PV systems is an important siting consideration. There are two measures of grid distribution circuit capcity that are provided in the tool. The first, which is based upon the Rule-21 15% Penetration capacity of the circuits, tells you the upper limit (MW) for a behind the meter system (i.e. for a resilience center) that could likely be interconnected to a given circuit without the need for a detailed study or infrastructure capacity upgrades. The second, which is based upon SCE's integrated capacity assessement (ICA), tells you the upper limit (MVA)<sup>**</sup> for an in front of the meter (IFOM) system that could be interconnected to support the development of a community solar program, for instance.</p>
           
           <p><i><small>
             ** Note that the units associated with this value are expressed in megavolt-amperes (MVA), instead of megawatts (MW). For purposes of this tool and site planning, it can be assumed that this value is equivalent to MW when comparing it to the size of a prospective solar PV installation. This is equivalent to assuming a power factor of unity and thus, implies that any potential issues related to reactive power would be addressed indepedently of the eligible site's system design.</small></i></p>
@@ -152,33 +125,34 @@
             This type of filtering is useful if there is a definite minimum size for the solar installation you want to install, and you want to be sure there is grid capacity to interconnect. However, if you have more flexibility on the size of the installation, or if you are focused on a particular neighborhood, you may want to check grid capacity on a site-by-site basis after using other filters.”</p>
         <ol>
           <li>
-              Open the Grid Circuit Capacity filer</li>
+              Select the filer panel and navigate to the BTM Grid Circuit Capacity filer</li>
           <li>
-              Click on the histogram and two range bars appear. Drag the bars to capture the range of circuit capacities you are interestd in.</li>
+              The are two text boxes which allow you to input lower and upper threshold limits on the BTM capacity of sites that are to be selected within the map.</li>
           <li>
-              Only sites that are within your preferred size are shown on the map. Other filters can be applied to additionally narrow your site selection.
+              Once you input a valid set of numeric values, sites that are associated with circuits whose BTM capacities are within the prescribed range will be selected on the map. Other filters can be applied to additionally narrow your site selection.
           </li>
         </ol>
+        <p>
+          To clear this selection, delete both the upper and lower range values which were input to the BTM grid capacity filter.</p>
+          <img src="images/btm_capacity.gif">
       </div>
 
-      <button class="accordion">Find sites with the highest Combined
-        Potential (MW)</button>
+      <button class="accordion">Find sites with the highest Combined Potential (MW)</button>
       <div class="panel">
 
         <ol>
           <li>
-              Scroll to and open the Combined Solar Potential (MW) filter.
+              Select the filter panel and nagivate to the Combined Solar Potential (MW) filter.
           </li>
           <li>
-              A histogram shows the distribution of combined solar potential (MW) in each eligible site shown on the map. Combined solar potential represents the combination of rooftop and parking lot solar potential (MW).</li>
+              There are two text boxes which allow you to input lower and upper threshold limits on the Combined solar potential of the sites that are to be selected within the map. The Combined solar potential represents the combination of rooftop and parking lot solar potential (MW).</li>
           <li>
-              Click on the histogram and two range bars appear. Drag the bars to capture the highest range of values or the values you are most
-            interested in.</li>
+              Input values for the size of solar PV systems that you are interested in. These values must be numeric and can range from 0 on the low end to any value on the high end.</li>
           <li>
-              Now, only eligible sites with a combined solar potential within the range you have set in the histogram are available. Using additional filters will further refine your selected sites.</li>
+              Now, only eligible sites with a combined solar potential within the range you have set are available. Using additional filters will further refine your selected sites.</li>
         </ol>
         <p>
-            To undo this step, click "Clear" within the Combined Solar Potential filter. To see a histogram of just your selected values, click "Zoom."</p>
+          To clear this selection, delete both the upper and lower range values which were input to the Combined Solar Potential filter.</p>
         <img src="images/highest.gif">
 
       </div>
@@ -188,16 +162,14 @@
 
         <ol>
           <li>
-              Go to the legend on the left side of the map. Click the check box next to "DAC Census Tracts." This layer is provided as an overview of the DAC Census Tracts in Los Angeles County.</li>
+              Navigate to the Legend panel and click the check box next to the layer labeled "Census Tracts by CES-4.0 Disadvantaged Community Status." This layer is provided as an overview of the DAC Census Tracts in Los Angeles County.</li>
           <li>
-              Scroll to and open the "CalEnviroscreen 4.0 Scores" filter. This histogram filters eligible sites based on the CalEnviroscreen score of the census tract it is located within.</li>
+              Next, navigate to the filter panel and locate the "CES-4.0 Percentile Scores" filter. This filter selects eligible sites based upon a minimum threshold for the CalEnviroscreen 4.0 percentile score of the census tract in which it is located.</li>
           <li>
-              Click the histogram and two range bars appear. Drag the bars to capture the eligible sites with a CalEnviroscreen score between 75 and 100. The eligible sites now overlap with the DAC Census Tract layer available in the legend.</li>
-          <li>
-              Turn off the "DAC Census Tracts" layer. Click the rain drop above the histogram to apply the color style. Now only eligible sites located in a census tract with a CalEnviroscreen score between 75 and 100 are available and colored gradiently by score. Using additional filters will further refine your selected sites.</li>
+              Input a minimum threshold value in the text box provided. Census tracts with CES percentile scores of 75 and above are technically designated as Disadvantaged Communities (DACs). You will see that after inputting a value of 75 the eligible sites which are selected now overlap with the DAC Census Tract layer available in the legend.</li>
         </ol>
         <p>
-            To undo this step, click "Clear" within the CalEnviroscreen 4.0 Scores filter. Click the raindrop to undo the color style.</p>
+          To clear this selection, delete minimum theshold value that was input to the text box within the CES-4.0 Percentile Scores filter.</p>
         <img src="images/dac.gif">
 
       </div>
@@ -206,64 +178,62 @@
       <div class="panel">
 
         <p>
-            There are two filters available for vizualizing parcel usetype.</p>
+            There are two filters available for selecting sites by their usetype categorization.</p>
         <ol>
           <li>
               General Usetype. Options: Institutional, Government, Educational, Miscellaneous, Recreational.</li>
           <li>
-              Detailed Usetype. Specific usetypes provided, i.e.,Elementary Schools, Churches, etc.</li>
+              Detailed Usetype. Specific usetypes provided in the dropdown list (i.e., Elementary Schools, Churches, etc.)</li>
         </ol>
         <p>
               To make use of either of these filters:
         </p>
          <ol>
           <li>
-              Scroll to and open your preferred usetype filter. This category filters eligible sites based on the Parcel Use Type you select.</li>
+              Navigate to the filter panel and located your preferred usetype filter. This will create a selection of eligible sites based on the Parcel Use Type you select.</li>
           <li>
-              Click the raindrop on the filter to color Eligible sites by parcel usetypes</li>
-          <li>
-              To filter for on usetype, select a usetype by clicking or use the search bar. Click "Lock" to filter only for this usetype.</li>
+              It is possible to check multiple usetype categories simultaneously to create a composite selection.</li>
         </ol>
         <p>
-            To undo this step, click "Unlock" within usetype filter. Click the raindrop to undo the color style.</p>
+          To clear this selection, uncheck all of the usetype categories which were selected in the dropdown pane or click on the small trashcan icon at the bottom right corner of the pane.</p>
         <img src="images/usetype.gif">
 
       </div>
 
-      <button class="accordion">Find sites where the most people's usage could be offset by solar PV</button>
+      <button class="accordion">Find sites whose estimated output could offset a specific number of local people's annual electricity usage</button>
       <div class="panel">
 
         <ol>
           <li>
-              Scroll down to the "Local Population Offset" filter and open it.</li>
+              Navigate to the filter panel and located the "Combined Residential Usage Offset (Persons)" filter.</li>
           <li>
-              A histogram shows the distribution of a low estimate of population where total electricity usage could be offset by solar PV within the census block group where the eligible site is located.</li>
+              Two text boxes allow you to input lower and upper threshold values for the desired number of people whose annual electricity usage a site's combined solar potential could potentially offset.</li>
           <li>
-              Click on the histogram and two range bars appear. Drag the bars to capture the highest range of population or the range you are most interested in.</li>
+              Input a valid set of numerical values within the two text boxes provide. This will cause only the sites capable of offsetting the average annual energy usage of this many local persons to be selected in the map.</li>
           <li>
-              Now, only eligible sites with the highest number of people whose electricity usage could by offset by solar PV within the range you have selected are visible on the map. Using additional filters will further refine your selected sites.</li>
+              Using additional filters will further refine your selected sites.</li>
         </ol>
         <p>
-            To undo this step, click "Clear" within the Local Population Offset filter. To see a histogram of just the sites you've selected, click "Zoom."</p>
+            To clear this selection, delete the values which you input into the two text boxes associated with the Combined Residential Usage Offset (Persons) filter.</p>
         <img src="images/pop.gif">
 
       </div>
 
-      <button class="accordion">Find sites where the most renter's usage could be offset by solar PV</button>
+      <button class="accordion">Find sites whose estimated output could offset a specific number of local renter household's annual electricity usage</button>
       <div class="panel">
 
         <ol>
           <li>
-              Go to the legend on the left side of the map. Click the check box next to the "Housing Attribute Data" layer. This layer is provided as an overview of the percentage of renters in each census tract.</li>
+              Navigate to the layers panel and locate the "Census Tract Groups by Average Annual Electricity Usage (kWh/year) Per Renter Household" layer. This layer is based upon UCLA Energy Atlas residential consumption data and has been provided to give an overview of the variation in average annual electricity consumption rates across different regions within Los Angeles County.</li>
           <li>
-              Scroll to and open the "Local Renter Household Offset" filter. This filters eligible sites based on a low estimate of the population where total electricity usage could be offset by solar PV within the census block group where the eligible site is located.</li>
+              Navigate to the filter panel and locate the "Combined Residential Usage Offset (Renter Occupied Households)" filter. This filter allows you to select eligible sites based a lower and upper range of values for the number of local renter households whose average annual electricity usage could be offset by the estimated out of a site's combined solar PV potential.</li>
           <li>
-              Click the histogram and two range bars appear. Drag the bars to capture the eligible sites within the highest range of percent renters.</li>
+              Input a set of valid numeric values for the lower and upper range on the number of renter households whose usage could potentially be offset.</li>
           <li>
-              Now, only eligible sites with the highest number of renters whose electricity usage could by offset by solar PV within the range you have selected are visible on the map. Using additional filters will further refine your selected sites.</li>
+              Now, only eligible sites whose output could offset the usage of this desired range of renter households will be selected within the map. Using additional filters will further refine your selected sites.</li>
         </ol>
         <p>
-            To undo this step, click "Clear" within the Local Renter Household Offset filter. To see a histogram of just the sites you've selected, click "Zoom."</p>
+            To clear this selection, delete the values which you input into the two text boxes associated with the Combined Residential Usage Offset (Renter Occupied Households) filter. </p>
         <img src="images/rent.gif">
         
       </div>
@@ -271,66 +241,60 @@
       <button class="accordion">Where are Brownfield and Superfund sites?</button>
       <div class="panel">
 
-        <p>Brownfield and Superfund point locations are now included outside of the choice of layers.</p>
+        <p>The location of Brownfield and Superfund sites are available as a set of point layers within the map.</p>
         <ol>
           <li>
-              Zoom into any location within Los Angeles County on the map.</li>
+              Navigate to the layers panel and select the "USEPA Brownfield Sites by Status" from the layer list.</li>
           <li>
-              Red and yellow points appear on the map labeled by the site name.
-              <br/><b style="color:red">Red</b> represents Brownfield sites
-              <br/><b style="color:#dddd21">Yellow</b> represents Superfund sites
+              Brownfield sites are color coded according to their current activity status as described in the legend panel. 
           </li>
         </ol>
-        <img src="images/brownfield.PNG">
+        <img src="images/brownfield.gif">
         
       </div>
-
+      
       </div>
 
-      <button class="accordion">How do I single-out sites I'm interested in?</button>
+      <button class="accordion">How do I select individual sites that I'm interested in?</button>
       <div class="panel">
 
         <p>
-            Our suggestion is to keep track of sites based on the Site ID number.</p>
+            Our suggestion is to keep track of sites based on their unique Site ID numbers.</p>
         <ol>
           <li>
-              You have found a site or multiple sites to consider.</li>
+              You have already found a site that you would like to quickly relocate.</li>
           <li>
               Click on the site to view the pop-up and locate Site ID, listed first.
               <br/>We suggest keeping a list of Site ID's for eligible sites you are considering.
           <li>
-              To view only this site on the map, use the Site ID filter. </li>
+              To view only this site on the map, use the "Site ID" filter. </li>
           <li>
-              Open the filter and search for the Site ID you are interested in. Multiple sites can be added with this filter.</li>
-            <br/>Note that the filter will not zoom to the site automatically. You will need to know roughly where it is located and zoom in manually.
+              Navigate to the filter panel and located the Site ID filter. In the text box provide input the numerical value for the site that you are interested in.</li>
+            <br/> The map will create a new selection with just this individual site and zoom to its extents automatically.
         </ol>
+        <img src="images/site_id.gif">
         
       </div>
 
       <button class="accordion">Download Data</button>
       <div class="panel">
-        <p><b>Simplified Data</b></p>
+        <p><b>Full Eligible Sites Dataset</b></p>
         <p>
-            Choose Excel for curated data columns matching what is available when you click on an Eligible Site on the Map. Our suggestion, if you would like data for a few sites, is to write down the Site ID value (found by clicking on a site on the map). Use the Excel file to match the Site ID(s) of interest. This document includes metadata.
-        </p>
-        <p><b>Full Data Columns</b></p>
-        <p>
-            Choose CSV or Shapefile for the full columns of the Eligible Sites data layer available for download through CARTO.
+            Choose to download Excel, CSV, or Shapefile formatted versions of the underlying data set that is associated with Eligible Sites layer depicted on the map. Our suggestion, if you would like data for a few sites, is to write down the Site ID value (found by clicking on a site on the map). Use the Excel file to match the Site ID(s) of interest. This document includes metadata.
         </p>
         <p>
-            Metadata includes column names and descriptions.</p>
-        
-        <!-- TESTING EXCEL DOWNLOAD
-        <button id="button-a">Create Excel</button> -->
+            Another option for accessing tabular data for a restricted set of sites is to use the attribute table viewer functionality of the map. Once a selection has been created, either by using the filtering panel or by zooming into a specific area of interest, click the small grey arrow on the bottom of the map to bring up the attribute table viewer. There are options within this viewer tool for extracting the attributes for a restricted group of selected sites to be exported as a CSV table for subsequent analysis. 
+      </p>
+        <p>
+            The metadata excel file includes more detailed column names and descriptions.</p>
         
         <div class="dropdown">
           <button onclick="dropFunction()"class="dropbtn">Download Eligible Sites Data as:</button>
           <div id="myDropdown" class="dropdown-content">
-            <!-- <a href="download/institutional_sites.xlsx" download="institutional_sites">Excel (simplified with metadata)</a> -->
-            <a href="excel.html" target="_blank">Excel (simplified with metadata)</a>
-            <a href="https://ccsc-ucla.carto.com/tables/institutional_sites/public/map" target="_blank">CSV (full data)</a>
-            <a href="https://ccsc-ucla.carto.com/tables/institutional_sites/public/map" target="_blank">Shapefile (full data)</a>
-            <a href="download/institutional_sites_metadata.xlsx" download="institutional_sites_metadata">Download Full Metadata</a>
+            <a href="https://gisucla.maps.arcgis.com/home/item.html?id=d5c923efa480445383a677f4c66e2f10" target="_blank">Excel</a>
+            <a href="https://gisucla.maps.arcgis.com/home/item.html?id=79bab87889ef437a99e8215547f4b7a5" target="_blank">CSV</a>
+            <a href="https://gisucla.maps.arcgis.com/home/item.html?id=9c9c309e573c40eb8e5f1c15a1e1c584" target="_blank">Shapefile</a>
+            <a href="download/institutional_sites_metadata.xlsx" download="institutional_sites_metadata">Download Metadata</a>
           </div>
         </div>
 
@@ -339,45 +303,12 @@
     </main>
 
     <iframe class="map-wrapper" id="map"
-      src="https://ccsc-ucla.carto.com/builder/c2792d6d-5ab2-485f-a5ac-e311080d5be6/embed"
+      src="https://gisucla.maps.arcgis.com/apps/webappviewer/index.html?id=539c019815af4de9a7083be5bcee21f8"
       allowfullscreen webkitallowfullscreen mozallowfullscreen oallowfullscreen
-      msallowfullscreen title="Solar Tool Carto Map"></iframe>
+      msallowfullscreen title="Solar Tool ArcGIS Map"></iframe>
 
     <script src="js/jquery-3.5.1.min.js"></script>
     <script src="js/scripts.js"></script>
-    <!-- <script>
-      var wb = XLSX.utils.book_new();
-      wb.Props = {
-              Title: "SheetJS Tutorial",
-              Subject: "Test",
-              Author: "Red Stapler",
-              CreatedDate: new Date(2017,12,19)
-      };
-      
-      wb.SheetNames.push("Test Sheet");
-      //var ws_data = [['hello' , 'world']];
-      //var ws = XLSX.utils.aoa_to_sheet(ws_data);
-      
-      const api_url = 'https://ccsc-ucla.carto.com:443/api/v2/sql?q=select site_id, address, combined_solar_potential_low_mw, percent_15_cap, combined_solar_annual_output_low_mwh_ac, low_combined_res_usage_offset_capita, low_combined_res_usage_offset_owner_households, low_combined_res_usage_offset_renter_households, ciscorep, cpa_territory, circuit_name, sub_name, sys_name, rooftop_solar_potential_mw, parking_lot_solar_potential_low_mw, parking_lot_solar_annual_output_low_mwh_ac, rooftop_solar_annual_output_mwh_ac, total_res_usage_per_cap, total_res_usage_per_owner_household, total_res_usage_per_renter_household, average_household_size_owner_occupied_housing_units, average_household_size_renter_occupied_housing_units, vacancy_percentage, renter_percentage from public.institutional_sites'
-      // let response = fetch(api_url);
-      // let data = response.json();
-      async function getSitesData() {
-        const response = await fetch (api_url);
-        const data = await response.json();
-        console.log(data.rows)
-        const ws = XLSX.utils.json_to_sheet(data.rows);
-        wb.Sheets["Test Sheet"] = ws;
-        var wbout = XLSX.write(wb, {bookType:'xlsx',  type: 'binary'});
-        console.log(ws)
-
-        var buf = new ArrayBuffer(wbout.length);
-        var view = new Uint8Array(buf);
-        for (var i=0; i<wbout.length; i++) view[i] = wbout.charCodeAt(i) & 0xFF;
-        saveAs(new Blob([buf],{type:"application/octet-stream"}), 'test.xlsx')
-      }
-      getSitesData();
-
-    </script> -->
   </body>
 
 </html>
