@@ -46,31 +46,8 @@
       <h3>Table of Contents</h3>
       <ul>
         <li><a href="#overview">Overview</a></li>
-          <!-- <ul>
-            <li><a href="#map_panel">Map Panel</a></li>
-            <li><a href="#filter_panel">Filter Panel</a></li>
-            <li><a href="#metadata_links">Metadata Links</a></li>
-          </ul> -->
         <li><a href="#layers">Available Map Layers</a></li>
-          <!-- <ul>
-            <li><a href="#eligible_sites">Eligible Sites</a></li>
-            <li><a href="#cities">City Boundaries</a></li>
-            <li><a href="#dacs">DAC Census Tracts</a></li>
-            <li><a href="#elec_usage">Electricity Consumption</a></li>
-            <li><a href="#housing">Housing Attributes</a></li>
-            <li><a href="#circuits">Distribution Circuits</a></li>
-            <li><a href="#brownfields">Brownfield & Superfund Sites</a></li>
-            <li><a href="#ev_charging">EV Charging Stations</a></li>
-          </ul> -->
         <li><a href="#map">Using the Map</a></li>
-        <!-- <ul>
-          <li><a href="#zoom">Zooming In</a></li>
-          <li><a href="#filter">Using Filters</a></li>
-          <li><a href="#filtertype">Filter Types</a></li>
-          <li><a href="#color">Applying Colors</a></li>
-          <li><a href="#popupinfo">Using Pop-Ups</a></li>
-          <li><a href="#filterlist">Map Filter Options</a></li>
-        </ul> -->
         <li><a href="#trouble">Troubleshooting</a></li>
       </ul>
     </nav>
@@ -81,12 +58,11 @@
       <h2 id="overview">Overview</h2>
 
       <p>
-          When community solar opportunities map loads, two elements appear on the screen: a map panel and a filter panel (right side). A custom basemap has been developed using Mapbox which highlights the administrative boundary of Los Angeles County, grays out the service territory of LADWP<sup>**</sup> and restricts reference annotation text elements to only those geographic points of interest most relevant to this project.
+          When community solar opportunities map loads, two elements appear on the screen: a map panel and a widget panel (right side). A custom basemap has been developed using Mapbox which highlights the administrative boundary of Los Angeles County, grays out the service territory of LADWP<sup>**</sup> and restricts reference annotation text elements to only those geographic points of interest most relevant to this project.
       </p>
 
       <figure>
-        <img class="tutorialImg" src="images/overview.PNG"
-          onclick="openModal();currentSlide(1)">
+        <img class="tutorialImg" src="images/overview.png" onclick="openModal();currentSlide(1)">
         <figcaption>Hover your cursor over an image, click to enlarge.
         </figcaption>
       </figure>
@@ -97,18 +73,17 @@
       <ol>
         <li>Map Panel</li>
         <li>Widget Panel</li>
-        <li>Attribute Table Panel (Minimized)</li>
+        <li>Attribute Table Panel (Minimized by Default)</li>
       </ol>
       <p id="map_panel"><b>Map Panel</b></p>
       <p>
           Within the map panel there are a series of interactive elements which can be used to explore different sources of geographic information as well as adjust the zoom level or search for geographic locations of interest. On the upper left portion of the map panel is a search bar which can be used to find addresses, points of interest, and other geographic areas. On the bottom left are a series of navigational tools for zooming and panning through the map. The home icon provides a convenient way to return to the default geographic extent and zoom level if ever you find yourself lost. 
       </p>
-      <img class="tutorialImg" src="images/map_panel.png"
-        onclick="openModal();currentSlide(2)">
+      <img class="tutorialImg" src="images/map_panel.png" onclick="openModal();currentSlide(2)">
 
       <p id="filter_panel"><b>Widget Panel</b></p>
       <p>
-          Within the widget panel are interactive selection tools that allow users to do things like change the layers that are visble in the map, iteratively apply filters to the layer of eligible sites, explore different infographics and charts, create and navigate bookmarked areas, as well as generate print outs of the map's data. The ArcGIS web map service refers to these tools as "widgets." Among the most important of these widgets are the filters. These filters allow the selection of sites by numeric, categorical, and boolean attributes. The features and suggested patterns of use of these filtering tools are discussed in later sections. Think of the filters as building blocks. They can be combined to meet the requirements of your site selection. Each "Get Started" example on the Solar Map page gives an example of suggested use for each component filter.
+          Within the widget panel are interactive selection tools that allow users to do things like change the layers that are visble in the map, iteratively apply filters to the layer of eligible sites, explore infographics and charts, create and navigate bookmarked areas, as well as generate print outs of the map's data. The ArcGIS web map service refers to these tools as "widgets." Among the most important of these widgets are the filters. These filters allow the selection of sites by numeric, categorical, and boolean attributes. The features and suggested patterns of use of these filtering tools are discussed in later sections. Think of the filters as building blocks. They can be combined to meet the requirements of your site selection. Each "Get Started" example on the Solar Map page gives an example of suggested use for each component filter.
       </p>
       <img class="tutorialImg" src="images/widget_panel.png"
         onclick="openModal();currentSlide(3)">
@@ -117,14 +92,17 @@
         <p>
             At the bottom of the screen is a small grey arrow that, when clicked, will make visible the attribute table panel that is minimized by default. This panel provides a tabular view of the underlying data which is being represented in the map. This attribute table panel allows for the detailed selection, sorting, filtering, and inspection of all of the attributes for any layer that is visible within the current map view. The attribute table panel can also be used to directly export tabular CSV data files for sets of eligible sites that have been selected through the application of various filters.
           </p>
-        <img class="tutorialImg" src="images/attribute_table_panel.png"
-          onclick="openModal();currentSlide(3)">
+        <img class="tutorialImg" src="images/attribute_table_panel.png" onclick="openModal();currentSlide(4)">
 
       <h3 id="layers">Available Map Layers</h3>
 
+      <p> Different contextual data layers can be toggled on and off by navigating to the layer selection pane within the widgets panel. Users can easily choose which data layers they want to be visible within the map by clicking their associated radio buttons. If a layer appears to be grayed out in the layer pane then this means that it cannot be made visible at the current map zoom level. Try zooming in closer to make the layer accessible for use.</p>
+
+      <img class="tutorialImg" src="images/layer_selector.gif" onclick="openModal();currentSlide(5)">
+
       <p id="eligible_sites"><b>Eligible Sites by Usetype</b></p>
       <p>
-          Using the layer selection controls, the user can easily toggle on or off different geographic data layers. The primary layer, whose attributes are linked to all of the interactive selection filters, is titled "Eligible Sites by Usetype" within the layer control panel. This layer corresponds to the following categories of publicly-owned and community-oriented properties considered eligible for potential selection for the location of a community scale solar PV generation system that could potentially be used to support a resilience center or as the anchor location for a community solar virtual net metering program. Examples of these types of sites include: </p>
+          The primary layer, whose attributes are linked to all of the interactive selection filters, is titled "Eligible Sites by Usetype" within the layer control panel. This layer corresponds to the following categories of publicly-owned and community-oriented properties considered eligible for potential selection for the location of a community scale solar PV generation system that could potentially be used to support a resilience center or as the anchor location for a community solar virtual net metering program. Examples of these types of sites include: </p>
             <ul> 
                 <li>Institutional (e.g. Churches, Hospitals)</li>
                 <li>Educational (e.g. Schools)</li>
@@ -180,50 +158,26 @@
 
       <p id="zoom"><b>How to zoom in</b></p>
       <p>
-          Zoom into the map using the + and - controls in the bottom left corner of the tool. As you zoom into the map the count of eligible sites decreases. Zooming in on the map filters the data, which is reflected in the eligible site count, combined solar potential, and histogram filters.
+          Zoom into the map using the + and - controls in the bottom left corner of the tool. Zooming in on the map changes the number of sites within view. However, this is different from creating a new selection of sites which can be accomplished through the sequential application of one or more different filters. When a new selection is created (i.e. sites are removed from view) this selection propagates to other features of the map such as the cumulative solar potential infographic which will later be introduced. 
       </p>
-      <p id="filter"><b>Using a filter</b></p>
+      <p id="filter"><b>How to use a filter</b></p>
       <p>
-          To open a filter, hover your cursor over the three vertical dots and click the green "Toggle Widget" switch. ArcGIS calls these filters "Widgets." For our purposes, they make more sense to be described as filters.
-      </p>
-      <img src="images/open_widget.gif">
-
-      <p>
-          Think of the different filters on the sidebar as building blocks. They can be combined and explored based on your custom requirements for selecting a site. 
-      </p>
+          To open a filter, navigate to the icon on the widget panel that looks like a funnel. Clicking this icon will bring up the filter pane which appears a series of statements. Providing an answer to each statement (either by selecting an option through a drop-down menu or inputting a value into an empty text box) activates that component of the filter. You can think of these different filter components as building blocks. They can be combined and explored based on your custom requirements for selecting a site.</p>
       
-      <p id="filtertype"><b>Categorical filters versus numerical filters</b></p>
+      <p id="numericalfilter"><b>Using a numerical filter</b></p>
       <p>
           Categorical filters allow you to filter eligible sites based on data-defined categories. For example: city name, usetype, CPA territory, etc. To use a category filter: click on the drop-down window and select the category or categories of interest. It is also possible to search for a category and then select from a set of potential matches. </p>
+      <p> 
+          In the example illustrated below, we show how sites which are located in multiple different cities can be added to a new selection through the use of the City name filter dropdown window. This selection can then be cleared by clicking the trashcan icon on the bottom right hand side of the dropdown window.</p>
+      <img class="tutorialImgSml" src="images/categorical.gif" onclick="openModal();currentSlide(6)">  
+
+      <p id="categoricalfilter"><b>Using a numerical filter</b></p>
       <p>
           Numerical filters allow you to select eligible sites by setting either a threshold or range of desired values. For example: Grid Circuit Capacity, CalEnviroScreen 4.0 Scores, and Combined Solar Potential are all numerical attributes that can be filtered in this way. These filters are largely self descriptive and provide helpful hints as to what types of input values will produce a meaningful selection result.</p>
-      <img src="images/numerical.gif">      
       <p>
-          Navigate to the CES-4.0 Percentile Score filter and input a threshold value of 75. This will create a selection of sites that is restricted to only those which fall within census tracks with a CalEnviroScreen-4.0 score of 75% or more.</p>
-
-      <p id="color"><b>Exploring the aggregate solar potential infographic</b></p>
-        <p>
-          A fully interactive infographic panel has been created which plots the cumulative solar potential across all sites aggregated by general usetype category. Solar potential totals can be explored by installation type and the data which is rendered in the infographic is dynamically linked to the selected parcels which are currently in view. </p>
-        <p> You can hover over different elements of the chart to get more detailed data and click on the different plot series to add or remove them from view. </p>
-      <img class="tutorialImg" src="images/infographic.gif"
-        onclick="openModal();currentSlide(5)">
-    
-      <p id="color"><b>Creating and using spatial bookmarks</b></p>
-      <p>
-          It is possible that a geographic area of interest for a user of the tool may not neatly conform to the city, zipcode, or supervisioral district boundaries that have been provided. In this case it is possible to create and use spatial bookmarks. A bookmark can be created which saves the current map pan and zoom level so it can be easily returned to later in a browsing session.</p> 
-      <p>
-          Several default bookmarks have been provided within the map. These correspond to popular geographic areas within the county that might be of interest to different users.</p>
-      <img class="tutorialImg" src="images/bookmarks.gif"
-        onclick="openModal();currentSlide(5)">
-
-      <p id="popupinfo"><b>How to get more information from layer pop-ups</b></p>
-      <p>
-          Pop-up information can be displayed by turning on a map layer and clicking on any feature of interest. 
-      </p>
-      <img src="images/popupinfo.gif">
-      <p>
-          This feature is available for the following layers: Eligible Sites, Electricity Consumption Data, Housing Attribute Data, Distribution Circuit Data, and EV Charging Stations</p>
-
+          In the example illustrated below, we show how you can navigate to the CES-4.0 Percentile Score filter and input a threshold value of 75. This will create a selection of sites that is restricted to only those which fall within census tracks with a CalEnviroScreen-4.0 score of 75% or more.</p>
+      <img class="tutorialImgSml" src="images/numerical.gif" onclick="openModal();currentSlide(7)">     
+      
       <p id="filterlist"><b>Description of Filters Available on the Map</b></p>
       <p><i><b>City Name is any of:</b></i> Filter eligible sites by the City they reside in.</p>
       <p><i><b>Zipcode is any of:</b></i> Filter eligible sites by the Zip Code they reside in.</p>
@@ -241,71 +195,89 @@
       <p><i><b>Combined Residential Usage Offset (Persons) is between:</b></i> Filter and see the distribution of eligible sites based on the estimate of persons within local census block groups whose total electricity usage could be offset by the low estimate combined solar potential.</p>
       <p><i><b>Combined Residential Usage Offset (Renter Occupied Households) is between:</b></i> Filter and see the distribution of eligible sites based on the estimate of renter-occupied households within local census block groups whose total electricity usage could be offset by the low estimate combined solar potential.</p>
       
+      <p id="color"><b>Exploring the cumulative solar potential infographic</b></p>
+        <p>
+          A fully interactive infographic has been created which plots the cumulative solar potential across all sites aggregated by general usetype category. This can be accessed by navigating to the infographic pane in the widgets panel. The data presented in the graphic is for cumnulative solar potential by installation type and site general usetype category. The infographic is dynamically linked to the selected parcels which are currently in view. You can hover over different elements of the chart to get more detailed data and click on the different plot series to add or remove them from view. </p>
+      <img class="tutorialImg" src="images/infographic.gif" onclick="openModal();currentSlide(8)">
+    
+      <p id="color"><b>Creating and using spatial bookmarks</b></p>
+      <p>
+          It is possible that a geographic area of interest for a user of the tool may not neatly conform to the city, zipcode, or supervisioral district boundaries that have been provided. In this case it is possible to create and use spatial bookmarks. New bookmarks can be created which will save the current map pan and zoom levels so that they can be easily returned to later on within the current browsing session.</p> 
+      <p>
+          Several default bookmarks have been provided within the map. These correspond to popular geographic areas within the county that might be of interest to different users.</p>
+      <img class="tutorialImg" src="images/bookmarks.gif" onclick="openModal();currentSlide(9)">
+
+      <p id="popupinfo"><b>How to get more information from layer pop-ups</b></p>
+      <p>
+          Pop-up information can be displayed by turning on a map layer and clicking on any feature of interest. 
+      </p>
+      <img class="tutorialImg" src="images/popupinfo.gif" onclick="openModal();currentSlide(10)">
+
+      <p>
+          This feature is available for the following layers: Eligible Sites, Electricity Consumption Data, Housing Attribute Data, Distribution Circuit Data, and EV Charging Stations</p>
+
       <h3 id="trouble">Troubleshooting</h3>
       
-      <p> <b> NEEDS UPDATING FOR ARCGIS VERSION </b> </p>
+      <p><b>Returning Home</b></p>
+      <p>
+          Occassionally, users may find that they have accidentally zoomed or panned very far away from the LA County region where the tool's data layers are available. If this happens, the quickest way to return to the default zoom extent is by clicking the home icon in the navigation button cluster in the lower left hand portion of the map. </p>
 
-      <p><b>Filter timed out</b></p>
+      <p><b>No Sites Visible</b></p>
       <p>
-          Occasionally, if the tool has been open in your browser for an extended period of time, a filter will time out. A refresh button becomes available in the top left corner of the filter. Click refresh to resolve. </p>
-      <p><b>No Data Available</b></p>
-      <p>
-          When you use a histogram type filter and click on the graph to make a range selection, on the first click before you drag the range selector bars, you might accidentally make a selection that doesn’t include any sites. This will look like all other filters graying out and displaying a message that no data is available.</p>
-      <p>
-          To solve this, scroll back to the histogram filter you had just clicked. Drag the selector bars on the histogram apart until they are selecting sites.</p>
-      <p><b>Refreshing or Clearing filters to start over</b></p>
-      <p>
-          To remove all filtering from the map, each filter needs to be cleared separately. For a histogram filter, click "Clear." For a category filter, click 'All' or 'Unlock' depending on if you have clicked a category or searched for a category.
-      </p>
-      <p><b>Filter Toggle Switch</b></p>
-      <p>
-          Many people have noticed that the filter toggle switches are green when off and grey when on – the opposite of what you are probably used to seeing on other sites. This is built into the Arcgis platform we are using and cannot be modified by us.
-      </p>
+          It is possible during the compositional use of the filtering components that the user could provide a set of filtering constraints that restrict all sites from being part of a selection. This will cause no sites to be rendered within the map. </p>
+      
+      <p><b>Clearing All Filters</b></p>
+      <p> 
+          Related to the previous issue, if the combination of filters have become too restrictive or you would like to quickly clear all of the filters to begin the site selection process anew, the easiest way to go about it is to simply refresh your browser page which will reload the map to its default settings and clear all filter settings in the process. </p>
 
       <div id="myModal" class="modal">
         <span class="close cursor" onclick="closeModal()">&times;</span>
 
         <div class="modal-content">
           <figure class="mySlides">
-            <figcaption id="caption"><span class="number">1</span>Overview image
-              of tool
+            <figcaption id="caption"><span class="number">1</span>Overview image of tool
             </figcaption>
             <img src="images/overview.png">
           </figure>
           <figure class="mySlides">
-            <figcaption id="caption"><span class="number">2</span>Location of
-              the Map
-              Panel on the tool</figcaption>
+            <figcaption id="caption"><span class="number">2</span>Location of the map panel on the tool</figcaption>
             <img src="images/map_panel.png">
           </figure>
           <figure class="mySlides">
-            <figcaption id="caption"><span class="number">3</span>Location of
-            Filter Panel
-              on the tool</figcaption>
+            <figcaption id="caption"><span class="number">3</span>Location of the widget panel on the tool</figcaption>
             <img src="images/widget_panel.png">
           </figure>
           <figure class="mySlides">
-            <figcaption id="caption"><span class="number">4</span>Location of
-              Metadata
-              Links on the tool</figcaption>
-            <img src="images/metadata_links.png">
+            <figcaption id="caption"><span class="number">4</span>Location of attribute table panel on the tool</figcaption>
+            <img src="images/attribute_table_panel.png">
           </figure>
           <figure class="mySlides">
-            <figcaption id="caption"><span class="number">5</span>How to apply
-              color on a
-              Filter</figcaption>
-            <img src="images/apply_color.gif">
+            <figcaption id="caption"><span class="number">5</span>How to select different layers</figcaption>
+            <img src="images/layer_selector.gif">
           </figure>
           <figure class="mySlides">
-            <figcaption id="caption"><span class="number">6</span>Troubleshooting:
-              No Data Available</figcaption>
-            <img src="images/nodata.gif">
+            <figcaption id="caption"><span class="number">6</span>How to use a categorical filter</figcaption>
+            <img src="images/categorical.gif">
           </figure>
-
+          <figure class="mySlides">
+            <figcaption id="caption"><span class="number">7</span>How to use a numerical filter</figcaption>
+            <img src="images/numerical.gif">
+          </figure>
+          <figure class="mySlides">
+            <figcaption id="caption"><span class="number">8</span>How to use the cumulative site potential infographic</figcaption>
+            <img src="images/infographic.gif">
+          </figure>
+          <figure class="mySlides">
+            <figcaption id="caption"><span class="number">9</span>How to use spatial bookmarks</figcaption>
+            <img src="images/bookmarks.gif">
+          </figure>
+          <figure class="mySlides">
+            <figcaption id="caption"><span class="number">10</span>How to access site specific data using popups</figcaption>
+            <img src="images/popupinfo.gif">
+          </figure>
 
           <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
           <a class="next" onclick="plusSlides(1)">&#10095;</a>
-
 
           <div class="modal-nav">
             <img class="demo cursor" src="images/overview.png"
@@ -314,19 +286,31 @@
             <img class="demo cursor" src="images/map_panel.png"
               onclick="currentSlide(2)">
 
-            <img class="demo cursor" src="images/widget_panel.png"
+            <img class="demo cursor" src="images/widget_panel.png" 
               onclick="currentSlide(3)">
 
-            <img class="demo cursor" src="images/metadata_links.png"
+            <img class="demo cursor" src="images/attribute_table_panel.png"
               onclick="currentSlide(4)">
-
-            <img class="demo cursor" src="images/apply_color.gif"
+            
+            <img class="demo cursor" src="images/layer_selector.png"
               onclick="currentSlide(5)">
 
-            <img class="demo cursor" src="images/nodata.gif"
-            onclick="currentSlide(6)">
-          </div><!-- end modal images-->
+            <img class="demo cursor" src="images/categorical.gif"
+              onclick="currentSlide(6)">
 
+            <img class="demo cursor" src="images/numerical.gif"
+              onclick="currentSlide(7)">
+
+            <img class="demo cursor" src="images/infographic.gif"
+              onclick="currentSlide(8)">
+
+            <img class="demo cursor" src="images/bookmarks.gif"
+              onclick="currentSlide(9)">
+
+            <img class="demo cursor" src="images/popupinfo.gif"
+              onclick="currentSlide(10)">
+
+          </div><!-- end modal images-->
         </div> <!-- end modal content-->
 
     </main>
@@ -337,8 +321,7 @@
             UCLA</b></a><br>
           <i><small> Updated: 3/2/2022 </small></i>
       </address>
-      <!-- <p>Please <a href="mailto:ccsc@ioes.ucla.edu">contact us</a> with
-        any questions or comments.</p> -->
+
       <p><a href="http://www.caclimateinvestments.ca.gov/">
         <img class="cci_logo" src="./images/CCI_logo_tagline_RGB72.png" alt="CCI logo">
       </a>
