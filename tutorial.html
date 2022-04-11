@@ -81,9 +81,11 @@
       </p>
       <img class="tutorialImg" src="images/map_panel.png" onclick="openModal();currentSlide(2)">
 
-      <p id="filter_panel"><b>Widget Panel</b></p>
+      <p id="widget_panel"><b>Widget Panel</b></p>
       <p>
-          Within the widget panel are interactive selection tools that allow users to do things like change the layers that are visble in the map, iteratively apply filters to the layer of eligible sites, explore infographics and charts, create and navigate bookmarked areas, as well as generate print outs of the map's data. The ArcGIS web map service refers to these tools as "widgets." Among the most important of these widgets are the filters. These filters allow the selection of sites by numeric, categorical, and boolean attributes. The features and suggested patterns of use of these filtering tools are discussed in later sections. Think of the filters as building blocks. They can be combined to meet the requirements of your site selection. Each "Get Started" example on the Solar Map page gives an example of suggested use for each component filter.
+        Within the Widget Panel, the following elements are available: Information, Layer List, Legend, Filter, Infographics, Bookmarks, and Print. These elements provide the functionality to perform such tasks as: interactively selecting the layers that are visble in the map, iteratively apply filters to the layer of eligible sites, explore infographics and charts, create and navigate bookmarked areas, as well as generate print outs of the map's data. The ArcGIS web map service refers to these tools as "widgets" and the following sections describe each element in turn. </p>
+      <p>
+        Among the most important of these widgets are the filters. These filters allow the selection of sites by numeric, categorical, and boolean attributes. The features and suggested patterns of use of these filtering tools are discussed in later sections. Think of the filters as building blocks. They can be combined to meet the requirements of your site selection. Each "Get Started" example on the Solar Map page gives an example of suggested use for each component filter.
       </p>
       <img class="tutorialImg" src="images/widget_panel.png"
         onclick="openModal();currentSlide(3)">
@@ -96,7 +98,7 @@
 
       <h3 id="layers">Available Map Layers</h3>
 
-      <p> Different contextual data layers can be toggled on and off by navigating to the layer selection pane within the widgets panel. Users can easily choose which data layers they want to be visible within the map by clicking their associated radio buttons. If a layer appears to be grayed out in the layer pane then this means that it cannot be made visible at the current map zoom level. Try zooming in closer to make the layer accessible for use.</p>
+      <p> Different contextual data layers can be toggled on and off by navigating to the layer selection pane within the widgets panel. Users can easily choose which data layers they want to be visible within the map by clicking their associated check boxes. If a layer appears to be grayed out in the layer pane then this means that it cannot be made visible at the current map zoom level. Try zooming in closer to make the layer accessible for use.</p>
 
       <img class="tutorialImg" src="images/layer_selector.gif" onclick="openModal();currentSlide(5)">
 
@@ -127,7 +129,7 @@
       </p>
       <p id="ev_charging"><b>EV Charging Stations by Access Type</b></p>
       <p>
-          Additionally, point locations of Electric Vehicle Charging Stations are provided as a contextual layer. EV Charging Stations displays stations in three categories: public, private and other. Information like charging time availability, network, and pricing is available when a site is clicked on the map.
+          Point locations of Electric Vehicle Charging Stations are provided as a contextual layer. EV Charging Stations displays stations in three categories: public, private and other. Information like charging time availability, network, and pricing is available when a site is clicked on the map.
       </p>
       <p id="brownfields"><b>USEPA Brownfield Sites by Status</b></p>
       <p>
@@ -151,15 +153,11 @@
       </p>
       <p id="elec_usage"><b>Census Block Groups by Average Annual Electricity Usage (kWh/year) Per Renter Household</b></p>
       <p>
-          This layer contains estimates of the total annual electricity consumption per capita within collections of census block groups (kWh/year). These circuit groups reflect the most granular spatial unit at which residential electricity consumption data, sourced from the UCLA Energy Atlas, have been aggregated to generate estimates of annual electricity use per capita and per household throughout the region. A circuit group is a collection of census block groups which are associated with the same distribution circuit. Click on a feature to find the total residential electricity usage (kWh/year) for both renter and owner-occupied households.
+          This layer contains estimates of the total annual electricity consumption per capita within collections of census block groups (kWh/year). These census block groups reflect the most granular spatial unit at which residential electricity consumption data, sourced from the UCLA Energy Atlas, have been aggregated to generate estimates of annual electricity use per capita and per household throughout the region. A circuit group is a collection of census block groups which are associated with the same distribution circuit. Click on a feature to find the total residential electricity usage (kWh/year) for both renter and owner-occupied households.
       </p>
 
       <h3 id="map">Using the Map</h3>
 
-      <p id="zoom"><b>How to zoom in</b></p>
-      <p>
-          Zoom into the map using the + and - controls in the bottom left corner of the tool. Zooming in on the map changes the number of sites within view. However, this is different from creating a new selection of sites which can be accomplished through the sequential application of one or more different filters. When a new selection is created (i.e. sites are removed from view) this selection propagates to other features of the map such as the cumulative solar potential infographic which will later be introduced. 
-      </p>
       <p id="filter"><b>How to use a filter</b></p>
       <p>
           To open a filter, navigate to the icon on the widget panel that looks like a funnel. Clicking this icon will bring up the filter pane which appears a series of statements. Providing an answer to each statement (either by selecting an option through a drop-down menu or inputting a value into an empty text box) activates that component of the filter. You can think of these different filter components as building blocks. They can be combined and explored based on your custom requirements for selecting a site.</p>
@@ -197,7 +195,7 @@
       
       <p id="color"><b>Exploring the cumulative solar potential infographic</b></p>
         <p>
-          A fully interactive infographic has been created which plots the cumulative solar potential across all sites aggregated by general usetype category. This can be accessed by navigating to the infographic pane in the widgets panel. The data presented in the graphic is for cumnulative solar potential by installation type and site general usetype category. The infographic is dynamically linked to the selected parcels which are currently in view. You can hover over different elements of the chart to get more detailed data and click on the different plot series to add or remove them from view. </p>
+          A fully interactive infographic has been created which plots the cumulative solar potential across all sites aggregated by general usetype category. This can be accessed by navigating to the infographic pane in the widgets panel. The data presented in the graphic is for cumulative solar potential by installation type and site general usetype category. The infographic is dynamically linked to the selected parcels which are currently in view. You can hover over different elements of the chart to get more detailed data and click on the different plot series to add or remove them from view. </p>
       <img class="tutorialImg" src="images/infographic.gif" onclick="openModal();currentSlide(8)">
     
       <p id="color"><b>Creating and using spatial bookmarks</b></p>
@@ -215,6 +213,11 @@
 
       <p>
           This feature is available for the following layers: Eligible Sites, Electricity Consumption Data, Housing Attribute Data, Distribution Circuit Data, and EV Charging Stations</p>
+      
+      <p id="zoom"><b>How to zoom in</b></p>
+      <p>
+          Zoom into the map using the + and - controls in the bottom left corner of the tool. Zooming in on the map changes the number of sites within view. However, this is different from creating a new selection of sites which can be accomplished through the sequential application of one or more different filters. When a new selection is created (i.e. sites are removed from view) this selection propagates to other features of the map such as the cumulative solar potential infographic which will later be introduced. 
+      </p>
 
       <h3 id="trouble">Troubleshooting</h3>
       
