@@ -62,10 +62,8 @@
         
         <p>
             Find eligible sites for community solar and resilience center projects in your local area with the map tool below. Eligible sites are publicly owned or community oriented institutional facilities with existing buildings. These sites may also have parking lots.</p>
-    
         <p> 
             The widgets panel on the right side of the map contains a filter pane which allows you to restrict the locations which are currently in view based on criteria important to your solar installation site. The service territories for LADWP and other Los Angeles County municipal electric utilities are currently grayed out because key data inputs about the locations and solar PV integration capacities of their distribution circuits were unavailable.</p>
-
       <p>Please note that the map is best experienced on a desktop PC with the browser window maximized.</p>
       <a href="http://www.caclimateinvestments.ca.gov/" target="_blank">
         <img class="cci_logo" src="./images/CCI_logo_tagline_RGB72.png" alt="CCI logo">
@@ -87,7 +85,51 @@
         <p>
             Once the sites within your city have been selected within the map, all of other filters will be only be applied to the sites in this selection. Because filters are added cumulatively, making a selection in an additional filter will further refine the previous set of selected sites.</p>
         <p>To clear this selection, click the city selection dropdown menu and either de-select all checked cities or click on the small trashcan icon at the bottom right of the pane.</p>
-        <img src="images/sites_by_city.gif">
+        <img class="tutorialImg" src="images/sites_by_city.gif" onclick="openModal();currentSlide(1)">  
+        <small>Click on image to view larger size</small> <br>
+
+      </div>
+
+      <button class="accordion">Find sites within DAC census tracts</button>
+      <div class="panel">
+
+        <ol>
+          <li>
+              Navigate to the Legend panel and click the check box next to the layer labeled "Census Tracts by CES-4.0 Disadvantaged Community Status." This layer is provided as an overview of the DAC Census Tracts in Los Angeles County. (Note: This layer is provided for content and does not need to be turned on to perform the site filtering procedure described in the following)</li>
+          <li>
+              Next, navigate to the filter panel and locate the "CES-4.0 Percentile Scores" filter. This filter selects eligible sites based upon a minimum threshold for the CalEnviroscreen 4.0 percentile score of the census tract in which it is located.</li>
+          <li>
+              Input a minimum threshold value in the text box provided. Census tracts with CES percentile scores of 75 and above are technically designated as Disadvantaged Communities (DACs). You will see that after inputting a value of 75 the eligible sites which are selected now overlap with the DAC Census Tract layer available in the legend. However, other values could also be input as well.</li>
+        </ol>
+        <p>
+          To clear this selection, delete minimum theshold value that was input to the text box within the CES-4.0 Percentile Scores filter.</p>
+        <img class="tutorialImg" src="images/dac.gif" onclick="openModal();currentSlide(2)">
+
+      </div>
+
+      <button class="accordion">Find sites by Parcel Usetype</button>
+      <div class="panel">
+
+        <p>
+            There are two filters available for selecting sites by their usetype categorization.</p>
+        <ol>
+          <li>
+              General Usetype. Options: Institutional, Government, Educational, Miscellaneous, Recreational.</li>
+          <li>
+              Detailed Usetype. Specific usetypes provided in the dropdown list (i.e., Elementary Schools, Churches, etc.)</li>
+        </ol>
+        <p>
+              To make use of either of these filters:
+        </p>
+         <ol>
+          <li>
+              Navigate to the filter panel and located your preferred usetype filter. This will create a selection of eligible sites based on the Parcel Use Type you select.</li>
+          <li>
+              It is possible to check multiple usetype categories simultaneously to create a composite selection.</li>
+        </ol>
+        <p>
+          To clear this selection, uncheck all of the usetype categories which were selected in the dropdown pane or click on the small trashcan icon at the bottom right corner of the pane.</p>
+        <img class="tutorialImg" src="images/usetype.gif" onclick="openModal();currentSlide(3)">
 
       </div>
 
@@ -104,10 +146,52 @@
         </ol>
         <p>
             To clear this selection, unchech the "1" in the CPA filter click on the small trashcan icon at the bottom right of the pane.</p>
-        <img src="images/cpa.gif">
+        <img class="tutorialImg" src="images/cpa.gif" onclick="openModal();currentSlide(4)">
+
+      </div>
+
+      <button class="accordion">How do I select individual sites that I'm interested in?</button>
+      <div class="panel">
+
+        <p>
+            Our suggestion is to keep track of sites based on their unique Site ID numbers.</p>
+        <ol>
+          <li>
+              You have already found a site that you would like to quickly relocate.</li>
+          <li>
+              Click on the site to view the pop-up and locate Site ID, listed first.
+              <br/>We suggest keeping a list of Site ID's for eligible sites you are considering.
+          <li>
+              To view only this site on the map, use the "Site ID" filter. </li>
+          <li>
+              Navigate to the filter panel and located the Site ID filter. In the text box provide input the numerical value for the site that you are interested in.</li>
+            <br/> The map will create a new selection with just this individual site and zoom to its extents automatically.
+        </ol>
+        <img class="tutorialImg" src="images/site_id.gif" onclick="openModal();currentSlide(5)">
+        
+      </div>
+
+      <button class="accordion">Find sites with the highest Combined Potential (MW)</button>
+      <div class="panel">
+
+        <ol>
+          <li>
+              Select the filter panel and nagivate to the Combined Solar Potential (MW) filter.
+          </li>
+          <li>
+              There are two text boxes which allow you to input lower and upper threshold limits on the Combined solar potential of the sites that are to be selected within the map. The Combined solar potential represents the combination of rooftop and parking lot solar potential (MW).</li>
+          <li>
+              Input values for the size of solar PV systems that you are interested in. These values must be numeric and can range from 0 on the low end to any value on the high end.</li>
+          <li>
+              Now, only eligible sites with a combined solar potential within the range you have set are available. Using additional filters will further refine your selected sites.</li>
+        </ol>
+        <p>
+          To clear this selection, delete both the upper and lower range values which were input to the Combined Solar Potential filter.</p>
+        <img class="tutorialImg" src="images/highest.gif" onclick="openModal();currentSlide(6)">
+
       </div>
       
-      <button class="accordion">How do I incoporate circuit capacity into an evaluation of sites?</button>
+      <button class="accordion">How do I incoporate circuit capacity into the evaluation of sites?</button>
       <div class="panel">
 
         <p>
@@ -134,70 +218,7 @@
         </ol>
         <p>
           To clear this selection, delete both the upper and lower range values which were input to the BTM grid capacity filter.</p>
-          <img src="images/btm_capacity.gif">
-      </div>
-
-      <button class="accordion">Find sites with the highest Combined Potential (MW)</button>
-      <div class="panel">
-
-        <ol>
-          <li>
-              Select the filter panel and nagivate to the Combined Solar Potential (MW) filter.
-          </li>
-          <li>
-              There are two text boxes which allow you to input lower and upper threshold limits on the Combined solar potential of the sites that are to be selected within the map. The Combined solar potential represents the combination of rooftop and parking lot solar potential (MW).</li>
-          <li>
-              Input values for the size of solar PV systems that you are interested in. These values must be numeric and can range from 0 on the low end to any value on the high end.</li>
-          <li>
-              Now, only eligible sites with a combined solar potential within the range you have set are available. Using additional filters will further refine your selected sites.</li>
-        </ol>
-        <p>
-          To clear this selection, delete both the upper and lower range values which were input to the Combined Solar Potential filter.</p>
-        <img src="images/highest.gif">
-
-      </div>
-
-      <button class="accordion">Find sites within DAC census tracts</button>
-      <div class="panel">
-
-        <ol>
-          <li>
-              Navigate to the Legend panel and click the check box next to the layer labeled "Census Tracts by CES-4.0 Disadvantaged Community Status." This layer is provided as an overview of the DAC Census Tracts in Los Angeles County.</li>
-          <li>
-              Next, navigate to the filter panel and locate the "CES-4.0 Percentile Scores" filter. This filter selects eligible sites based upon a minimum threshold for the CalEnviroscreen 4.0 percentile score of the census tract in which it is located.</li>
-          <li>
-              Input a minimum threshold value in the text box provided. Census tracts with CES percentile scores of 75 and above are technically designated as Disadvantaged Communities (DACs). You will see that after inputting a value of 75 the eligible sites which are selected now overlap with the DAC Census Tract layer available in the legend.</li>
-        </ol>
-        <p>
-          To clear this selection, delete minimum theshold value that was input to the text box within the CES-4.0 Percentile Scores filter.</p>
-        <img src="images/dac.gif">
-
-      </div>
-
-      <button class="accordion">Find sites by Parcel Usetype</button>
-      <div class="panel">
-
-        <p>
-            There are two filters available for selecting sites by their usetype categorization.</p>
-        <ol>
-          <li>
-              General Usetype. Options: Institutional, Government, Educational, Miscellaneous, Recreational.</li>
-          <li>
-              Detailed Usetype. Specific usetypes provided in the dropdown list (i.e., Elementary Schools, Churches, etc.)</li>
-        </ol>
-        <p>
-              To make use of either of these filters:
-        </p>
-         <ol>
-          <li>
-              Navigate to the filter panel and located your preferred usetype filter. This will create a selection of eligible sites based on the Parcel Use Type you select.</li>
-          <li>
-              It is possible to check multiple usetype categories simultaneously to create a composite selection.</li>
-        </ol>
-        <p>
-          To clear this selection, uncheck all of the usetype categories which were selected in the dropdown pane or click on the small trashcan icon at the bottom right corner of the pane.</p>
-        <img src="images/usetype.gif">
-
+          <img class="tutorialImg" src="images/btm_capacity.gif" onclick="openModal();currentSlide(7)">
       </div>
 
       <button class="accordion">Find sites whose estimated output could offset a specific number of local people's annual electricity usage</button>
@@ -215,7 +236,7 @@
         </ol>
         <p>
             To clear this selection, delete the values which you input into the two text boxes associated with the Combined Residential Usage Offset (Persons) filter.</p>
-        <img src="images/pop.gif">
+        <img class="tutorialImg" src="images/pop.gif" onclick="openModal();currentSlide(9)">
 
       </div>
 
@@ -224,7 +245,7 @@
 
         <ol>
           <li>
-              Navigate to the layers panel and locate the "Census Tract Groups by Average Annual Electricity Usage (kWh/year) Per Renter Household" layer. This layer is based upon UCLA Energy Atlas residential consumption data and has been provided to give an overview of the variation in average annual electricity consumption rates across different regions within Los Angeles County.</li>
+              Navigate to the layers panel and locate the "Census Tract Groups by Average Annual Electricity Usage (kWh/year) Per Renter Household" layer. This layer is based upon UCLA Energy Atlas residential consumption data and has been provided to give an overview of the variation in average annual electricity consumption rates across different regions within Los Angeles County. (Note: This layer is provided for context and does not need to be turned on to enable the site filtering procedure described in the following)</li>
           <li>
               Navigate to the filter panel and locate the "Combined Residential Usage Offset (Renter Occupied Households)" filter. This filter allows you to select eligible sites based a lower and upper range of values for the number of local renter households whose average annual electricity usage could be offset by the estimated out of a site's combined solar PV potential.</li>
           <li>
@@ -234,7 +255,7 @@
         </ol>
         <p>
             To clear this selection, delete the values which you input into the two text boxes associated with the Combined Residential Usage Offset (Renter Occupied Households) filter. </p>
-        <img src="images/rent.gif">
+        <img class="tutorialImg" src="images/rent.gif" onclick="openModal();currentSlide(9)">
         
       </div>
 
@@ -249,31 +270,10 @@
               Brownfield sites are color coded according to their current activity status as described in the legend panel. 
           </li>
         </ol>
-        <img src="images/brownfield.gif">
+        <img class="tutorialImg" src="images/brownfield.gif" onclick="openModal();currentSlide(10)">
         
       </div>
       
-      </div>
-
-      <button class="accordion">How do I select individual sites that I'm interested in?</button>
-      <div class="panel">
-
-        <p>
-            Our suggestion is to keep track of sites based on their unique Site ID numbers.</p>
-        <ol>
-          <li>
-              You have already found a site that you would like to quickly relocate.</li>
-          <li>
-              Click on the site to view the pop-up and locate Site ID, listed first.
-              <br/>We suggest keeping a list of Site ID's for eligible sites you are considering.
-          <li>
-              To view only this site on the map, use the "Site ID" filter. </li>
-          <li>
-              Navigate to the filter panel and located the Site ID filter. In the text box provide input the numerical value for the site that you are interested in.</li>
-            <br/> The map will create a new selection with just this individual site and zoom to its extents automatically.
-        </ol>
-        <img src="images/site_id.gif">
-        
       </div>
 
       <button class="accordion">Download Data</button>
@@ -299,6 +299,89 @@
         </div>
 
       </div>
+
+      <div id="myModal" class="modal">
+        <span class="close cursor" onclick="closeModal()">&times;</span>
+
+      <div class="modal-content">
+        <figure class="mySlides">
+          <figcaption id="caption"><span class="number">1</span>Find sites within my city
+          </figcaption>
+          <img src="images/sites_by_city.gif">
+        </figure>
+        <figure class="mySlides">
+          <figcaption id="caption"><span class="number">2</span>Find sites within DAC census tracts
+          </figcaption>
+          <img src="images/dac.gif">
+        </figure>
+        <figure class="mySlides">
+          <figcaption id="caption"><span class="number">3</span>Find sites by parcel usetype
+          </figcaption>
+          <img src="images/usetype.gif">
+        </figure>
+        <figure class="mySlides">
+          <figcaption id="caption"><span class="number">4</span>Find sites within Clean Power Alliance (CPA) territory
+          </figcaption>
+          <img src="images/cpa.gif">
+        </figure>
+        <figure class="mySlides">
+          <figcaption id="caption"><span class="number">5</span>How do I select individual sites that I am interested in
+          </figcaption>
+          <img src="images/site_id.gif">
+        </figure>
+        <figure class="mySlides">
+          <figcaption id="caption"><span class="number">6</span>Find sites with the highest combined potential (MW)
+          </figcaption>
+          <img src="images/highest.gif">
+        </figure>
+        <figure class="mySlides">
+          <figcaption id="caption"><span class="number">7</span>How do I incorporate circuit capacity into the evaluation of sites
+          </figcaption>
+          <img src="images/btm_capacity.gif">
+        </figure>
+        <figure class="mySlides">
+          <figcaption id="caption"><span class="number">8</span>Find sites whose estimated output could offset a specific number of local people's annual electricity usage
+          </figcaption>
+          <img src="images/pop.gif">
+        </figure>
+        <figure class="mySlides">
+          <figcaption id="caption"><span class="number">9</span>Find sites whose estimated output could offset a specific number of local renter household's annual electricity usage
+          </figcaption>
+          <img src="images/rent.gif">
+        </figure>
+        <figure class="mySlides">
+          <figcaption id="caption"><span class="number">10</span>Where are brownfield and Superfund sites
+          </figcaption>
+          <img src="images/brownfield.gif">
+        </figure>
+ 
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+        <div class="modal-nav">
+          <img class="demo cursor" src="images/sites_by_city.gif"
+            onclick="currentSlide(1)">
+          <img class="demo cursor" src="images/dac.gif" 
+            onclick="currentSlide(2)">
+          <img class="demo cursor" src="images/usetype.gif" 
+            onclick="currentSlide(3)">
+          <img class="demo cursor" src="images/cpa.gif"
+            onclick="currentSlide(4)">
+          <img class="demo cursor" src="images/site_id.gif"
+            onclick="currentSlide(5)">
+            <img class="demo cursor" src="images/highest.gif" 
+            onclick="currentSlide(6)">
+          <img class="demo cursor" src="images/btm_capacity.gif"
+            onclick="currentSlide(7)">
+          <img class="demo cursor" src="images/pop.gif" 
+            onclick="currentSlide(8)">
+          <img class="demo cursor" src="images/rent.gif" 
+            onclick="currentSlide(9)">
+          <img class="demo cursor" src="images/brownfield.gif" 
+            onclick="currentSlide(10)">
+
+        </div><!-- end modal images-->
+      </div> <!-- end modal content-->
 
     </main>
 
